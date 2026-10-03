@@ -77,7 +77,7 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
         riskAssessment!.maxV,
         riskAssessment!.eta,
         riskAssessment!.level,
-        riskAssessment!.nearestSafe?.name || 'an emergency shelter',
+        (riskAssessment!.level === 'LOW' || riskAssessment!.level === 'MODERATE') ? 'None needed (User is safe)' : (riskAssessment!.nearestSafe?.name || 'an emergency shelter'),
         riskAssessment!.safeDist
       );
       if (isActive) {
@@ -166,10 +166,21 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
           <Info className="w-4 h-4" /> Emergency Instructions
         </h3>
         <ul className="text-sm space-y-2 text-subtext list-disc pl-4">
-          <li>Keep your phone charged and listen to local radio for IMD updates.</li>
-          <li>Prepare a disaster kit: water, non-perishable food, flashlight, batteries.</li>
-          {level === 'CRITICAL' && <li className="text-red-400 font-medium">Do not step outside during the calm eye of the storm!</li>}
-          <li>Move away from windows and glass doors.</li>
+          {(level === 'LOW' || level === 'MODERATE') ? (
+            <>
+              <li className="text-green-400 font-medium">You are in a safe zone. No evacuation is necessary.</li>
+              <li>Expect moderate rainfall and gusty winds; stay indoors if weather worsens.</li>
+              <li>Keep your devices charged in case of temporary power fluctuations.</li>
+              <li>Avoid coastal beaches and do not venture into the sea.</li>
+            </>
+          ) : (
+            <>
+              <li>Keep your phone charged and listen to local radio for IMD updates.</li>
+              <li>Prepare a disaster kit: water, non-perishable food, flashlight, batteries.</li>
+              <li className="text-orange-400 font-medium">Pack essential documents in waterproof bags and prepare to evacuate.</li>
+              {level === 'CRITICAL' && <li className="text-red-400 font-bold">Do not step outside during the calm eye of the storm!</li>}
+            </>
+          )}
         </ul>
       </div>
       
