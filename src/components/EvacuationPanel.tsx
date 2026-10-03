@@ -16,6 +16,7 @@ interface EvacuationPanelProps {
 export function EvacuationPanel({ userLocation, storm, model, assets }: EvacuationPanelProps) {
   const [aiAnalysis, setAiAnalysis] = useState<string | null>(null);
   const [isAiLoading, setIsAiLoading] = useState(false);
+  const [sosSent, setSosSent] = useState(false);
   
   const riskAssessment = useMemo(() => {
     if (!userLocation) return null;
@@ -89,6 +90,11 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
     fetchAi();
     return () => { isActive = false; };
   }, [riskAssessment]);
+
+  // Reset SOS state when location changes
+  useEffect(() => {
+    setSosSent(false);
+  }, [userLocation]);
 
   if (!userLocation) {
     return (
@@ -194,6 +200,28 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
           {isAiLoading ? 'Analyzing location variables...' : (aiAnalysis || 'Could not fetch analysis.')}
         </p>
       </div>
+
+      {/* SOS Button */}
+      {(level === 'CRITICAL' || level === 'HIGH') && (
+        <div className="mt-2">
+          <button 
+            onClick={() => setSosSent(true)}
+            disabled={sosSent}
+            className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${sosSent ? 'bg-green-600/20 text-green-400 border border-green-500/30 cursor-not-allowed' : 'bg-red-600 hover:bg-red-500 text-white shadow-[0_0_15px_rgba(220,38,38,0.5)]'}`}
+          >
+            {sosSent ? (
+              <>
+                <ShieldCheck className="w-5 h-5" /> Help Request Sent to NDRF
+              </>
+            ) : (
+              <>
+                <AlertTriangle className="w-5 h-5" /> ONE-CLICK EMERGENCY HELP
+              </>
+            )}
+          </button>
+          {!sosSent && <p className="text-xs text-subtext text-center mt-2">Instantly dispatches your GPS coordinates to local authorities.</p>}
+        </div>
+      )}
 
     </div>
   );
