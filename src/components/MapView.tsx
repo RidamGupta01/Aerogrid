@@ -4,6 +4,7 @@ import L from 'leaflet';
 import { vmaxAt, galeR } from '../lib/simulation';
 import type { StormState } from '../lib/simulation';
 import { lonlat, nearestCoast, TYPES, K, dist, type Point } from '../lib/model';
+import { useEffect } from 'react';
 
 // Fix Leaflet default marker icon issue
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -16,9 +17,36 @@ L.Icon.Default.mergeOptions({
 // Custom div icons for handles
 const createHandleIcon = (label: string, color: string) => L.divIcon({
   className: 'custom-handle-icon',
-  html: `<div style="background: ${color}; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></div><div style="position: absolute; top: 14px; left: -20px; width: 60px; text-align: center; color: #fff; font-size: 10px; font-weight: bold; text-shadow: 1px 1px 2px #000;">${label}</div>`,
-  iconSize: [12, 12],
-  iconAnchor: [6, 6]
+  html: `
+    <div style="
+      background: ${color}; 
+      width: 14px; 
+      height: 14px; 
+      border-radius: 50%; 
+      border: 2.5px solid #FFFFFF; 
+      box-shadow: 0 4px 12px rgba(15, 80, 120, 0.35);
+      cursor: grab;
+    "></div>
+    <div style="
+      position: absolute; 
+      top: 16px; 
+      left: -28px; 
+      width: 70px; 
+      text-align: center; 
+      color: #12345B; 
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 10px; 
+      font-weight: 700; 
+      border: 1px solid #D7EAF7;
+      box-shadow: 0 2px 6px rgba(15, 80, 120, 0.12);
+      pointer-events: none;
+    ">${label}</div>
+  `,
+  iconSize: [14, 14],
+  iconAnchor: [7, 7]
 });
 
 // Component to dynamically update map view based on region
@@ -26,7 +54,7 @@ function MapUpdater({ center, bounds }: { center?: [number, number], bounds?: [[
   const map = useMap();
   useEffect(() => {
     if (bounds) {
-      map.fitBounds(bounds, { animate: true, padding: [20, 20] });
+      map.fitBounds(bounds, { animate: true, padding: [30, 30] });
     } else if (center) {
       map.setView(center, map.getZoom(), { animate: true });
     }
@@ -45,8 +73,6 @@ function MapEventsHandler({ appMode, setUserLocation }: { appMode: string, setUs
   return null;
 }
 
-import { useEffect } from 'react';
-
 interface MapViewProps {
   storm: StormState;
   setStorm: React.Dispatch<React.SetStateAction<StormState>>;
@@ -62,7 +88,11 @@ interface MapViewProps {
   mapBounds: [[number, number], [number, number]];
 }
 
-export function MapView({ storm, setStorm, model, setPreset, swath, selectedAssetId, setSelectedAssetId, appMode, userLocation, setUserLocation, assets, mapBounds }: MapViewProps) {
+export function MapView({ 
+  storm, setStorm, model, setPreset, swath, 
+  selectedAssetId, setSelectedAssetId, appMode, 
+  userLocation, setUserLocation, assets, mapBounds 
+}: MapViewProps) {
   
   const { preTrack, postTrack, swathCircles, timeMarkers, currentStorm } = useMemo(() => {
     const pre: [number, number][] = [], post: [number, number][] = [];
@@ -83,7 +113,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         const R = galeR(storm.rm, v);
         if (R) {
           const ll = lonlat(model.tr.pos(tt));
-          swathCircles.push({ latlng: [ll[1], ll[0]] as [number, number], r: R * 1000 }); // Leaflet radius is in meters
+          swathCircles.push({ latlng: [ll[1], ll[0]] as [number, number], r: R * 1000 });
         }
       }
     }
@@ -124,7 +154,8 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
     return dest;
   }, [userLocation, assets]);
 
-  const getLevelColor = (level: number) => ['#10B981', '#FBBF24', '#F97316', '#EF4444'][level];
+  // Design token status colors
+  const getLevelColor = (level: number) => ['#16A34A', '#F59E0B', '#F97316', '#EF4444'][level];
 
   // Map the storm handles to LatLng
   const O_ll = lonlat(storm.O);
@@ -132,7 +163,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
   const L_ll = lonlat(storm.L);
 
   return (
-    <div className="w-full h-full min-h-[500px] bg-slate-900 rounded-xl overflow-hidden border border-border/50 relative">
+    <div className="w-full h-full min-h-[500px] bg-background-secondary rounded-xl overflow-hidden border border-border relative shadow-sm">
       <MapContainer 
         center={[20, 80]} 
         zoom={5} 
@@ -143,64 +174,93 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         <MapUpdater bounds={mapBounds} />
         <MapEventsHandler appMode={appMode} setUserLocation={setUserLocation} />
         
-        {/* Dark Theme Base Map via OSM + CSS Filter */}
+        {/* Maritime High-Clarity Base Map */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          className="dark-map-tiles"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          subdomains="abcd"
+          maxZoom={19}
         />
 
-        {/* Swath */}
+        {/* Gale-force Swath Zone */}
         {swath && swathCircles.map((c: any, i: number) => (
           <Circle 
             key={`s-${i}`} 
             center={c.latlng} 
             radius={c.r} 
-            pathOptions={{ color: 'rgba(59, 130, 246, 0.1)', fillColor: 'rgba(59, 130, 246, 0.05)', stroke: false }} 
+            pathOptions={{ 
+              color: 'rgba(14, 165, 233, 0.35)', 
+              fillColor: 'rgba(56, 189, 248, 0.12)', 
+              weight: 1 
+            }} 
           />
         ))}
 
-        {/* Tracks */}
-        <Polyline positions={preTrack} pathOptions={{ color: '#F97316', weight: 4 }} />
-        <Polyline positions={postTrack} pathOptions={{ color: '#F97316', weight: 3, dashArray: '5, 10' }} />
+        {/* Pre-landfall and Post-landfall Tracks */}
+        <Polyline 
+          positions={preTrack} 
+          pathOptions={{ color: '#F97316', weight: 4.5, opacity: 0.95 }} 
+        />
+        <Polyline 
+          positions={postTrack} 
+          pathOptions={{ color: '#F97316', weight: 3.5, dashArray: '6, 8', opacity: 0.85 }} 
+        />
 
-        {/* Time Markers */}
+        {/* Time Progress Markers along Track */}
         {timeMarkers.map((tm: any) => (
           <CircleMarker 
             key={`tm-${tm.tk}`} 
             center={tm.latlng} 
-            radius={4} 
-            pathOptions={{ color: '#0A0E17', fillColor: '#fff', fillOpacity: 1, weight: 2 }}
+            radius={4.5} 
+            pathOptions={{ color: '#0B4EA2', fillColor: '#FFFFFF', fillOpacity: 1, weight: 2 }}
           >
-            {tm.showText && <Tooltip permanent direction="right" offset={[5, 0]} className="bg-transparent border-0 text-white shadow-none text-xs font-mono">T+{tm.tk}h</Tooltip>}
+            {tm.showText && (
+              <Tooltip permanent direction="right" offset={[6, 0]} className="custom-tooltip-aero">
+                T+{tm.tk}h
+              </Tooltip>
+            )}
           </CircleMarker>
         ))}
 
-        {/* Current Storm */}
+        {/* Eyewall & Gale Wind Radius at Current Time */}
         {currentStorm.Rn > 0 && (
           <Circle 
             center={currentStorm.latlng} 
             radius={currentStorm.Rn} 
-            pathOptions={{ color: '#ef4444', weight: 2, dashArray: '5,5', fill: false }} 
+            pathOptions={{ 
+              color: '#DC2626', 
+              weight: 2, 
+              dashArray: '6, 6', 
+              fillColor: 'rgba(239, 68, 68, 0.08)',
+              fillOpacity: 1 
+            }} 
           />
         )}
+
+        {/* Storm Vortex Center */}
         <CircleMarker 
           center={currentStorm.latlng} 
-          radius={8} 
-          pathOptions={{ color: '#ef4444', fillColor: 'rgba(239, 68, 68, 0.5)', fillOpacity: 1, weight: 2 }} 
-        />
+          radius={9} 
+          pathOptions={{ 
+            color: '#B91C1C', 
+            fillColor: '#EF4444', 
+            fillOpacity: 0.9, 
+            weight: 3 
+          }} 
+        >
+          <Tooltip direction="top" className="custom-tooltip-aero">
+            Eye: {Math.round(currentStorm.vn)} km/h
+          </Tooltip>
+        </CircleMarker>
 
-        {/* Draggable Handles */}
+        {/* Draggable Trajectory Controls */}
         <Marker 
           position={[O_ll[1], O_ll[0]]} 
           draggable 
-          icon={createHandleIcon('Start', '#3b82f6')}
+          icon={createHandleIcon('Start', '#1677E8')}
           eventHandlers={{
             dragend: (e) => {
               const ll = e.target.getLatLng();
-              // Reverse lonlat: K requires lon, lat
-              // Wait, K is: lonlat returns [lon, lat]. So inverse is just passing lon, lat to K.
-              // Wait, no. K converts lon,lat to km. 
               setStorm(s => ({ ...s, O: [ (ll.lng - 80) * 105.0, (ll.lat - 20) * 111.0 ] }));
               setPreset('custom');
             }
@@ -209,7 +269,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         <Marker 
           position={[B_ll[1], B_ll[0]]} 
           draggable 
-          icon={createHandleIcon('Steering', '#a855f7')}
+          icon={createHandleIcon('Steering', '#0EA5E9')}
           eventHandlers={{
             dragend: (e) => {
               const ll = e.target.getLatLng();
@@ -221,7 +281,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         <Marker 
           position={[L_ll[1], L_ll[0]]} 
           draggable 
-          icon={createHandleIcon('Landfall', '#ef4444')}
+          icon={createHandleIcon('Landfall', '#DC2626')}
           eventHandlers={{
             dragend: (e) => {
               const ll = e.target.getLatLng();
@@ -232,7 +292,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
           }}
         />
 
-        {/* Assets (Infrastructure) */}
+        {/* Critical Infrastructure Assets */}
         {model.res.map((x: any) => {
           const ll = lonlat(x.a.k);
           const color = getLevelColor(x.level);
@@ -243,22 +303,21 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
             <CircleMarker
               key={x.a.id}
               center={[ll[1], ll[0]]}
-              radius={isSel ? 8 : 5}
+              radius={isSel ? 9 : 5.5}
               pathOptions={{ 
-                color: '#0A0E17', 
+                color: isSel ? '#12345B' : '#FFFFFF', 
                 fillColor: color, 
-                fillOpacity: isSel ? 1 : 0.8, 
-                weight: 1.5 
+                fillOpacity: isSel ? 1 : 0.85, 
+                weight: isSel ? 3 : 1.5 
               }}
               eventHandlers={{
                 click: () => setSelectedAssetId(x.a.id)
               }}
             >
-              <Tooltip direction="top">
-                <div className="font-sans">
-                  <strong>{x.a.name}</strong><br/>
-                  Type: {ty.label}<br/>
-                  Impact Level: {x.level}/3
+              <Tooltip direction="top" className="custom-tooltip-aero">
+                <div style={{ padding: '2px 4px' }}>
+                  <div style={{ fontWeight: 700, color: '#12345B' }}>{x.a.name}</div>
+                  <div style={{ color: '#486581', fontSize: '10px' }}>{ty.label} • Risk {Math.round(x.score)}/100</div>
                 </div>
               </Tooltip>
             </CircleMarker>
@@ -267,15 +326,23 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
 
         {/* User Location and Evacuation Route */}
         {userLocation && (
-          <Marker position={userLocation} icon={createHandleIcon('You', '#3B82F6')} />
+          <Marker position={userLocation} icon={createHandleIcon('You', '#1677E8')} />
         )}
         {userLocation && nearestSafeDest && (
           <Polyline 
             positions={[userLocation, [nearestSafeDest.lat, nearestSafeDest.lon]]} 
-            pathOptions={{ color: '#3B82F6', weight: 4, dashArray: '5, 10' }} 
+            pathOptions={{ color: '#1677E8', weight: 4, dashArray: '6, 8' }} 
           />
         )}
       </MapContainer>
+
+      {/* Floating Map Legend Indicator */}
+      <div className="absolute top-4 right-4 z-10 glass-panel px-3 py-2 flex items-center gap-3 text-xs font-medium border border-border shadow-md">
+        <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-safe inline-block"></span> Safe</span>
+        <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-watch inline-block"></span> Watch</span>
+        <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-warning inline-block"></span> Warning</span>
+        <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-danger inline-block"></span> Danger</span>
+      </div>
     </div>
   );
 }

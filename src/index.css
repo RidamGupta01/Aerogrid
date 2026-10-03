@@ -2,57 +2,198 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Background */
+  --background: #F3FAFF;
+  --background-secondary: #EAF6FF;
+
+  /* Surface */
+  --surface: #FFFFFF;
+  --surface-hover: #F7FCFF;
+
+  /* Primary */
+  --primary: #1677E8;
+  --primary-dark: #0B4EA2;
+  --primary-light: #E8F3FF;
+
+  /* Ocean */
+  --ocean: #0369A1;
+  --ocean-light: #0EA5E9;
+  --sky: #38BDF8;
+  --cyan: #06B6D4;
+
+  /* Text */
+  --text-primary: #12345B;
+  --text-secondary: #486581;
+  --text-muted: #7B93A8;
+  --text-white: #FFFFFF;
+
+  /* Status */
+  --safe: #16A34A;
+  --safe-light: #DCFCE7;
+
+  --watch: #F59E0B;
+  --watch-light: #FEF3C7;
+
+  --warning: #F97316;
+  --warning-light: #FFEDD5;
+
+  --danger: #EF4444;
+  --danger-dark: #DC2626;
+  --danger-light: #FEE2E2;
+
+  --critical: #B91C1C;
+
+  /* Border */
+  --border: #D7EAF7;
+  --border-light: #E8F3FA;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(15, 80, 120, 0.05);
+  --shadow-md: 0 6px 20px rgba(15, 80, 120, 0.08);
+  --shadow-lg: 0 12px 32px rgba(15, 80, 120, 0.12);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html, body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+  }
+}
+
+/* Leaflet Container Styling */
 .leaflet-container {
   width: 100%;
   height: 100%;
-  min-height: 500px;
-  background-color: #0F172A !important;
+  background-color: #E2F1FB !important;
+  font-family: 'Inter', sans-serif !important;
 }
 
 .leaflet-container img {
   max-width: none !important;
 }
 
-.dark-map-tiles {
-  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+/* Light Maritime Map Tiles */
+.maritime-map-tiles {
+  filter: contrast(1.05) saturate(1.1) brightness(1.02);
 }
 
 .leaflet-control-attribution {
-  background: rgba(15, 23, 42, 0.7) !important;
-  color: #94A3B8 !important;
-}
-.leaflet-control-attribution a {
-  color: #3B82F6 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: var(--text-muted) !important;
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-sm) !important;
+  padding: 2px 8px !important;
+  border: 1px solid var(--border-light) !important;
+  font-size: 10px !important;
 }
 
-@layer base {
-  html, body {
-    @apply bg-background text-text antialiased;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
-  }
+.leaflet-control-attribution a {
+  color: var(--ocean) !important;
+  text-decoration: none;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--surface) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-md) !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--surface) !important;
+}
+
+.custom-tooltip-aero {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-sm) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  padding: 4px 8px !important;
+}
+
+.custom-tooltip-aero::before {
+  border-right-color: var(--surface) !important;
 }
 
 @layer utilities {
-  .glass-panel {
-    @apply bg-panel/70 backdrop-blur-md border border-border/50 rounded-2xl shadow-glass;
+  .card-surface {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease-in-out;
   }
-  .glass-button {
-    @apply bg-panel/50 hover:bg-panel/80 backdrop-blur-sm border border-border/50 rounded-lg transition-all;
+
+  .card-surface:hover {
+    background: var(--surface-hover);
+    box-shadow: var(--shadow-md);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
   }
   
-  /* Scrollbar customization */
+  .glass-button {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glass-button:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  /* Range Input Styling */
+  input[type="range"] {
+    accent-color: var(--primary);
+  }
+
+  /* Scrollbar Customization */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--background);
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-border rounded-full hover:bg-subtext;
+    background: var(--border);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--ocean-light);
   }
 }

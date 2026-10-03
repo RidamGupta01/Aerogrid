@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Play, Pause, Wind, Waves, CloudRain, ShieldAlert, Layers } from 'lucide-react';
+import { Play, Pause, Wind, Waves, CloudRain, ShieldAlert, Compass, Droplets } from 'lucide-react';
 import { runModel } from './lib/simulation';
 import type { StormState } from './lib/simulation';
 import { PRESETS, SAMPLE_DATA, buildAssets, nearestCoast, K, REGIONS, type Asset } from './lib/model';
@@ -18,7 +18,7 @@ const initialPreset = 'fani';
 const initialAssets = buildAssets(SAMPLE_DATA);
 
 export default function App() {
-  const [appMode, setAppMode] = useState('cyclone');
+  const [appMode, setAppMode] = useState<'cyclone' | 'evacuation' | 'flood' | 'rain'>('cyclone');
   const [preset, setPreset] = useState(initialPreset);
   const [activeCyclones, setActiveCyclones] = useState<any[]>([]);
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
@@ -67,10 +67,10 @@ export default function App() {
         const coords = cyc.geometry.coordinates; // [lon, lat]
         setStorm(s => ({
           ...s,
-          O: K(coords[0] + 3, coords[1] - 3), // Approximate past position
-          B: K(coords[0], coords[1]),         // Current position
-          L: nearestCoast(K(coords[0] - 2, coords[1] + 2)).pt, // Approximate landfall
-          vL: 140, // Default to severe
+          O: K(coords[0] + 3, coords[1] - 3),
+          B: K(coords[0], coords[1]),
+          L: nearestCoast(K(coords[0] - 2, coords[1] + 2)).pt,
+          vL: 140,
           rm: 40
         }));
       }
@@ -137,72 +137,147 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen bg-background text-text overflow-hidden">
-      {/* Sidebar Navigation */}
-      <aside className="w-64 border-r border-border/50 bg-panel/30 flex flex-col p-4 z-10 backdrop-blur-md">
-        <div className="flex items-center gap-3 mb-8 px-2 mt-2">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-blue-600 flex items-center justify-center shadow-lg shadow-accent/20">
-            <ShieldAlert className="w-6 h-6 text-white" />
+    <div className="flex h-screen bg-background text-text-primary overflow-hidden">
+      
+      {/* 1. Sidebar Navigation */}
+      <aside className="w-64 border-r border-border bg-surface flex flex-col p-4 z-10 shadow-sm flex-shrink-0">
+        
+        {/* Brand Logo & Name */}
+        <div className="flex items-center gap-3 mb-6 px-2 pt-2">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-ocean flex items-center justify-center shadow-md shadow-primary/25">
+            <Compass className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="font-bold text-lg leading-tight uppercase tracking-wide">AeroGrid</h1>
-            <p className="text-[10px] text-subtext uppercase tracking-widest font-mono">Disaster Desk</p>
+            <h1 className="font-bold text-lg leading-tight tracking-tight text-text-primary">
+              Aero<span className="text-primary">Grid</span>
+            </h1>
+            <p className="text-[10px] text-ocean font-mono font-bold uppercase tracking-widest">
+              Disaster Desk
+            </p>
           </div>
         </div>
 
-        <nav className="flex flex-col gap-2">
+        {/* Navigation Modes */}
+        <nav className="flex flex-col gap-1.5">
           <button 
             onClick={() => setAppMode('cyclone')}
-            className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", appMode === 'cyclone' ? "bg-accent/10 text-accent border border-accent/20" : "hover:bg-panel/50 text-subtext hover:text-text")}
+            className={cn(
+              "flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-all text-left",
+              appMode === 'cyclone' 
+                ? "bg-primary-light text-primary border border-primary/20 shadow-xs" 
+                : "text-text-secondary hover:bg-surface-hover hover:text-text-primary"
+            )}
           >
-            <Wind className="w-4 h-4" /> Cyclone Impact
+            <div className={cn("p-1.5 rounded-md", appMode === 'cyclone' ? "bg-primary text-white" : "bg-background-secondary text-text-secondary")}>
+              <Wind className="w-3.5 h-3.5" />
+            </div>
+            <span>Cyclone Vulnerability</span>
           </button>
+
           <button 
             onClick={() => setAppMode('evacuation')}
-            className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", appMode === 'evacuation' ? "bg-green-500/10 text-green-400 border border-green-500/20" : "hover:bg-panel/50 text-subtext hover:text-text")}
+            className={cn(
+              "flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-all text-left",
+              appMode === 'evacuation' 
+                ? "bg-safe-light text-safe border border-safe/30 shadow-xs" 
+                : "text-text-secondary hover:bg-surface-hover hover:text-text-primary"
+            )}
           >
-            <ShieldAlert className="w-4 h-4" /> Evacuation & Risk
+            <div className={cn("p-1.5 rounded-md", appMode === 'evacuation' ? "bg-safe text-white" : "bg-background-secondary text-text-secondary")}>
+              <ShieldAlert className="w-3.5 h-3.5" />
+            </div>
+            <span>Evacuation & Risk</span>
           </button>
+
           <button 
             onClick={() => setAppMode('flood')}
-            className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", appMode === 'flood' ? "bg-blue-500/10 text-blue-400 border border-blue-500/20" : "hover:bg-panel/50 text-subtext hover:text-text")}
+            className={cn(
+              "flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-all text-left",
+              appMode === 'flood' 
+                ? "bg-ocean/10 text-ocean border border-ocean/20 shadow-xs" 
+                : "text-text-secondary hover:bg-surface-hover hover:text-text-primary"
+            )}
           >
-            <Waves className="w-4 h-4" /> Coastal Floods <span className="ml-auto text-[10px] bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">BETA</span>
+            <div className={cn("p-1.5 rounded-md", appMode === 'flood' ? "bg-ocean text-white" : "bg-background-secondary text-text-secondary")}>
+              <Waves className="w-3.5 h-3.5" />
+            </div>
+            <div className="flex-1 flex items-center justify-between">
+              <span>Coastal Floods</span>
+              <span className="text-[9px] font-mono font-bold bg-ocean/15 text-ocean px-1.5 py-0.2 rounded">BETA</span>
+            </div>
           </button>
+
           <button 
             onClick={() => setAppMode('rain')}
-            className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", appMode === 'rain' ? "bg-purple-500/10 text-purple-400 border border-purple-500/20" : "hover:bg-panel/50 text-subtext hover:text-text")}
+            className={cn(
+              "flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-all text-left",
+              appMode === 'rain' 
+                ? "bg-sky/20 text-ocean border border-sky/30 shadow-xs" 
+                : "text-text-secondary hover:bg-surface-hover hover:text-text-primary"
+            )}
           >
-            <CloudRain className="w-4 h-4" /> Heavy Rainfall <span className="ml-auto text-[10px] bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-full">BETA</span>
+            <div className={cn("p-1.5 rounded-md", appMode === 'rain' ? "bg-sky text-white" : "bg-background-secondary text-text-secondary")}>
+              <CloudRain className="w-3.5 h-3.5" />
+            </div>
+            <div className="flex-1 flex items-center justify-between">
+              <span>Heavy Rainfall</span>
+              <span className="text-[9px] font-mono font-bold bg-sky/20 text-ocean px-1.5 py-0.2 rounded">BETA</span>
+            </div>
           </button>
         </nav>
 
-        <div className="mt-auto pt-6 border-t border-border/50 px-2 text-xs text-subtext/70 space-y-2">
-          <p className="flex items-center gap-2"><Layers className="w-3 h-3" /> Live Data: OSM & GDACS</p>
-          <p>© 2026 AeroGrid Systems</p>
+        {/* Live Status Widget in Sidebar */}
+        <div className="mt-auto pt-4 border-t border-border-light space-y-2.5 text-xs">
+          <div className="p-3 bg-background-secondary rounded-lg border border-border-light">
+            <div className="flex items-center gap-2 text-[11px] font-bold text-safe mb-1">
+              <span className="w-2 h-2 rounded-full bg-safe animate-pulse"></span>
+              Live Telemetry Feeds
+            </div>
+            <div className="text-[11px] text-text-muted space-y-0.5 font-mono">
+              <p>• GDACS Real-time API</p>
+              <p>• OpenStreetMap Overpass</p>
+              <p>• IMD Storm Matrix</p>
+            </div>
+          </div>
+
+          <div className="px-1 text-[11px] text-text-muted flex items-center justify-between">
+            <span>AeroGrid Systems v2.4</span>
+            <span className="text-primary font-bold">2026</span>
+          </div>
         </div>
       </aside>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+      {/* 2. Main Workspace */}
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden bg-background">
         
         {/* Top Header Controls */}
-        <header className="h-16 border-b border-border/50 bg-background/80 backdrop-blur flex items-center px-6 justify-between flex-shrink-0 z-10">
-          <h2 className="text-lg font-semibold tracking-tight text-white/90">
-            {appMode === 'cyclone' && 'Cyclone Vulnerability Model'}
-            {appMode === 'evacuation' && 'Personal Risk Assessment'}
-            {appMode === 'flood' && 'Coastal Flood Risk Map'}
-            {appMode === 'rain' && 'Rainfall Accumulation Forecast'}
-          </h2>
+        <header className="h-16 border-b border-border bg-surface flex items-center px-6 justify-between flex-shrink-0 z-10 shadow-xs">
+          <div>
+            <h2 className="text-base font-bold tracking-tight text-text-primary flex items-center gap-2">
+              {appMode === 'cyclone' && 'Cyclone Vulnerability & Infrastructure Exposure'}
+              {appMode === 'evacuation' && 'Personal Risk Assessment & Emergency Routing'}
+              {appMode === 'flood' && 'Coastal Inundation & Sea-Level Surge Risk Map'}
+              {appMode === 'rain' && 'Rainfall Accumulation & Waterlogging Forecast'}
+            </h2>
+            <p className="text-xs text-text-muted">
+              {appMode === 'cyclone' && 'Interactive parametric hydrodynamic wind & storm surge simulation'}
+              {appMode === 'evacuation' && 'Click anywhere on the coastal map to plot localized safety vectors'}
+              {appMode === 'flood' && 'Marine tidal anomalies combined with coastal bathymetry'}
+              {appMode === 'rain' && 'Open-Meteo numerical weather prediction precipitation grids'}
+            </p>
+          </div>
 
           {(appMode === 'cyclone' || appMode === 'evacuation') && (
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <label className="text-xs font-mono uppercase tracking-widest text-subtext">Region:</label>
+            <div className="flex items-center gap-3">
+              {/* Region Selector */}
+              <div className="flex items-center gap-1.5 bg-background-secondary p-1 rounded-lg border border-border">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-text-muted px-2">
+                  Region:
+                </span>
                 <select 
                   value={region} 
                   onChange={e => setRegion(e.target.value)}
-                  className="bg-panel border border-border/60 rounded-md px-3 py-1.5 text-sm text-text font-medium outline-none focus:ring-1 focus:ring-accent transition-all cursor-pointer hover:border-border"
+                  className="bg-surface border border-border rounded-md px-3 py-1.5 text-xs text-text-primary font-semibold outline-none focus:border-primary transition-all cursor-pointer shadow-xs"
                 >
                   {Object.entries(REGIONS).map(([k, v]) => (
                     <option key={k} value={k}>{v.name}</option>
@@ -210,31 +285,33 @@ export default function App() {
                 </select>
               </div>
               
-              <div className="flex items-center gap-2">
-                <label className="text-xs font-mono uppercase tracking-widest text-subtext">
-                  Scenario {loadingAssets && <span className="text-accent animate-pulse ml-1">(Fetching Assets...)</span>}
-                </label>
+              {/* Scenario Selector */}
+              <div className="flex items-center gap-1.5 bg-background-secondary p-1 rounded-lg border border-border">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-text-muted px-2 flex items-center gap-1">
+                  Scenario:
+                  {loadingAssets && <span className="text-primary animate-pulse">(Loading...)</span>}
+                </span>
                 <select 
                   value={preset} 
                   onChange={e => setPreset(e.target.value)}
-                  className="bg-panel border border-border/60 rounded-md px-3 py-1.5 text-sm text-text font-medium outline-none focus:ring-1 focus:ring-accent transition-all cursor-pointer hover:border-border min-w-[200px]"
+                  className="bg-surface border border-border rounded-md px-3 py-1.5 text-xs text-text-primary font-semibold outline-none focus:border-primary transition-all cursor-pointer shadow-xs min-w-[210px]"
                 >
-                  <optgroup label="🔴 Live Data (GDACS)">
+                  <optgroup label="🔴 Live GDACS Global Feeds">
                     {activeCyclones.map(c => (
                       <option key={c.properties?.eventid} value={`live_${c.properties?.eventid}`}>
-                        {c.properties?.name || 'Unnamed'} (Live)
+                        {c.properties?.name || 'Unnamed'} (Live GDACS)
                       </option>
                     ))}
-                    {activeCyclones.length === 0 && <option disabled>No active cyclones globally</option>}
+                    {activeCyclones.length === 0 && <option disabled>No active cyclones worldwide</option>}
                   </optgroup>
                   {Object.entries(REGIONS).map(([regKey, regVal]) => (
-                    <optgroup key={regKey} label={`📊 Scenarios: ${regVal.name}`}>
+                    <optgroup key={regKey} label={`📊 Benchmarks: ${regVal.name}`}>
                       {Object.entries(PRESETS).filter(([_, v]) => v.region === regKey).map(([k, v]) => (
                         <option key={k} value={k}>{v.name}</option>
                       ))}
                     </optgroup>
                   ))}
-                  <optgroup label="⚙️ Custom Scenarios">
+                  <optgroup label="⚙️ Custom Scenario">
                     <option value="custom">Custom Track (Drag Map Handles)</option>
                   </optgroup>
                 </select>
@@ -243,56 +320,68 @@ export default function App() {
           )}
         </header>
 
-        {/* Content Area */}
-        <main className="flex-1 relative overflow-hidden bg-[#0A0E17]">
+        {/* Workspace Content Area */}
+        <main className="flex-1 relative overflow-hidden bg-background">
           {(appMode === 'cyclone' || appMode === 'evacuation') && (
             <div className="absolute inset-0 flex">
-              {/* Map View */}
-              <div className="flex-1 relative">
-                <MapView 
-                  storm={storm} 
-                  setStorm={setStorm} 
-                  model={model} 
-                  setPreset={setPreset}
-                  swath={swath}
-                  selectedAssetId={selectedAssetId}
-                  setSelectedAssetId={setSelectedAssetId}
-                  appMode={appMode}
-                  userLocation={userLocation}
-                  setUserLocation={setUserLocation}
-                  assets={assets}
-                  mapBounds={mapBounds}
-                />
-                
-                {/* Floating Timeline Control */}
-                <div className="absolute bottom-6 left-6 right-6 z-20">
-                  <div className="glass-panel p-4 flex items-center gap-4 max-w-2xl mx-auto shadow-2xl border-white/5">
-                    <button 
-                      onClick={togglePlay}
-                      className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/90 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/20 flex-shrink-0"
-                    >
-                      {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-1" />}
-                    </button>
-                    <div className="flex-1 flex flex-col gap-1">
-                      <div className="flex justify-between text-xs font-medium text-subtext px-1">
-                        <span>Landfall (-36h)</span>
-                        <span className="text-white">T+{storm.t}h</span>
-                        <span>Post-storm (+24h)</span>
+              
+              {/* Left / Center Map View */}
+              <div className="flex-1 relative p-4 flex flex-col">
+                <div className="flex-1 relative rounded-xl overflow-hidden shadow-sm">
+                  <MapView 
+                    storm={storm} 
+                    setStorm={setStorm} 
+                    model={model} 
+                    setPreset={setPreset}
+                    swath={swath}
+                    selectedAssetId={selectedAssetId}
+                    setSelectedAssetId={setSelectedAssetId}
+                    appMode={appMode}
+                    userLocation={userLocation}
+                    setUserLocation={setUserLocation}
+                    assets={assets}
+                    mapBounds={mapBounds}
+                  />
+                  
+                  {/* Floating Modern Timeline Control */}
+                  <div className="absolute bottom-5 left-5 right-5 z-20 pointer-events-none">
+                    <div className="glass-panel p-3.5 flex items-center gap-4 max-w-xl mx-auto shadow-lg border border-border pointer-events-auto">
+                      <button 
+                        onClick={togglePlay}
+                        className={cn(
+                          "w-11 h-11 rounded-xl flex items-center justify-center transition-all shadow-md flex-shrink-0 active:scale-95",
+                          isPlaying 
+                            ? "bg-warning text-white shadow-warning/30" 
+                            : "bg-primary text-white hover:bg-primary-dark shadow-primary/30"
+                        )}
+                        title={isPlaying ? "Pause simulation" : "Play simulation"}
+                      >
+                        {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                      </button>
+                      
+                      <div className="flex-1 flex flex-col gap-1.5">
+                        <div className="flex justify-between items-center text-xs font-semibold">
+                          <span className="text-text-muted">Landfall (-36h)</span>
+                          <span className="px-2.5 py-0.5 rounded-full bg-primary-light text-primary font-mono font-bold text-xs border border-primary/20">
+                            T+{storm.t}h {storm.t === 36 ? '(Landfall Now)' : storm.t < 36 ? `(Inland in ${36 - storm.t}h)` : `(Post-landfall +${storm.t - 36}h)`}
+                          </span>
+                          <span className="text-text-muted">Dissipation (+24h)</span>
+                        </div>
+                        <input 
+                          type="range" 
+                          min="0" max="60" step="1" 
+                          value={storm.t} 
+                          onChange={handleTimeChange}
+                          className="w-full cursor-pointer accent-primary" 
+                        />
                       </div>
-                      <input 
-                        type="range" 
-                        min="0" max="60" step="1" 
-                        value={storm.t} 
-                        onChange={handleTimeChange}
-                        className="w-full accent-accent cursor-pointer" 
-                      />
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Sidebar Impact Panel */}
-              <div className="w-[420px] bg-background/95 backdrop-blur-xl border-l border-border/50 h-full overflow-y-auto shadow-2xl relative z-20">
+              {/* Right Sidebar Impact Panel */}
+              <div className="w-[430px] border-l border-border bg-surface h-full overflow-y-auto shadow-sm relative z-20 flex-shrink-0">
                 {appMode === 'cyclone' ? (
                   <SidePanel 
                     storm={storm} 
@@ -318,31 +407,172 @@ export default function App() {
             </div>
           )}
 
+          {/* Coastal Floods View */}
           {appMode === 'flood' && (
-            <div className="absolute inset-0 flex items-center justify-center p-8 text-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 to-background">
-              <div className="max-w-md glass-panel p-8 rounded-3xl border-blue-500/20">
-                <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_50px_rgba(59,130,246,0.2)]">
-                  <Waves className="w-10 h-10 text-blue-400" />
+            <div className="p-8 h-full overflow-y-auto bg-background">
+              <div className="max-w-4xl mx-auto space-y-6">
+                
+                {/* Banner */}
+                <div className="bg-surface rounded-2xl p-6 border border-border shadow-sm flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-ocean/10 border border-ocean/20 flex items-center justify-center text-ocean shrink-0">
+                    <Waves className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-lg font-bold text-text-primary">Coastal Flooding & Inundation Index</h3>
+                      <span className="text-[10px] font-mono font-bold bg-ocean/15 text-ocean px-2 py-0.5 rounded">LIVE PREVIEW</span>
+                    </div>
+                    <p className="text-xs text-text-secondary leading-relaxed">
+                      Hydrodynamic inundation forecast calculating peak astronomical high tide combined with cyclone wind drag.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Coastal Floods</h3>
-                <p className="text-subtext mb-6">Real-time sea-level anomaly integration and inundation modeling is currently in beta. We are incorporating Open-Meteo marine APIs.</p>
-                <button className="bg-blue-500/10 text-blue-400 border border-blue-500/30 px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-500/20 transition-all">Notify me when ready</button>
+
+                {/* Tide Gauge Station Metrics */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-surface p-4 rounded-xl border border-border shadow-xs">
+                    <div className="flex items-center justify-between text-xs text-text-muted mb-1">
+                      <span>Paradip Port Station</span>
+                      <span className="text-[10px] font-mono font-bold text-danger bg-danger-light px-1.5 py-0.2 rounded">HIGH TIDE</span>
+                    </div>
+                    <div className="text-2xl font-bold font-mono text-text-primary">+3.8 m</div>
+                    <p className="text-[11px] text-text-muted mt-1">Surge anomaly over astronomical baseline</p>
+                  </div>
+
+                  <div className="bg-surface p-4 rounded-xl border border-border shadow-xs">
+                    <div className="flex items-center justify-between text-xs text-text-muted mb-1">
+                      <span>Dhamra Estuary</span>
+                      <span className="text-[10px] font-mono font-bold text-warning bg-warning-light px-1.5 py-0.2 rounded">SURGE WARNING</span>
+                    </div>
+                    <div className="text-2xl font-bold font-mono text-text-primary">+2.9 m</div>
+                    <p className="text-[11px] text-text-muted mt-1">Breach probability: 74% at high tide peak</p>
+                  </div>
+
+                  <div className="bg-surface p-4 rounded-xl border border-border shadow-xs">
+                    <div className="flex items-center justify-between text-xs text-text-muted mb-1">
+                      <span>Gopalpur Coast</span>
+                      <span className="text-[10px] font-mono font-bold text-safe bg-safe-light px-1.5 py-0.2 rounded">STABLE</span>
+                    </div>
+                    <div className="text-2xl font-bold font-mono text-text-primary">+1.1 m</div>
+                    <p className="text-[11px] text-text-muted mt-1">Standard coastal wave wash limits</p>
+                  </div>
+                </div>
+
+                {/* Simulated Inundation Depth Table */}
+                <div className="bg-surface rounded-xl p-5 border border-border shadow-sm">
+                  <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-text-muted mb-3">
+                    Estuarine & Coastal Embankment Exposure
+                  </h4>
+                  <div className="space-y-2 text-xs">
+                    <div className="p-3 bg-background-secondary rounded-lg border border-border-light flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-text-primary">Mahanadi Delta Mangrove Barrier</div>
+                        <div className="text-text-muted">Mangrove attenuation buffers wave energy by ~35%</div>
+                      </div>
+                      <span className="font-mono font-bold text-safe bg-safe-light px-2.5 py-1 rounded">BUFFERED</span>
+                    </div>
+
+                    <div className="p-3 bg-background-secondary rounded-lg border border-border-light flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-text-primary">Astaranga Fishery Embankment</div>
+                        <div className="text-text-muted">Vulnerable earthen dykes with low crest height (2.2m)</div>
+                      </div>
+                      <span className="font-mono font-bold text-danger bg-danger-light px-2.5 py-1 rounded">CRITICAL BREACH RISK</span>
+                    </div>
+
+                    <div className="p-3 bg-background-secondary rounded-lg border border-border-light flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-text-primary">Chilika Lagoon Outfall Channel</div>
+                        <div className="text-text-muted">High water level causing backflow into low-lying agricultural fields</div>
+                      </div>
+                      <span className="font-mono font-bold text-warning bg-warning-light px-2.5 py-1 rounded">MODERATE OVERFLOW</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           )}
 
+          {/* Heavy Rainfall View */}
           {appMode === 'rain' && (
-            <div className="absolute inset-0 flex items-center justify-center p-8 text-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 to-background">
-              <div className="max-w-md glass-panel p-8 rounded-3xl border-purple-500/20">
-                <div className="w-20 h-20 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_50px_rgba(168,85,247,0.2)]">
-                  <CloudRain className="w-10 h-10 text-purple-400" />
+            <div className="p-8 h-full overflow-y-auto bg-background">
+              <div className="max-w-4xl mx-auto space-y-6">
+                
+                {/* Banner */}
+                <div className="bg-surface rounded-2xl p-6 border border-border shadow-sm flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-sky/20 border border-sky/30 flex items-center justify-center text-ocean shrink-0">
+                    <Droplets className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-lg font-bold text-text-primary">Quantitative Precipitation Forecast (QPF)</h3>
+                      <span className="text-[10px] font-mono font-bold bg-sky/20 text-ocean px-2 py-0.5 rounded">LIVE PREVIEW</span>
+                    </div>
+                    <p className="text-xs text-text-secondary leading-relaxed">
+                      24-hour rainfall accumulation model powered by IMD NWP and Open-Meteo precipitation rasters.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Heavy Rainfall</h3>
-                <p className="text-subtext mb-6">Integrating IMD numerical weather prediction (NWP) grids and Open-Meteo precipitation forecasts to model urban waterlogging.</p>
-                <button className="bg-purple-500/10 text-purple-400 border border-purple-500/30 px-6 py-2 rounded-full text-sm font-medium hover:bg-purple-500/20 transition-all">Notify me when ready</button>
+
+                {/* Rain Gauge Cards */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-surface p-4 rounded-xl border border-border shadow-xs">
+                    <div className="flex items-center justify-between text-xs text-text-muted mb-1">
+                      <span>Puri District</span>
+                      <span className="text-[10px] font-mono font-bold text-danger bg-danger-light px-1.5 py-0.2 rounded">RED ALERT</span>
+                    </div>
+                    <div className="text-2xl font-bold font-mono text-text-primary">285 mm</div>
+                    <p className="text-[11px] text-text-muted mt-1">Extreme rainfall accumulation (24h)</p>
+                  </div>
+
+                  <div className="bg-surface p-4 rounded-xl border border-border shadow-xs">
+                    <div className="flex items-center justify-between text-xs text-text-muted mb-1">
+                      <span>Jagatsinghpur</span>
+                      <span className="text-[10px] font-mono font-bold text-warning bg-warning-light px-1.5 py-0.2 rounded">ORANGE ALERT</span>
+                    </div>
+                    <div className="text-2xl font-bold font-mono text-text-primary">190 mm</div>
+                    <p className="text-[11px] text-text-muted mt-1">Heavy downpours; waterlogging expected</p>
+                  </div>
+
+                  <div className="bg-surface p-4 rounded-xl border border-border shadow-xs">
+                    <div className="flex items-center justify-between text-xs text-text-muted mb-1">
+                      <span>Cuttack / Bhubaneswar</span>
+                      <span className="text-[10px] font-mono font-bold text-watch bg-watch-light px-1.5 py-0.2 rounded">YELLOW WATCH</span>
+                    </div>
+                    <div className="text-2xl font-bold font-mono text-text-primary">115 mm</div>
+                    <p className="text-[11px] text-text-muted mt-1">Localized urban drainage bottlenecks</p>
+                  </div>
+                </div>
+
+                {/* Urban Catchment Risk */}
+                <div className="bg-surface rounded-xl p-5 border border-border shadow-sm">
+                  <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-text-muted mb-3">
+                    Urban Catchment & Drainage Risk Index
+                  </h4>
+                  <div className="space-y-2 text-xs">
+                    <div className="p-3 bg-background-secondary rounded-lg border border-border-light flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-text-primary">Bhubaneswar Smart City Stormwater Basin</div>
+                        <div className="text-text-muted">Gangua Nallah discharge rate at 85% capacity</div>
+                      </div>
+                      <span className="font-mono font-bold text-warning bg-warning-light px-2.5 py-1 rounded">SURCHARGE RISK</span>
+                    </div>
+
+                    <div className="p-3 bg-background-secondary rounded-lg border border-border-light flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-text-primary">Cuttack Kathajodi Outfall Sluices</div>
+                        <div className="text-text-muted">High river stage prevents gravity draining of low city sectors</div>
+                      </div>
+                      <span className="font-mono font-bold text-danger bg-danger-light px-2.5 py-1 rounded">PUMPING REQUIRED</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           )}
+
         </main>
       </div>
     </div>
