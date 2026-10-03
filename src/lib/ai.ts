@@ -38,6 +38,9 @@ Write a very brief (2-3 sentences max), urgent, and highly actionable survival i
     throw new Error("No completion");
   } catch (error) {
     console.error("Groq API Error:", error);
+    if (level === 'LOW' || level === 'MODERATE') {
+      return `You are in a safe zone (Peak winds: ${Math.round(maxV)}km/h). No evacuation is needed. Stay indoors.`;
+    }
     return `Based on the ${Math.round(maxV)}km/h projection at your location, structural damage is likely. Proceed to ${shelterName} before T+${Math.max(1, eta - 4)}h.`;
   }
 }
