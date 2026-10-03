@@ -22,6 +22,19 @@ const createHandleIcon = (label: string, color: string) => L.divIcon({
 });
 
 // Component to dynamically update map view based on region
+function ActiveAssetFlyTo({ selectedAssetId, assets }: { selectedAssetId: string | number | null, assets: any[] }) {
+  const map = useMap();
+  useEffect(() => {
+    if (selectedAssetId) {
+      const asset = assets.find(a => a.id === selectedAssetId);
+      if (asset) {
+        map.flyTo([asset.lat, asset.lon], 13, { animate: true, duration: 1.5 });
+      }
+    }
+  }, [selectedAssetId, assets, map]);
+  return null;
+}
+
 function MapUpdater({ center, bounds }: { center?: [number, number], bounds?: [[number, number], [number, number]] }) {
   const map = useMap();
   useEffect(() => {
@@ -141,6 +154,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         zoomControl={false}
       >
         <MapUpdater bounds={mapBounds} />
+        <ActiveAssetFlyTo selectedAssetId={selectedAssetId} assets={assets} />
         <MapEventsHandler appMode={appMode} setUserLocation={setUserLocation} />
         
         {/* Base Map via OSM */}

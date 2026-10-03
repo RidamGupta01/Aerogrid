@@ -18,11 +18,31 @@ export function cn(...inputs: ClassValue[]) {
 const initialPreset = 'fani';
 const initialAssets = buildAssets(SAMPLE_DATA);
 
+
+function useLocalStorage<T>(key: string, initialValue: T) {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      return initialValue;
+    }
+  });
+  const setValue = (value: T | ((val: T) => T)) => {
+    try {
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) { }
+  };
+  return [storedValue, setValue] as const;
+}
+
 export default function App() {
-  const [appMode, setAppMode] = useState('cyclone');
+  const [appMode, setAppMode] = useLocalStorage('aerogrid_mode', 'cyclone');
   const [preset, setPreset] = useState(initialPreset);
   const [activeCyclones, setActiveCyclones] = useState<any[]>([]);
-  const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
+  const [userLocation, setUserLocation] = useLocalStorage<[number, number] | null>('aerogrid_location', null);
 
   const [storm, setStorm] = useState<StormState>(() => {
     const p = PRESETS[initialPreset];
@@ -37,7 +57,7 @@ export default function App() {
   });
   
   const [assets, setAssets] = useState<Asset[]>(initialAssets);
-  const [region, setRegion] = useState('odisha');
+  const [region, setRegion] = useLocalStorage('aerogrid_region', 'odisha');
   const [loadingAssets, setLoadingAssets] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [swath, setSwath] = useState(true);
