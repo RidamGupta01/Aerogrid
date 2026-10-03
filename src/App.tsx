@@ -66,10 +66,10 @@ export default function App() {
   const [selectedAssetId, setSelectedAssetId] = useState<number | null>(null);
   
   const currentBounds = REGIONS[region].bounds;
-  const mapBounds: [[number, number], [number, number]] = [
+  const mapBounds = useMemo<[[number, number], [number, number]]>(() => [
     [currentBounds[0], currentBounds[1]],
     [currentBounds[2], currentBounds[3]]
-  ];
+  ], [currentBounds]);
   
   // Calculate model
   const model = useMemo(() => runModel(storm, assets), [storm, assets]);
@@ -174,7 +174,6 @@ export default function App() {
             setUserLocation={setUserLocation}
             assets={assets}
             mapBounds={mapBounds}
-            isPlaying={isPlaying}
           />
         </div>
       )}
