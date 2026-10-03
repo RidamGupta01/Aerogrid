@@ -146,6 +146,20 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
   const nearestSafeDest = useMemo(() => {
     if (!userLocation) return null;
     const uK = K(userLocation[1], userLocation[0]);
+    
+    // Check if user is actually in danger
+    let maxV = 0;
+    for (let t = 0; t <= 60; t++) {
+      const pos = model.tr.pos(t);
+      const d = dist(pos, uK);
+      const vAtCenter = vmaxAt(storm, t);
+      const vAtUser = vAtCenter * Math.exp(-d / 100); 
+      if (vAtUser > maxV) maxV = vAtUser;
+    }
+    
+    // Only plot an evacuation route if risk is HIGH or CRITICAL (> 65km/h)
+    if (maxV <= 65) return null;
+
     let safeDist = Infinity;
     let dest = null;
     for (const a of assets) {
@@ -158,7 +172,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
       }
     }
     return dest;
-  }, [userLocation, assets]);
+  }, [userLocation, assets, model, storm]);
 
   const getLevelColor = (level: number) => ['#10B981', '#FBBF24', '#F97316', '#EF4444'][level];
 
