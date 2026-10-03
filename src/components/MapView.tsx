@@ -28,7 +28,11 @@ function ActiveAssetFlyTo({ selectedAssetId, assets }: { selectedAssetId: string
     if (selectedAssetId) {
       const asset = assets.find(a => a.id === selectedAssetId);
       if (asset) {
-        map.flyTo([asset.lat, asset.lon], 13, { animate: true, duration: 1.5 });
+        map.flyTo([asset.lat, asset.lon], 13, { 
+          animate: true, 
+          duration: 2.5,
+          easeLinearity: 0.15
+        });
       }
     }
   }, [selectedAssetId, assets, map]);
@@ -39,7 +43,12 @@ function MapUpdater({ center, bounds }: { center?: [number, number], bounds?: [[
   const map = useMap();
   useEffect(() => {
     if (bounds) {
-      map.fitBounds(bounds, { animate: true, padding: [20, 20] });
+      map.fitBounds(bounds, { 
+        animate: true, 
+        padding: [20, 20],
+        duration: 2.0,
+        easeLinearity: 0.2
+      });
     } else if (center) {
       map.setView(center, map.getZoom(), { animate: true });
     }
