@@ -1,75 +1,182 @@
 const fs = require('fs');
+let code = fs.readFileSync('src/App.tsx', 'utf-8');
 
-const modelTsPath = 'src/lib/model.ts';
-let modelTs = fs.readFileSync(modelTsPath, 'utf8');
+// The new App layout
+const newLayout = `
+  return (
+    <div className="relative w-screen h-screen bg-background text-text overflow-hidden font-body text-sm selection:bg-accent/30">
+      
+      {/* Map View (Background) */}
+      {(appMode === 'cyclone' || appMode === 'evacuation') && (
+        <div className="absolute inset-0 z-0">
+          <MapView 
+            storm={storm} 
+            setStorm={setStorm} 
+            model={model} 
+            setPreset={setPreset}
+            swath={swath}
+            selectedAssetId={selectedAssetId}
+            setSelectedAssetId={setSelectedAssetId}
+            appMode={appMode}
+            userLocation={userLocation}
+            setUserLocation={setUserLocation}
+            assets={assets}
+            mapBounds={mapBounds}
+          />
+        </div>
+      )}
 
-// Replace everything up to PRESETS with the new logic
-const newTop = `export const TL = 36, TMAX = 60;
+      {/* Floating Sidebar (Top Left) */}
+      <aside className="absolute top-4 left-4 w-[280px] bg-panel/95 backdrop-blur-md rounded-2xl shadow-glass border border-border/50 flex flex-col p-4 z-10">
+        <div className="flex items-center gap-3 mb-6 px-2 mt-2">
+          <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-lg shadow-accent/20">
+            <ShieldAlert className="w-6 h-6 text-white" />
+          </div>
+          <div>
+            <h1 className="font-bold text-lg leading-tight tracking-wide text-text">AeroGrid</h1>
+            <p className="text-[10px] text-accent uppercase tracking-widest font-mono font-bold">Disaster Desk</p>
+          </div>
+        </div>
 
-export type Point = [number, number]; // [lon, lat] generally, or [x, y] in km
+        <nav className="flex flex-col gap-2">
+          <button 
+            onClick={() => setAppMode('cyclone')}
+            className={cn("flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all", appMode === 'cyclone' ? "bg-accent/10 text-accent font-bold" : "hover:bg-panelHover text-subtext hover:text-text")}
+          >
+            <Wind className="w-4 h-4" /> Cyclone Impact
+          </button>
+          <button 
+            onClick={() => setAppMode('evacuation')}
+            className={cn("flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all", appMode === 'evacuation' ? "bg-green-500/10 text-green-600 font-bold" : "hover:bg-panelHover text-subtext hover:text-text")}
+          >
+            <ShieldAlert className="w-4 h-4" /> Evacuation & Risk
+          </button>
+          <button 
+            onClick={() => setAppMode('flood')}
+            className={cn("flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all", appMode === 'flood' ? "bg-blue-500/10 text-blue-600 font-bold" : "hover:bg-panelHover text-subtext hover:text-text")}
+          >
+            <Waves className="w-4 h-4" /> Coastal Floods <span className="ml-auto text-[10px] bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full font-bold">BETA</span>
+          </button>
+        </nav>
+      </aside>
 
-// Global projection center (we can update this when region changes, but for simplicity we'll just project everything relative to a central point in India, or just use precise haversine.
-// To keep the simulation fast and simple, we'll project to km relative to India's center [80, 20]
-export function K(lon: number, lat: number): Point {
-  return [(lon - 80) * 105.0, (lat - 20) * 111.0];
+      {/* Floating Top Controls (Top Center) */}
+      {(appMode === 'cyclone' || appMode === 'evacuation') && (
+        <div className="absolute top-4 left-[300px] z-10 flex items-center gap-3">
+          <div className="bg-panel/95 backdrop-blur-md rounded-full shadow-glass border border-border/50 px-6 py-3 flex items-center gap-6">
+            <div className="flex items-center gap-3">
+              <label className="text-xs font-semibold text-subtext">Region</label>
+              <select 
+                value={region} 
+                onChange={e => setRegion(e.target.value)}
+                className="bg-transparent text-sm text-text font-bold outline-none cursor-pointer"
+              >
+                {Object.entries(REGIONS).map(([k, v]) => (
+                  <option key={k} value={k}>{v.name}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="w-px h-6 bg-border/50"></div>
+            
+            <div className="flex items-center gap-3">
+              <label className="text-xs font-semibold text-subtext">
+                Scenario {loadingAssets && <span className="text-accent animate-pulse ml-1">(Loading...)</span>}
+              </label>
+              <select 
+                value={preset} 
+                onChange={e => setPreset(e.target.value)}
+                className="bg-transparent text-sm text-text font-bold outline-none cursor-pointer max-w-[250px] truncate"
+              >
+                <optgroup label="🔴 Live Data (GDACS)">
+                  {activeCyclones.map(c => (
+                    <option key={c.properties?.eventid} value={\`live_\${c.properties?.eventid}\`}>
+                      {c.properties?.name || 'Unnamed'} (Live)
+                    </option>
+                  ))}
+                  {activeCyclones.length === 0 && <option disabled>No active cyclones</option>}
+                </optgroup>
+                {Object.entries(REGIONS).map(([regKey, regVal]) => (
+                  <optgroup key={regKey} label={\`📊 Scenarios: \${regVal.name}\`}>
+                    {Object.entries(PRESETS).filter(([_, v]) => v.region === regKey).map(([k, v]) => (
+                      <option key={k} value={k}>{v.name}</option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Floating Right Panel (Details) */}
+      {(appMode === 'cyclone' || appMode === 'evacuation') && (
+        <div className="absolute top-4 right-4 bottom-24 w-[420px] bg-panel/95 backdrop-blur-xl rounded-2xl shadow-glass border border-border/50 flex flex-col z-10 overflow-hidden">
+          {appMode === 'cyclone' ? (
+            <SidePanel 
+              storm={storm} 
+              setStorm={setStorm}
+              model={model}
+              swath={swath}
+              setSwath={setSwath}
+              dnames={dnames}
+              setDnames={setDnames}
+              assets={assets}
+              selectedAssetId={selectedAssetId}
+            />
+          ) : (
+            <EvacuationPanel 
+              userLocation={userLocation}
+              storm={storm}
+              model={model}
+              assets={assets}
+            />
+          )}
+        </div>
+      )}
+
+      {/* Floating Timeline Control (Bottom Center) */}
+      {(appMode === 'cyclone' || appMode === 'evacuation') && (
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 w-full max-w-[800px] px-4">
+          <div className="bg-panel/95 backdrop-blur-md rounded-2xl shadow-glass border border-border/50 p-4 flex items-center gap-6">
+            <button 
+              onClick={togglePlay}
+              className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/90 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/20 flex-shrink-0"
+            >
+              {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
+            </button>
+            <div className="flex-1 flex flex-col gap-2">
+              <div className="flex justify-between text-xs font-bold text-subtext px-2">
+                <span>Landfall (-36h)</span>
+                <span className="text-accent bg-accent/10 px-3 py-1 rounded-full">T+{storm.t}h</span>
+                <span>Post-storm (+24h)</span>
+              </div>
+              <input 
+                type="range" 
+                min="0" max="60" step="1" 
+                value={storm.t} 
+                onChange={e => {
+                  setStorm(s => ({ ...s, t: +e.target.value }));
+                  setIsPlaying(false);
+                }}
+                className="w-full accent-accent cursor-pointer h-2 bg-gray-200 rounded-lg appearance-none"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
-export function lonlat(p: Point): Point {
-  return [80 + p[0] / 105.0, 20 + p[1] / 111.0];
-}
 
-export function dist(a: Point, b: Point): number {
-  return Math.hypot(a[0] - b[0], a[1] - b[1]);
-}
-
-export function clamp(v: number, a: number, b: number): number {
-  return Math.max(a, Math.min(b, v));
-}
-
-export const COASTLL: Point[] = [
-  [68.3, 23.6], [69.0, 22.8], [69.2, 22.1], [70.2, 22.1], [71.4, 20.8],
-  [72.6, 20.2], [72.8, 19.0], [73.0, 18.0], [73.3, 16.5], [73.8, 15.4],
-  [74.3, 14.3], [74.8, 13.0], [75.3, 12.0], [76.2, 10.5], [77.0, 8.5],
-  [77.5, 8.1], // Kanyakumari
-  [78.2, 8.8], [79.2, 9.5], [79.9, 10.5], [79.8, 11.8], [80.3, 13.2],
-  [80.1, 14.5], [80.2, 15.5], [81.5, 16.3], [82.3, 16.9], [83.3, 17.7],
-  [84.1, 18.3], [85.0, 19.3], [85.8, 19.8], [86.7, 20.3], [87.0, 21.0],
-  [87.6, 21.6], [88.1, 21.7], [89.0, 21.8]
-];
-export const COAST = COASTLL.map(p => K(p[0], p[1]));
-
-export function nearestCoast(P: Point): { d: number, pt: Point } {
-  let best = { d: 1e9, pt: COAST[0] };
-  for (let i = 0; i < COAST.length - 1; i++) {
-    const a = COAST[i], b = COAST[i + 1], abx = b[0] - a[0], aby = b[1] - a[1];
-    const t = clamp(((P[0] - a[0]) * abx + (P[1] - a[1]) * aby) / (abx * abx + aby * aby), 0, 1);
-    const q: Point = [a[0] + abx * t, a[1] + aby * t], d = dist(P, q);
-    if (d < best.d) best = { d, pt: q };
-  }
-  return best;
-}
-
-export const REGIONS = {
-  odisha: { name: 'Odisha & Bengal', center: [20.5, 86.5], zoom: 7, bounds: [19.0, 84.0, 22.0, 89.0] },
-  ap: { name: 'Andhra Pradesh', center: [16.5, 81.5], zoom: 7, bounds: [13.5, 79.5, 19.0, 84.5] },
-  tn: { name: 'Tamil Nadu', center: [11.5, 79.5], zoom: 7, bounds: [8.0, 77.0, 14.0, 81.0] },
-  gujarat: { name: 'Gujarat', center: [22.0, 70.5], zoom: 7, bounds: [20.0, 68.0, 24.0, 73.0] },
-  maharashtra: { name: 'Maharashtra', center: [18.0, 72.5], zoom: 7, bounds: [15.0, 71.0, 20.0, 74.0] },
-};
-
-export const TYPES: Record<string, { label: string, g: string, vf: number, sv: number, unit: string, color: string }> = {
-  hospital: { label: 'Hospital', g: 'H', vf: 150, sv: 0.9, unit: 'beds', color: '#ef4444' },
-  shelter: { label: 'Cyclone shelter', g: 'S', vf: 175, sv: 0.6, unit: 'places', color: '#10b981' },
-  power: { label: 'Power substation', g: 'P', vf: 115, sv: 1.0, unit: 'k consumers', color: '#eab308' },
-  telecom: { label: 'Telecom tower', g: 'T', vf: 125, sv: 0.7, unit: 'sites', color: '#3b82f6' },
-  road: { label: 'Road or bridge', g: 'R', vf: 190, sv: 0.8, unit: '', color: '#9ca3af' },
-  water: { label: 'Water works', g: 'W', vf: 140, sv: 1.0, unit: 'k pop', color: '#0ea5e9' }
-};
-
-export const TKEYS = ['hospital', 'shelter', 'power', 'telecom', 'road', 'water'];
-export const COND = ['', 'Poor', 'Weak', 'Fair', 'Good', 'Very good'];
+export default App;
 `;
 
-modelTs = modelTs.replace(/export const W = 750.*?export const SAMPLE_DATA = \[\n.*?\];/s, newTop);
-
-fs.writeFileSync(modelTsPath, modelTs);
-console.log('model.ts updated');
+const startIndex = code.indexOf('return (');
+if (startIndex !== -1) {
+  code = code.substring(0, startIndex) + newLayout;
+  fs.writeFileSync('src/App.tsx', code);
+  console.log("App.tsx replaced successfully!");
+} else {
+  console.log("Could not find return block.");
+}
