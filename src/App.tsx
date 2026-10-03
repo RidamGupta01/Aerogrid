@@ -308,6 +308,7 @@ export default function App() {
           ) : (
             <EvacuationPanel 
               userLocation={userLocation}
+              setUserLocation={setUserLocation}
               storm={storm}
               model={model}
               assets={assets}

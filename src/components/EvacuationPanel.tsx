@@ -4,19 +4,39 @@ import type { StormState } from '../lib/simulation';
 import type { Asset } from '../lib/model';
 import { K, dist } from '../lib/model';
 import { vmaxAt } from '../lib/simulation';
-import { ShieldCheck, AlertTriangle, Info, MapPin, ArrowRight } from 'lucide-react';
+import { ShieldCheck, AlertTriangle, Info, MapPin, ArrowRight, Navigation } from 'lucide-react';
 
 interface EvacuationPanelProps {
   userLocation: [number, number] | null;
+  setUserLocation: (ll: [number, number] | null) => void;
   storm: StormState;
   model: any;
   assets: Asset[];
 }
 
-export function EvacuationPanel({ userLocation, storm, model, assets }: EvacuationPanelProps) {
+export function EvacuationPanel({ userLocation, setUserLocation, storm, model, assets }: EvacuationPanelProps) {
   const [aiAnalysis, setAiAnalysis] = useState<string | null>(null);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [sosSent, setSosSent] = useState(false);
+  const [isLocating, setIsLocating] = useState(false);
+
+  const handleLocateMe = () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser");
+      return;
+    }
+    setIsLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setUserLocation([position.coords.latitude, position.coords.longitude]);
+        setIsLocating(false);
+      },
+      () => {
+        alert("Unable to retrieve your location");
+        setIsLocating(false);
+      }
+    );
+  };
   
   const riskAssessment = useMemo(() => {
     if (!userLocation) return null;
@@ -103,7 +123,16 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
           <MapPin className="w-8 h-8 text-blue-400 animate-bounce" />
         </div>
         <h2 className="text-xl font-bold mb-2">Pinpoint Your Location</h2>
-        <p className="text-subtext">Click anywhere on the map to drop a pin and get a personalized risk assessment, evacuation routes, and AI survival instructions.</p>
+        <p className="text-subtext mb-6">Click anywhere on the map to drop a pin and get a personalized risk assessment, evacuation routes, and AI survival instructions.</p>
+        
+        <button 
+          onClick={handleLocateMe}
+          disabled={isLocating}
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+        >
+          <Navigation className={`w-4 h-4 ${isLocating ? 'animate-pulse' : ''}`} />
+          {isLocating ? 'Locating...' : 'Use Current Location'}
+        </button>
       </div>
     );
   }
@@ -112,9 +141,19 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
 
   return (
     <div className="p-6 h-full overflow-y-auto flex flex-col gap-6 pb-24">
-      <div>
-        <h2 className="text-xl font-bold mb-1">Personal Risk Report</h2>
-        <p className="text-sm text-subtext font-mono">{userLocation[0].toFixed(4)}°N, {userLocation[1].toFixed(4)}°E</p>
+      <div className="flex items-start justify-between">
+        <div>
+          <h2 className="text-xl font-bold mb-1">Personal Risk Report</h2>
+          <p className="text-sm text-subtext font-mono">{userLocation[0].toFixed(4)}°N, {userLocation[1].toFixed(4)}°E</p>
+        </div>
+        <button 
+          onClick={handleLocateMe}
+          disabled={isLocating}
+          title="Use Current Location"
+          className="p-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg transition-colors"
+        >
+          <Navigation className={`w-4 h-4 ${isLocating ? 'animate-pulse' : ''}`} />
+        </button>
       </div>
       
       {/* Risk Banner */}
