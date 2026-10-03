@@ -84,28 +84,40 @@ interface MapViewProps {
   mapBounds: [[number, number], [number, number]];
 }
 
+function getIntensityColor(vmax: number) {
+  if (vmax >= 220) return '#9333ea'; // Super Cyclone (Purple)
+  if (vmax >= 167) return '#ef4444'; // Extremely Severe (Red)
+  if (vmax >= 118) return '#f97316'; // Very Severe (Orange)
+  if (vmax >= 62) return '#eab308'; // Cyclonic Storm (Yellow)
+  return '#3b82f6'; // Depression (Blue)
+}
+
 export function MapView({ storm, setStorm, model, setPreset, swath, selectedAssetId, setSelectedAssetId, appMode, userLocation, setUserLocation, assets, mapBounds }: MapViewProps) {
   
-  const { preTrack, postTrack, swathCircles, timeMarkers, currentStorm } = useMemo(() => {
-    const pre: [number, number][] = [], post: [number, number][] = [];
-    for (let t2 = 0; t2 <= 60; t2 += 1) {
-      const q2 = lonlat(model.tr.pos(t2));
-      const latlng: [number, number] = [q2[1], q2[0]]; // Leaflet uses [lat, lon]
-      if (t2 <= 36) pre.push(latlng); else post.push(latlng);
+  const { trackSegments, swathCircles, timeMarkers, currentStorm } = useMemo(() => {
+    const trackSegments: { positions: [[number, number], [number, number]], color: string, dash: string, weight: number }[] = [];
+    
+    for (let t2 = 0; t2 < 60; t2 += 1) {
+      const q1 = lonlat(model.tr.pos(t2));
+      const q2 = lonlat(model.tr.pos(t2 + 1));
+      const v = vmaxAt(storm, t2);
+      const isPost = t2 >= storm.t;
+      trackSegments.push({
+        positions: [[q1[1], q1[0]] as [number, number], [q2[1], q2[0]] as [number, number]],
+        color: getIntensityColor(v),
+        dash: isPost ? '5, 8' : '',
+        weight: isPost ? 3 : 5
+      });
     }
     
-    // Connect the paths
-    const mTL = lonlat(model.tr.pos(36));
-    post.unshift([mTL[1], mTL[0]]);
-    
-    const swathCircles: { latlng: [number, number], r: number }[] = [];
+    const swathCircles: { latlng: [number, number], r: number, color: string }[] = [];
     if (swath) {
       for (let tt = 0; tt <= 60; tt += 2) {
         const v = vmaxAt(storm, tt);
         const R = galeR(storm.rm, v);
         if (R) {
           const ll = lonlat(model.tr.pos(tt));
-          swathCircles.push({ latlng: [ll[1], ll[0]] as [number, number], r: R * 1000 }); // Leaflet radius is in meters
+          swathCircles.push({ latlng: [ll[1], ll[0]] as [number, number], r: R * 1000, color: getIntensityColor(v) }); 
         }
       }
     }
@@ -119,14 +131,16 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
       });
     }
     
+    const curV = vmaxAt(storm, storm.t);
     const curLL = lonlat(model.tr.pos(storm.t));
     const currentStorm = {
       latlng: [curLL[1], curLL[0]] as [number, number],
-      vn: vmaxAt(storm, storm.t),
-      Rn: galeR(storm.rm, vmaxAt(storm, storm.t)) * 1000
+      vn: curV,
+      color: getIntensityColor(curV),
+      Rn: galeR(storm.rm, curV) * 1000
     };
     
-    return { preTrack: pre, postTrack: post, swathCircles, timeMarkers, currentStorm };
+    return { trackSegments, swathCircles, timeMarkers, currentStorm };
   }, [storm, model, swath]);
 
   const nearestSafeDest = useMemo(() => {
@@ -178,13 +192,18 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
             key={`s-${i}`} 
             center={c.latlng} 
             radius={c.r} 
-            pathOptions={{ color: 'rgba(59, 130, 246, 0.1)', fillColor: 'rgba(59, 130, 246, 0.05)', stroke: false }} 
+            pathOptions={{ color: c.color, fillColor: c.color, fillOpacity: 0.05, stroke: false }} 
           />
         ))}
 
         {/* Tracks */}
-        <Polyline positions={preTrack} pathOptions={{ color: '#F97316', weight: 4 }} />
-        <Polyline positions={postTrack} pathOptions={{ color: '#F97316', weight: 3, dashArray: '5, 10' }} />
+        {trackSegments.map((seg, i) => (
+          <Polyline 
+            key={`tr-${i}`} 
+            positions={seg.positions} 
+            pathOptions={{ color: seg.color, weight: seg.weight, dashArray: seg.dash }} 
+          />
+        ))}
 
         {/* Time Markers */}
         {timeMarkers.map((tm: any) => (
@@ -203,13 +222,13 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
           <Circle 
             center={currentStorm.latlng} 
             radius={currentStorm.Rn} 
-            pathOptions={{ color: '#ef4444', weight: 2, dashArray: '5,5', fill: false }} 
+            pathOptions={{ color: currentStorm.color, weight: 2, dashArray: '5,5', fill: false }} 
           />
         )}
         <CircleMarker 
           center={currentStorm.latlng} 
-          radius={8} 
-          pathOptions={{ color: '#ef4444', fillColor: 'rgba(239, 68, 68, 0.5)', fillOpacity: 1, weight: 2 }} 
+          radius={currentStorm.vn > 167 ? 12 : 8} 
+          pathOptions={{ color: currentStorm.color, fillColor: currentStorm.color, fillOpacity: 0.5, weight: 3 }} 
         />
 
         {/* Draggable Handles */}
