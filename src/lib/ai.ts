@@ -12,6 +12,8 @@ Peak winds at their location will be ${Math.round(maxV)} km/h.
 The cyclone hits in ${eta} hours. 
 The nearest safe shelter is ${shelterName}, located ${distKm.toFixed(1)} km away.
 
+If the risk is LOW or MODERATE, tell them they are safe, they do not need to evacuate, and should just stay indoors. 
+If the risk is HIGH or CRITICAL, tell them to evacuate to the nearest safe shelter immediately.
 Write a very brief (2-3 sentences max), urgent, and highly actionable survival instruction. Do not use formatting like markdown. Be direct and authoritative.`;
 
   try {

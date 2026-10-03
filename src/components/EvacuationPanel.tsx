@@ -142,7 +142,7 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
       </div>
 
       {/* Evacuation Route */}
-      {nearestSafe && (
+      {nearestSafe && (level === 'CRITICAL' || level === 'HIGH') && (
         <div className="bg-blue-900/20 border border-blue-500/20 rounded-xl p-4">
           <h3 className="font-semibold text-blue-400 flex items-center gap-2 mb-3">
             <ArrowRight className="w-4 h-4" /> Nearest Safe Destination
