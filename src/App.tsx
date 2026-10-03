@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Play, Pause, Wind, Waves, ShieldAlert, Radar, Phone } from 'lucide-react';
+import { Play, Pause, Wind, Waves, ShieldAlert, Radar, Phone, Maximize, Minimize } from 'lucide-react';
 import { runModel } from './lib/simulation';
 import type { StormState } from './lib/simulation';
 import { PRESETS, SAMPLE_DATA, buildAssets, nearestCoast, K, REGIONS, type Asset } from './lib/model';
@@ -43,6 +43,7 @@ export default function App() {
   const [preset, setPreset] = useState(initialPreset);
   const [activeCyclones, setActiveCyclones] = useState<any[]>([]);
   const [userLocation, setUserLocation] = useLocalStorage<[number, number] | null>('aerogrid_location', null);
+  const [panelsVisible, setPanelsVisible] = useLocalStorage<boolean>('aerogrid_panels_visible', true);
 
   const [storm, setStorm] = useState<StormState>(() => {
     const p = PRESETS[initialPreset];
@@ -178,67 +179,80 @@ export default function App() {
       )}
 
       {/* Floating Sidebar (Top Left) */}
-      <aside className="absolute top-4 left-4 w-[280px] bg-panel/95 backdrop-blur-md rounded-2xl shadow-glass border border-border/50 flex flex-col p-4 z-10">
-        <div className="flex items-center gap-3 mb-6 px-2 mt-2">
-          <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-lg shadow-white/10">
-            <Radar className="w-6 h-6 text-[#202124]" />
+      {panelsVisible && (
+        <aside className="absolute top-4 left-4 w-[280px] bg-panel/95 backdrop-blur-md rounded-2xl shadow-glass border border-border/50 flex flex-col p-4 z-10">
+          <div className="flex items-center gap-3 mb-6 px-2 mt-2">
+            <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-lg shadow-white/10">
+              <Radar className="w-6 h-6 text-[#202124]" />
+            </div>
+            <div>
+              <h1 className="font-bold text-lg leading-tight tracking-wide text-text">AeroGrid</h1>
+              <p className="text-[10px] text-[#9AA0A6] uppercase tracking-widest font-mono font-bold">Disaster Desk</p>
+            </div>
           </div>
-          <div>
-            <h1 className="font-bold text-lg leading-tight tracking-wide text-text">AeroGrid</h1>
-            <p className="text-[10px] text-[#9AA0A6] uppercase tracking-widest font-mono font-bold">Disaster Desk</p>
-          </div>
-        </div>
 
-        <nav className="flex flex-col gap-2">
-          <button 
-            onClick={() => setAppMode('cyclone')}
-            className={cn("flex items-center gap-4 px-4 py-3 rounded-full text-sm font-medium transition-all", appMode === 'cyclone' ? "bg-[#303134] text-[#E8EAED]" : "hover:bg-[#303134] text-[#9AA0A6] hover:text-[#E8EAED]")}
-          >
-            <div className={cn("w-8 h-8 rounded-full flex items-center justify-center", appMode === 'cyclone' ? "bg-[#8AB4F8]" : "bg-[#8AB4F8]/20")}>
-              <Wind className={cn("w-4 h-4", appMode === 'cyclone' ? "text-[#202124]" : "text-[#8AB4F8]")} />
-            </div>
-            Cyclone Impact
-          </button>
-          <button 
-            onClick={() => setAppMode('evacuation')}
-            className={cn("flex items-center gap-4 px-4 py-3 rounded-full text-sm font-medium transition-all", appMode === 'evacuation' ? "bg-[#303134] text-[#E8EAED]" : "hover:bg-[#303134] text-[#9AA0A6] hover:text-[#E8EAED]")}
-          >
-            <div className={cn("w-8 h-8 rounded-full flex items-center justify-center", appMode === 'evacuation' ? "bg-[#81C995]" : "bg-[#81C995]/20")}>
-              <ShieldAlert className={cn("w-4 h-4", appMode === 'evacuation' ? "text-[#202124]" : "text-[#81C995]")} />
-            </div>
-            Evacuation & Risk
-          </button>
-          <button 
-            onClick={() => setAppMode('flood')}
-            className={cn("flex items-center gap-4 px-4 py-3 rounded-full text-sm font-medium transition-all", appMode === 'flood' ? "bg-[#303134] text-[#E8EAED]" : "hover:bg-[#303134] text-[#9AA0A6] hover:text-[#E8EAED]")}
-          >
-            <div className={cn("w-8 h-8 rounded-full flex items-center justify-center", appMode === 'flood' ? "bg-[#78D9EC]" : "bg-[#78D9EC]/20")}>
-              <Waves className={cn("w-4 h-4", appMode === 'flood' ? "text-[#202124]" : "text-[#78D9EC]")} />
-            </div>
-            Coastal Floods
-          </button>
-        </nav>
+          <nav className="flex flex-col gap-2">
+            <button 
+              onClick={() => setAppMode('cyclone')}
+              className={cn("flex items-center gap-4 px-4 py-3 rounded-full text-sm font-medium transition-all", appMode === 'cyclone' ? "bg-[#303134] text-[#E8EAED]" : "hover:bg-[#303134] text-[#9AA0A6] hover:text-[#E8EAED]")}
+            >
+              <div className={cn("w-8 h-8 rounded-full flex items-center justify-center", appMode === 'cyclone' ? "bg-[#8AB4F8]" : "bg-[#8AB4F8]/20")}>
+                <Wind className={cn("w-4 h-4", appMode === 'cyclone' ? "text-[#202124]" : "text-[#8AB4F8]")} />
+              </div>
+              Cyclone Impact
+            </button>
+            <button 
+              onClick={() => setAppMode('evacuation')}
+              className={cn("flex items-center gap-4 px-4 py-3 rounded-full text-sm font-medium transition-all", appMode === 'evacuation' ? "bg-[#303134] text-[#E8EAED]" : "hover:bg-[#303134] text-[#9AA0A6] hover:text-[#E8EAED]")}
+            >
+              <div className={cn("w-8 h-8 rounded-full flex items-center justify-center", appMode === 'evacuation' ? "bg-[#81C995]" : "bg-[#81C995]/20")}>
+                <ShieldAlert className={cn("w-4 h-4", appMode === 'evacuation' ? "text-[#202124]" : "text-[#81C995]")} />
+              </div>
+              Evacuation & Risk
+            </button>
+            <button 
+              onClick={() => setAppMode('flood')}
+              className={cn("flex items-center gap-4 px-4 py-3 rounded-full text-sm font-medium transition-all", appMode === 'flood' ? "bg-[#303134] text-[#E8EAED]" : "hover:bg-[#303134] text-[#9AA0A6] hover:text-[#E8EAED]")}
+            >
+              <div className={cn("w-8 h-8 rounded-full flex items-center justify-center", appMode === 'flood' ? "bg-[#78D9EC]" : "bg-[#78D9EC]/20")}>
+                <Waves className={cn("w-4 h-4", appMode === 'flood' ? "text-[#202124]" : "text-[#78D9EC]")} />
+              </div>
+              Coastal Floods
+            </button>
+          </nav>
 
-        <div className="mt-6 pt-6 border-t border-border/50">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-subtext mb-4 flex items-center gap-2">
-            <Phone className="w-3.5 h-3.5" /> Emergency Contacts
-          </h2>
-          <div className="space-y-3">
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-[#9AA0A6]">NDRF Control Room</span>
-              <span className="font-mono text-white">112</span>
-            </div>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-[#9AA0A6]">Coast Guard</span>
-              <span className="font-mono text-white">1554</span>
-            </div>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-[#9AA0A6]">Ambulance</span>
-              <span className="font-mono text-white">108</span>
+          <div className="mt-6 pt-6 border-t border-border/50">
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-subtext mb-4 flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5" /> Emergency Contacts
+            </h2>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-[#9AA0A6]">NDRF Control Room</span>
+                <span className="font-mono text-white">112</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-[#9AA0A6]">Coast Guard</span>
+                <span className="font-mono text-white">1554</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-[#9AA0A6]">Ambulance</span>
+                <span className="font-mono text-white">108</span>
+              </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      )}
+
+      {/* Floating Panel Toggle */}
+      <div className="absolute top-4 right-4 z-50">
+        <button 
+          onClick={() => setPanelsVisible(!panelsVisible)}
+          className="bg-panel/95 backdrop-blur-md rounded-full shadow-glass border border-border/50 p-3 hover:bg-white/10 transition-colors text-white group"
+          title={panelsVisible ? "Hide Panels" : "Show Panels"}
+        >
+          {panelsVisible ? <Maximize className="w-5 h-5 group-hover:scale-110 transition-transform" /> : <Minimize className="w-5 h-5 group-hover:scale-110 transition-transform" />}
+        </button>
+      </div>
 
       {/* Floating Top Controls (Top Center) */}
       {(appMode === 'cyclone' || appMode === 'evacuation') && (
@@ -290,8 +304,8 @@ export default function App() {
       )}
 
       {/* Floating Right Panel (Details) */}
-      {(appMode === 'cyclone' || appMode === 'evacuation') && (
-        <div className="absolute top-4 right-4 bottom-24 w-[420px] bg-panel/95 backdrop-blur-xl rounded-2xl shadow-glass border border-border/50 flex flex-col z-10 overflow-hidden">
+      {(appMode === 'cyclone' || appMode === 'evacuation') && panelsVisible && (
+        <div className="absolute top-16 right-4 bottom-24 w-[420px] bg-panel/95 backdrop-blur-xl rounded-2xl shadow-glass border border-border/50 flex flex-col z-10 overflow-hidden">
           {appMode === 'cyclone' ? (
             <SidePanel 
               storm={storm} 
@@ -318,8 +332,8 @@ export default function App() {
       )}
 
       {/* Floating Timeline Control (Bottom Left) */}
-      {(appMode === 'cyclone' || appMode === 'evacuation') && (
-        <div className="absolute bottom-6 left-6 z-20 w-[420px]">
+      {(appMode === 'cyclone' || appMode === 'evacuation') && panelsVisible && (
+        <div className="absolute bottom-6 left-[300px] z-20 w-[420px] transition-all" style={{ left: panelsVisible ? '300px' : '24px' }}>
           <div className="bg-[#202124]/95 backdrop-blur-md rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.3)] border border-[#3C4043] p-4 flex items-center gap-4">
             <button 
               onClick={togglePlay}
