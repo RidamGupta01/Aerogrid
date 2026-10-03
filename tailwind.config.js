@@ -7,24 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0B1015',
-        panel: '#151C23',
-        border: '#273440',
-        text: '#E5EFF2',
-        subtext: '#93A9B1',
-        sea: '#0A131B',
-        land: '#152427',
-        coast: '#32505C',
-        grid: 'rgba(229, 239, 242, 0.05)',
-        halo: '#0A131B',
-        accent: '#38BDF8', // A nice vibrant cyan
-        accentText: '#021017',
-        track: '#F43F5E', // Rose 500
+        background: '#202124',
+        panel: '#202124',
+        panelHover: '#303134',
+        border: '#3C4043',
+        text: '#E8EAED',
+        subtext: '#9AA0A6',
+        sea: '#202124',
+        land: '#303134',
+        coast: '#5F6368',
+        grid: 'rgba(255, 255, 255, 0.05)',
+        halo: '#202124',
+        accent: '#8AB4F8', // Google Dark Mode Blue
+        accentText: '#202124',
+        track: '#F28B82', // Google Dark Mode Red
         sev: {
-          low: '#10B981',    // Emerald 500
-          mod: '#FBBF24',    // Amber 400
-          high: '#F97316',   // Orange 500
-          crit: '#EF4444',   // Red 500
+          low: '#81C995',    // Google Dark Mode Green
+          mod: '#FDE293',    // Google Dark Mode Yellow
+          high: '#FCAD70',   // Google Dark Mode Orange
+          crit: '#F28B82',   // Google Dark Mode Red
         }
       },
       fontFamily: {

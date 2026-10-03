@@ -51,25 +51,48 @@ export function nearestCoast(P: Point): { d: number, pt: Point } {
 }
 
 export const PLACES = [
-  ['Kalingapatnam', 84.12, 18.33], ['Gopalpur', 84.9, 19.26], ['Satapada', 85.43, 19.66],
-  ['Puri', 85.83, 19.79], ['Konark', 86.08, 19.88], ['Paradip', 86.67, 20.26],
-  ['Rajnagar', 86.88, 20.55], ['Dhamra', 87.0, 20.75], ['Chandipur', 87.04, 21.46],
-  ['Digha', 87.55, 21.62], ['Sagar Island', 88.05, 21.65]
+  // West Coast
+  ['Jakhau', 68.7, 23.2], ['Porbandar', 69.6, 21.6], ['Veraval', 70.3, 20.9], ['Una', 71.0, 20.8],
+  ['Mumbai', 72.8, 19.0], ['Alibaug', 72.8, 18.6], ['Ratnagiri', 73.3, 16.9],
+  ['Goa', 73.8, 15.4], ['Karwar', 74.1, 14.8], ['Mangaluru', 74.8, 12.8],
+  ['Kozhikode', 75.7, 11.2], ['Kochi', 76.2, 9.9], ['Thiruvananthapuram', 76.9, 8.5],
+  // East Coast
+  ['Kanyakumari', 77.5, 8.0], ['Tuticorin', 78.1, 8.7], ['Rameswaram', 79.3, 9.2],
+  ['Nagapattinam', 79.8, 10.7], ['Puducherry', 79.8, 11.9], ['Chennai', 80.2, 13.0],
+  ['Nellore', 80.1, 14.4], ['Ongole', 80.0, 15.5], ['Bapatla', 80.4, 15.9],
+  ['Machilipatnam', 81.1, 16.1], ['Kakinada', 82.2, 16.9], ['Visakhapatnam', 83.3, 17.7],
+  ['Kalingapatnam', 84.1, 18.3], ['Gopalpur', 84.9, 19.2], ['Puri', 85.8, 19.8],
+  ['Paradip', 86.6, 20.2], ['Dhamra', 86.9, 20.7], ['Balasore', 86.9, 21.4],
+  ['Digha', 87.5, 21.6], ['Sagar Island', 88.1, 21.6],
+  // Islands
+  ['Port Blair', 92.7, 11.6]
 ].map((p: any) => ({ n: p[0], k: K(p[1], p[2]) }));
 
 export const DISTRICTS = [
-  ['Ganjam', 84.79, 19.31, 3.52], ['Khordha', 85.82, 20.3, 2.25],
-  ['Puri', 85.83, 19.81, 1.70], ['Jagatsinghpur', 86.17, 20.26, 1.14],
-  ['Kendrapara', 86.42, 20.5, 1.44], ['Bhadrak', 86.5, 21.06, 1.51],
-  ['Balasore', 86.93, 21.49, 2.32]
+  // Gujarat
+  ['Kachchh', 69.8, 23.2, 2.0], ['Devbhumi Dwarka', 69.3, 22.2, 0.7], ['Porbandar', 69.6, 21.6, 0.5], ['Gir Somnath', 70.6, 20.8, 1.2],
+  // Maharashtra
+  ['Palghar', 72.7, 19.6, 2.9], ['Mumbai', 72.8, 19.0, 12.4], ['Raigad', 73.1, 18.5, 2.6], ['Ratnagiri', 73.3, 16.9, 1.6],
+  // Karnataka & Kerala
+  ['Dakshina Kannada', 75.1, 12.8, 2.0], ['Ernakulam', 76.3, 10.0, 3.2], ['Thiruvananthapuram', 76.9, 8.5, 3.3],
+  // Tamil Nadu
+  ['Kanyakumari', 77.5, 8.2, 1.8], ['Thoothukudi', 78.1, 8.7, 1.7], ['Nagapattinam', 79.8, 10.7, 1.6], ['Chennai', 80.2, 13.0, 7.0],
+  // AP
+  ['Nellore', 79.9, 14.4, 2.9], ['Prakasam', 80.0, 15.5, 3.3], ['Krishna', 81.0, 16.1, 4.5], ['East Godavari', 82.2, 16.9, 5.1], ['Visakhapatnam', 83.3, 17.7, 4.2], ['Srikakulam', 83.9, 18.3, 2.7],
+  // Odisha
+  ['Ganjam', 84.7, 19.3, 3.5], ['Khordha', 85.6, 20.1, 2.2], ['Puri', 85.8, 19.8, 1.7], ['Jagatsinghpur', 86.1, 20.2, 1.1], ['Kendrapara', 86.4, 20.5, 1.4], ['Bhadrak', 86.5, 21.0, 1.5], ['Balasore', 86.9, 21.4, 2.3],
+  // Bengal
+  ['South 24 Parganas', 88.3, 21.9, 8.1]
 ].map((d: any) => ({ n: d[0], lon: d[1], lat: d[2], k: K(d[1], d[2]), pop: d[3] }));
 
 export const REGIONS: Record<string, { name: string, bounds: [number, number, number, number], defaultPreset: string }> = {
   odisha: { name: 'Odisha & Bengal', bounds: [19.0, 84.0, 22.0, 89.0], defaultPreset: 'fani' },
   ap: { name: 'Andhra Pradesh', bounds: [13.5, 79.5, 19.0, 84.5], defaultPreset: 'hudhud' },
   tn: { name: 'Tamil Nadu', bounds: [8.0, 77.0, 14.0, 81.0], defaultPreset: 'vardah' },
+  kerala: { name: 'Kerala & Karnataka', bounds: [8.0, 74.0, 15.0, 77.5], defaultPreset: 'ockhi' },
   gujarat: { name: 'Gujarat', bounds: [20.0, 68.0, 24.0, 73.0], defaultPreset: 'biparjoy' },
   maharashtra: { name: 'Maharashtra', bounds: [15.0, 71.0, 20.0, 74.0], defaultPreset: 'nisarga' },
+  andaman: { name: 'Andaman & Nicobar', bounds: [6.0, 92.0, 14.0, 94.0], defaultPreset: 'pabuk' },
 };
 
 export const TYPES: Record<string, { label: string, g: string, vf: number, sv: number, unit: string }> = {
@@ -145,9 +168,17 @@ export const PRESETS: Record<string, any> = {
   biparjoy: { region: 'gujarat', name: 'Biparjoy: Jakhau, very severe (Long & Erratic)', O: [66.5, 14.5], B: [67.0, 19.5], L: [68.5, 23.2], vL: 115, rm: 40 },
   tauktae: { region: 'gujarat', name: 'Tauktae: Una, extremely severe (Starts Nearby)', O: [71.0, 18.0], B: [70.5, 19.5], L: [71.0, 20.8], vL: 165, rm: 35 },
 
+  // Kerala & Karnataka (kerala)
+  ockhi: { region: 'kerala', name: 'Ockhi: Trivandrum coast, very severe', O: [77.5, 7.5], B: [74.5, 9.5], L: [71.0, 15.0], vL: 155, rm: 35 },
+  tauktae_kerala: { region: 'kerala', name: 'Tauktae (Early Phase): Coastal Karnataka', O: [73.5, 11.5], B: [72.0, 14.0], L: [71.0, 17.0], vL: 120, rm: 40 },
+
   // Maharashtra (maharashtra)
   nisarga: { region: 'maharashtra', name: 'Nisarga: Alibaug, severe (Starts Nearby)', O: [71.5, 16.0], B: [72.0, 17.5], L: [72.9, 18.6], vL: 110, rm: 30 },
-  phyan: { region: 'maharashtra', name: 'Phyan: Palghar, cyclonic storm (Long Track)', O: [70.0, 12.0], B: [71.5, 15.0], L: [72.7, 19.5], vL: 85, rm: 45 }
+  phyan: { region: 'maharashtra', name: 'Phyan: Palghar, cyclonic storm (Long Track)', O: [70.0, 12.0], B: [71.5, 15.0], L: [72.7, 19.5], vL: 85, rm: 45 },
+
+  // Andaman & Nicobar (andaman)
+  pabuk: { region: 'andaman', name: 'Pabuk: Andaman Islands, cyclonic storm', O: [95.0, 8.0], B: [93.5, 10.5], L: [92.5, 12.5], vL: 85, rm: 30 },
+  vardah_andaman: { region: 'andaman', name: 'Vardah (Genesis): Port Blair', O: [94.0, 10.0], B: [91.0, 12.0], L: [88.0, 13.0], vL: 100, rm: 40 }
 };
 
 export function imd(v: number) {
@@ -176,8 +207,16 @@ export interface Asset {
 }
 
 export function buildAssets(list: any[]): Asset[] {
-  return list.map((a, i) => ({
-    id: i, name: a[0], type: a[1], lon: a[2], lat: a[3],
-    elev: a[4], cond: a[5], cap: a[6], k: K(a[2], a[3])
-  }));
+  return list.map((a, i) => {
+    if (Array.isArray(a)) {
+      return {
+        id: i, name: a[0], type: a[1], lon: a[2], lat: a[3],
+        elev: a[4], cond: a[5], cap: a[6], k: K(a[2], a[3])
+      };
+    }
+    return {
+      id: a.id || i, name: a.name, type: a.type, lon: a.lon, lat: a.lat,
+      elev: a.elev, cond: a.cond, cap: a.cap, k: K(a.lon, a.lat)
+    };
+  });
 }

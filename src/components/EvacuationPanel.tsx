@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
+import { generateEvacuationAdvice } from '../lib/ai';
 import type { StormState } from '../lib/simulation';
 import type { Asset } from '../lib/model';
 import { K, dist } from '../lib/model';
@@ -13,6 +14,8 @@ interface EvacuationPanelProps {
 }
 
 export function EvacuationPanel({ userLocation, storm, model, assets }: EvacuationPanelProps) {
+  const [aiAnalysis, setAiAnalysis] = useState<string | null>(null);
+  const [isAiLoading, setIsAiLoading] = useState(false);
   
   const riskAssessment = useMemo(() => {
     if (!userLocation) return null;
@@ -64,6 +67,29 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
     return { minD, eta, maxV, nearestSafe, safeDist, level };
   }, [userLocation, storm, model, assets]);
 
+  useEffect(() => {
+    if (!riskAssessment) return;
+    let isActive = true;
+    
+    async function fetchAi() {
+      setIsAiLoading(true);
+      const advice = await generateEvacuationAdvice(
+        riskAssessment!.maxV,
+        riskAssessment!.eta,
+        riskAssessment!.level,
+        riskAssessment!.nearestSafe?.name || 'an emergency shelter',
+        riskAssessment!.safeDist
+      );
+      if (isActive) {
+        setAiAnalysis(advice);
+        setIsAiLoading(false);
+      }
+    }
+    
+    fetchAi();
+    return () => { isActive = false; };
+  }, [riskAssessment]);
+
   if (!userLocation) {
     return (
       <div className="p-6 h-full flex flex-col items-center justify-center text-center">
@@ -79,7 +105,7 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
   const { eta, maxV, nearestSafe, safeDist, level } = riskAssessment!;
 
   return (
-    <div className="p-6 h-full overflow-y-auto flex flex-col gap-6">
+    <div className="p-6 h-full overflow-y-auto flex flex-col gap-6 pb-24">
       <div>
         <h2 className="text-xl font-bold mb-1">Personal Risk Report</h2>
         <p className="text-sm text-subtext font-mono">{userLocation[0].toFixed(4)}°N, {userLocation[1].toFixed(4)}°E</p>
@@ -151,10 +177,10 @@ export function EvacuationPanel({ userLocation, storm, model, assets }: Evacuati
       <div className="mt-4 p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
         <div className="flex items-center gap-2 mb-2">
           <div className="w-5 h-5 rounded-md bg-indigo-500/20 flex items-center justify-center">✨</div>
-          <span className="font-semibold text-indigo-300 text-sm">Gemini AI Analysis</span>
+          <span className="font-semibold text-indigo-300 text-sm">Groq AI Analysis</span>
         </div>
         <p className="text-xs text-indigo-200/70 italic">
-          "Based on the {maxV.toFixed(0)}km/h projection at your location, structural damage to light roofs is likely. The primary threat will be wind-borne debris. Proceed to {nearestSafe?.name || 'the nearest shelter'} before T+{Math.max(1, eta - 4)}h."
+          {isAiLoading ? 'Analyzing location variables...' : (aiAnalysis || 'Could not fetch analysis.')}
         </p>
       </div>
 

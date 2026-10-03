@@ -1,0 +1,5896 @@
+{
+  "gujarat": [
+    {
+      "id": "gen_7po7pann4",
+      "name": "Water Works, Kachchh",
+      "type": "water",
+      "lon": 69.5841,
+      "lat": 23.0694,
+      "elev": 16,
+      "cond": 2,
+      "cap": 105
+    },
+    {
+      "id": "gen_rwgrfk4ez",
+      "name": "Multipurpose Shelter, Kachchh",
+      "type": "shelter",
+      "lon": 69.7662,
+      "lat": 23.0935,
+      "elev": 17,
+      "cond": 4,
+      "cap": 519
+    },
+    {
+      "id": "gen_7kyckhv9m",
+      "name": "33/11 kV Substation, Kachchh",
+      "type": "power",
+      "lon": 69.6803,
+      "lat": 23.2536,
+      "elev": 6,
+      "cond": 4,
+      "cap": 272
+    },
+    {
+      "id": "gen_xw1qcwmbb",
+      "name": "Power Station, Kachchh",
+      "type": "power",
+      "lon": 70.0081,
+      "lat": 23.4495,
+      "elev": 2,
+      "cond": 2,
+      "cap": 400
+    },
+    {
+      "id": "gen_idydzm3fs",
+      "name": "Cyclone Shelter, Kachchh",
+      "type": "shelter",
+      "lon": 69.6539,
+      "lat": 23.0831,
+      "elev": 16,
+      "cond": 2,
+      "cap": 610
+    },
+    {
+      "id": "gen_tjdb0cufq",
+      "name": "33/11 kV Substation, Kachchh",
+      "type": "power",
+      "lon": 69.6671,
+      "lat": 23.284,
+      "elev": 15,
+      "cond": 2,
+      "cap": 70
+    },
+    {
+      "id": "gen_i4ww98i2u",
+      "name": "General Hospital, Kachchh",
+      "type": "hospital",
+      "lon": 69.5912,
+      "lat": 23.3471,
+      "elev": 5,
+      "cond": 2,
+      "cap": 349
+    },
+    {
+      "id": "gen_pa1ny91m6",
+      "name": "Telephone Exchange, Kachchh",
+      "type": "telecom",
+      "lon": 69.9984,
+      "lat": 23.3726,
+      "elev": 4,
+      "cond": 2,
+      "cap": 359
+    },
+    {
+      "id": "gen_aqs9omo0n",
+      "name": "Tower Cluster, Kachchh",
+      "type": "telecom",
+      "lon": 69.593,
+      "lat": 23.3599,
+      "elev": 8,
+      "cond": 3,
+      "cap": 475
+    },
+    {
+      "id": "gen_umzzl3rb8",
+      "name": "132 kV Grid Substation, Kachchh",
+      "type": "power",
+      "lon": 69.813,
+      "lat": 23.3857,
+      "elev": 14,
+      "cond": 4,
+      "cap": 443
+    },
+    {
+      "id": "gen_rejaqwkq3",
+      "name": "Water Works, Kachchh",
+      "type": "water",
+      "lon": 69.8208,
+      "lat": 23.0575,
+      "elev": 2,
+      "cond": 4,
+      "cap": 321
+    },
+    {
+      "id": "gen_v5g6he1jr",
+      "name": "General Hospital, Kachchh",
+      "type": "hospital",
+      "lon": 69.742,
+      "lat": 23.2534,
+      "elev": 11,
+      "cond": 2,
+      "cap": 267
+    },
+    {
+      "id": "gen_dj9902chw",
+      "name": "Water Works, Kachchh",
+      "type": "water",
+      "lon": 69.7083,
+      "lat": 23.3948,
+      "elev": 2,
+      "cond": 3,
+      "cap": 392
+    },
+    {
+      "id": "gen_4sek728p4",
+      "name": "33/11 kV Substation, Kachchh",
+      "type": "power",
+      "lon": 69.6251,
+      "lat": 23.4271,
+      "elev": 12,
+      "cond": 2,
+      "cap": 357
+    },
+    {
+      "id": "gen_5017bnfuc",
+      "name": "Cyclone Shelter, Kachchh",
+      "type": "shelter",
+      "lon": 69.8284,
+      "lat": 23.1932,
+      "elev": 16,
+      "cond": 4,
+      "cap": 937
+    },
+    {
+      "id": "gen_kbhgv8ylz",
+      "name": "Relief Camp, Kachchh",
+      "type": "shelter",
+      "lon": 69.892,
+      "lat": 22.9858,
+      "elev": 12,
+      "cond": 3,
+      "cap": 906
+    },
+    {
+      "id": "gen_konmxsa4x",
+      "name": "Multipurpose Shelter, Kachchh",
+      "type": "shelter",
+      "lon": 69.745,
+      "lat": 23.3003,
+      "elev": 15,
+      "cond": 3,
+      "cap": 1465
+    },
+    {
+      "id": "gen_owdyg4al2",
+      "name": "Treatment Plant, Kachchh",
+      "type": "water",
+      "lon": 69.8599,
+      "lat": 23.4247,
+      "elev": 16,
+      "cond": 4,
+      "cap": 291
+    },
+    {
+      "id": "gen_jzflfevnl",
+      "name": "Power Station, Kachchh",
+      "type": "power",
+      "lon": 69.8755,
+      "lat": 23.0263,
+      "elev": 7,
+      "cond": 2,
+      "cap": 56
+    },
+    {
+      "id": "gen_d7u3d5a5a",
+      "name": "Pumping Station, Kachchh",
+      "type": "water",
+      "lon": 69.5799,
+      "lat": 23.1028,
+      "elev": 9,
+      "cond": 4,
+      "cap": 389
+    },
+    {
+      "id": "gen_kdl85tmly",
+      "name": "Power Station, Kachchh",
+      "type": "power",
+      "lon": 69.9186,
+      "lat": 23.1679,
+      "elev": 13,
+      "cond": 3,
+      "cap": 152
+    },
+    {
+      "id": "gen_m30eofyqv",
+      "name": "Relief Camp, Devbhumi Dwarka",
+      "type": "shelter",
+      "lon": 69.376,
+      "lat": 22.3465,
+      "elev": 19,
+      "cond": 4,
+      "cap": 1096
+    },
+    {
+      "id": "gen_zu1n3jx3e",
+      "name": "Multipurpose Shelter, Devbhumi Dwarka",
+      "type": "shelter",
+      "lon": 69.125,
+      "lat": 22.379,
+      "elev": 3,
+      "cond": 3,
+      "cap": 779
+    },
+    {
+      "id": "gen_z26bisekl",
+      "name": "Relief Camp, Devbhumi Dwarka",
+      "type": "shelter",
+      "lon": 69.3752,
+      "lat": 22.2257,
+      "elev": 7,
+      "cond": 3,
+      "cap": 982
+    },
+    {
+      "id": "gen_tpcaxkbal",
+      "name": "District Hospital, Devbhumi Dwarka",
+      "type": "hospital",
+      "lon": 69.5026,
+      "lat": 21.9758,
+      "elev": 13,
+      "cond": 4,
+      "cap": 477
+    },
+    {
+      "id": "gen_h3q5y3dgm",
+      "name": "Pumping Station, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.1106,
+      "lat": 22.4449,
+      "elev": 13,
+      "cond": 2,
+      "cap": 315
+    },
+    {
+      "id": "gen_0s1no2ya9",
+      "name": "Treatment Plant, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.0664,
+      "lat": 22.1066,
+      "elev": 17,
+      "cond": 4,
+      "cap": 71
+    },
+    {
+      "id": "gen_tvvqiwaux",
+      "name": "33/11 kV Substation, Devbhumi Dwarka",
+      "type": "power",
+      "lon": 69.4092,
+      "lat": 21.9644,
+      "elev": 17,
+      "cond": 4,
+      "cap": 265
+    },
+    {
+      "id": "gen_wvmcutf0w",
+      "name": "Pumping Station, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.5406,
+      "lat": 22.225,
+      "elev": 10,
+      "cond": 4,
+      "cap": 207
+    },
+    {
+      "id": "gen_7vi8stz7j",
+      "name": "BSNL Exchange, Devbhumi Dwarka",
+      "type": "telecom",
+      "lon": 69.4762,
+      "lat": 21.9935,
+      "elev": 16,
+      "cond": 3,
+      "cap": 161
+    },
+    {
+      "id": "gen_6413m5fju",
+      "name": "Water Works, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.3344,
+      "lat": 22.0932,
+      "elev": 6,
+      "cond": 4,
+      "cap": 281
+    },
+    {
+      "id": "gen_pzocg9vug",
+      "name": "Pumping Station, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.1389,
+      "lat": 22.0309,
+      "elev": 12,
+      "cond": 2,
+      "cap": 134
+    },
+    {
+      "id": "gen_po424sjh6",
+      "name": "Cyclone Shelter, Devbhumi Dwarka",
+      "type": "shelter",
+      "lon": 69.169,
+      "lat": 22.0173,
+      "elev": 12,
+      "cond": 3,
+      "cap": 356
+    },
+    {
+      "id": "gen_4oz4fbzu7",
+      "name": "Treatment Plant, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.4532,
+      "lat": 22.3458,
+      "elev": 11,
+      "cond": 2,
+      "cap": 240
+    },
+    {
+      "id": "gen_kavp9e3et",
+      "name": "Water Works, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.2452,
+      "lat": 22.1939,
+      "elev": 11,
+      "cond": 2,
+      "cap": 352
+    },
+    {
+      "id": "gen_gng3qn3gj",
+      "name": "Relief Camp, Devbhumi Dwarka",
+      "type": "shelter",
+      "lon": 69.4567,
+      "lat": 22.0354,
+      "elev": 9,
+      "cond": 3,
+      "cap": 806
+    },
+    {
+      "id": "gen_9p1mgtrgp",
+      "name": "33/11 kV Substation, Devbhumi Dwarka",
+      "type": "power",
+      "lon": 69.4033,
+      "lat": 22.3143,
+      "elev": 17,
+      "cond": 2,
+      "cap": 71
+    },
+    {
+      "id": "gen_mauncqcsd",
+      "name": "Pumping Station, Devbhumi Dwarka",
+      "type": "water",
+      "lon": 69.4839,
+      "lat": 22.0815,
+      "elev": 14,
+      "cond": 2,
+      "cap": 339
+    },
+    {
+      "id": "gen_ncimeavpg",
+      "name": "CHC, Devbhumi Dwarka",
+      "type": "hospital",
+      "lon": 69.194,
+      "lat": 22.0084,
+      "elev": 13,
+      "cond": 4,
+      "cap": 101
+    },
+    {
+      "id": "gen_j6l2863ko",
+      "name": "Cyclone Shelter, Devbhumi Dwarka",
+      "type": "shelter",
+      "lon": 69.5078,
+      "lat": 22.2143,
+      "elev": 18,
+      "cond": 4,
+      "cap": 687
+    },
+    {
+      "id": "gen_4b7p6va0o",
+      "name": "District Hospital, Devbhumi Dwarka",
+      "type": "hospital",
+      "lon": 69.2624,
+      "lat": 22.4484,
+      "elev": 3,
+      "cond": 3,
+      "cap": 70
+    },
+    {
+      "id": "gen_as7aosqn8",
+      "name": "CHC, Devbhumi Dwarka",
+      "type": "hospital",
+      "lon": 69.0712,
+      "lat": 22.1762,
+      "elev": 17,
+      "cond": 4,
+      "cap": 488
+    },
+    {
+      "id": "gen_7455145hg",
+      "name": "Medical College, Devbhumi Dwarka",
+      "type": "hospital",
+      "lon": 69.5056,
+      "lat": 22.3299,
+      "elev": 12,
+      "cond": 4,
+      "cap": 429
+    },
+    {
+      "id": "gen_kkk9bv762",
+      "name": "District Hospital, Porbandar",
+      "type": "hospital",
+      "lon": 69.6487,
+      "lat": 21.431,
+      "elev": 13,
+      "cond": 4,
+      "cap": 264
+    },
+    {
+      "id": "gen_ww9ahgsp7",
+      "name": "Treatment Plant, Porbandar",
+      "type": "water",
+      "lon": 69.5183,
+      "lat": 21.6709,
+      "elev": 7,
+      "cond": 2,
+      "cap": 183
+    },
+    {
+      "id": "gen_tl7xgurj2",
+      "name": "CHC, Porbandar",
+      "type": "hospital",
+      "lon": 69.7694,
+      "lat": 21.3574,
+      "elev": 4,
+      "cond": 2,
+      "cap": 71
+    },
+    {
+      "id": "gen_wj7x5mm31",
+      "name": "Relief Camp, Porbandar",
+      "type": "shelter",
+      "lon": 69.7627,
+      "lat": 21.8284,
+      "elev": 10,
+      "cond": 3,
+      "cap": 335
+    },
+    {
+      "id": "gen_w31qznpq9",
+      "name": "Power Station, Porbandar",
+      "type": "power",
+      "lon": 69.8076,
+      "lat": 21.3887,
+      "elev": 7,
+      "cond": 3,
+      "cap": 160
+    },
+    {
+      "id": "gen_9hpban5f9",
+      "name": "Treatment Plant, Porbandar",
+      "type": "water",
+      "lon": 69.3776,
+      "lat": 21.5276,
+      "elev": 6,
+      "cond": 2,
+      "cap": 310
+    },
+    {
+      "id": "gen_f4l9vjoae",
+      "name": "Medical College, Porbandar",
+      "type": "hospital",
+      "lon": 69.5909,
+      "lat": 21.4624,
+      "elev": 4,
+      "cond": 3,
+      "cap": 325
+    },
+    {
+      "id": "gen_ntvmz45pb",
+      "name": "33/11 kV Substation, Porbandar",
+      "type": "power",
+      "lon": 69.8206,
+      "lat": 21.6844,
+      "elev": 12,
+      "cond": 4,
+      "cap": 250
+    },
+    {
+      "id": "gen_zosgcwev5",
+      "name": "BSNL Exchange, Porbandar",
+      "type": "telecom",
+      "lon": 69.4943,
+      "lat": 21.3577,
+      "elev": 11,
+      "cond": 4,
+      "cap": 290
+    },
+    {
+      "id": "gen_aac4oemrp",
+      "name": "Multipurpose Shelter, Porbandar",
+      "type": "shelter",
+      "lon": 69.6003,
+      "lat": 21.5762,
+      "elev": 10,
+      "cond": 2,
+      "cap": 968
+    },
+    {
+      "id": "gen_nyvblc9pk",
+      "name": "Treatment Plant, Porbandar",
+      "type": "water",
+      "lon": 69.793,
+      "lat": 21.7385,
+      "elev": 7,
+      "cond": 3,
+      "cap": 456
+    },
+    {
+      "id": "gen_f9tqg0rce",
+      "name": "Power Station, Porbandar",
+      "type": "power",
+      "lon": 69.836,
+      "lat": 21.4324,
+      "elev": 11,
+      "cond": 4,
+      "cap": 425
+    },
+    {
+      "id": "gen_dgfxnraok",
+      "name": "Relief Camp, Porbandar",
+      "type": "shelter",
+      "lon": 69.8352,
+      "lat": 21.3682,
+      "elev": 6,
+      "cond": 4,
+      "cap": 435
+    },
+    {
+      "id": "gen_c267jbpn2",
+      "name": "District Hospital, Porbandar",
+      "type": "hospital",
+      "lon": 69.4325,
+      "lat": 21.3636,
+      "elev": 12,
+      "cond": 2,
+      "cap": 50
+    },
+    {
+      "id": "gen_ezg1l5lqw",
+      "name": "Tower Cluster, Porbandar",
+      "type": "telecom",
+      "lon": 69.8275,
+      "lat": 21.749,
+      "elev": 6,
+      "cond": 4,
+      "cap": 65
+    },
+    {
+      "id": "gen_w7uz0anmc",
+      "name": "Tower Cluster, Porbandar",
+      "type": "telecom",
+      "lon": 69.6526,
+      "lat": 21.5816,
+      "elev": 3,
+      "cond": 4,
+      "cap": 250
+    },
+    {
+      "id": "gen_szi194ejk",
+      "name": "Cyclone Shelter, Porbandar",
+      "type": "shelter",
+      "lon": 69.379,
+      "lat": 21.5725,
+      "elev": 12,
+      "cond": 4,
+      "cap": 510
+    },
+    {
+      "id": "gen_yl8ylgb81",
+      "name": "Pumping Station, Gir Somnath",
+      "type": "water",
+      "lon": 70.4201,
+      "lat": 20.6451,
+      "elev": 7,
+      "cond": 2,
+      "cap": 199
+    },
+    {
+      "id": "gen_aywzzwhv3",
+      "name": "Power Station, Gir Somnath",
+      "type": "power",
+      "lon": 70.8138,
+      "lat": 20.5771,
+      "elev": 4,
+      "cond": 2,
+      "cap": 269
+    },
+    {
+      "id": "gen_liwq0lc28",
+      "name": "General Hospital, Gir Somnath",
+      "type": "hospital",
+      "lon": 70.5115,
+      "lat": 20.6895,
+      "elev": 2,
+      "cond": 2,
+      "cap": 255
+    },
+    {
+      "id": "gen_4fiqb2b1m",
+      "name": "Medical College, Gir Somnath",
+      "type": "hospital",
+      "lon": 70.5593,
+      "lat": 21.0231,
+      "elev": 2,
+      "cond": 2,
+      "cap": 117
+    },
+    {
+      "id": "gen_45qaltz2v",
+      "name": "Relief Camp, Gir Somnath",
+      "type": "shelter",
+      "lon": 70.8012,
+      "lat": 20.7057,
+      "elev": 3,
+      "cond": 3,
+      "cap": 1293
+    },
+    {
+      "id": "gen_r820r1fdc",
+      "name": "Tower Cluster, Gir Somnath",
+      "type": "telecom",
+      "lon": 70.5088,
+      "lat": 20.7699,
+      "elev": 6,
+      "cond": 3,
+      "cap": 316
+    },
+    {
+      "id": "gen_1nsva6u6a",
+      "name": "Medical College, Gir Somnath",
+      "type": "hospital",
+      "lon": 70.8091,
+      "lat": 20.9112,
+      "elev": 18,
+      "cond": 2,
+      "cap": 313
+    },
+    {
+      "id": "gen_m1g9h8vpt",
+      "name": "BSNL Exchange, Gir Somnath",
+      "type": "telecom",
+      "lon": 70.5391,
+      "lat": 20.8845,
+      "elev": 15,
+      "cond": 4,
+      "cap": 365
+    },
+    {
+      "id": "gen_u6n9flkmu",
+      "name": "Medical College, Gir Somnath",
+      "type": "hospital",
+      "lon": 70.6829,
+      "lat": 20.6729,
+      "elev": 7,
+      "cond": 4,
+      "cap": 388
+    },
+    {
+      "id": "gen_91f7i50gt",
+      "name": "Telephone Exchange, Gir Somnath",
+      "type": "telecom",
+      "lon": 70.8112,
+      "lat": 20.9014,
+      "elev": 6,
+      "cond": 2,
+      "cap": 213
+    },
+    {
+      "id": "gen_4b680o1ow",
+      "name": "Multipurpose Shelter, Gir Somnath",
+      "type": "shelter",
+      "lon": 70.478,
+      "lat": 20.8669,
+      "elev": 19,
+      "cond": 2,
+      "cap": 774
+    },
+    {
+      "id": "gen_lisei97pu",
+      "name": "CHC, Gir Somnath",
+      "type": "hospital",
+      "lon": 70.7529,
+      "lat": 20.6802,
+      "elev": 3,
+      "cond": 2,
+      "cap": 110
+    },
+    {
+      "id": "gen_rtgnwyx2i",
+      "name": "Pumping Station, Gir Somnath",
+      "type": "water",
+      "lon": 70.6534,
+      "lat": 20.7381,
+      "elev": 15,
+      "cond": 3,
+      "cap": 485
+    },
+    {
+      "id": "gen_epivsibt9",
+      "name": "Relief Camp, Gir Somnath",
+      "type": "shelter",
+      "lon": 70.4207,
+      "lat": 20.8431,
+      "elev": 10,
+      "cond": 4,
+      "cap": 908
+    },
+    {
+      "id": "gen_5ew7l9upl",
+      "name": "Cyclone Shelter, Gir Somnath",
+      "type": "shelter",
+      "lon": 70.7253,
+      "lat": 20.7682,
+      "elev": 3,
+      "cond": 2,
+      "cap": 622
+    },
+    {
+      "id": "gen_zb6jagvfi",
+      "name": "33/11 kV Substation, Gir Somnath",
+      "type": "power",
+      "lon": 70.4312,
+      "lat": 20.5604,
+      "elev": 13,
+      "cond": 3,
+      "cap": 102
+    },
+    {
+      "id": "gen_hcnmm0vrf",
+      "name": "BSNL Exchange, Gir Somnath",
+      "type": "telecom",
+      "lon": 70.6021,
+      "lat": 20.7084,
+      "elev": 4,
+      "cond": 3,
+      "cap": 459
+    },
+    {
+      "id": "gen_x6hy17lqe",
+      "name": "Multipurpose Shelter, Gir Somnath",
+      "type": "shelter",
+      "lon": 70.5132,
+      "lat": 20.9129,
+      "elev": 9,
+      "cond": 3,
+      "cap": 246
+    },
+    {
+      "id": "gen_8r87u3d0u",
+      "name": "33/11 kV Substation, Gir Somnath",
+      "type": "power",
+      "lon": 70.7478,
+      "lat": 20.9248,
+      "elev": 15,
+      "cond": 2,
+      "cap": 54
+    },
+    {
+      "id": "gen_rwnmwv1t8",
+      "name": "Power Station, Gir Somnath",
+      "type": "power",
+      "lon": 70.4285,
+      "lat": 20.8611,
+      "elev": 12,
+      "cond": 2,
+      "cap": 70
+    },
+    {
+      "id": "gen_sl22yhl8a",
+      "name": "Multipurpose Shelter, Gir Somnath",
+      "type": "shelter",
+      "lon": 70.4602,
+      "lat": 20.6545,
+      "elev": 15,
+      "cond": 3,
+      "cap": 1248
+    }
+  ],
+  "maharashtra": [
+    {
+      "id": "gen_f5tzxxhqr",
+      "name": "Multipurpose Shelter, Palghar",
+      "type": "shelter",
+      "lon": 72.686,
+      "lat": 19.5895,
+      "elev": 14,
+      "cond": 3,
+      "cap": 1105
+    },
+    {
+      "id": "gen_hrkj1nbpi",
+      "name": "Cyclone Shelter, Palghar",
+      "type": "shelter",
+      "lon": 72.9337,
+      "lat": 19.536,
+      "elev": 18,
+      "cond": 3,
+      "cap": 377
+    },
+    {
+      "id": "gen_cglg141iv",
+      "name": "BSNL Exchange, Palghar",
+      "type": "telecom",
+      "lon": 72.8228,
+      "lat": 19.5398,
+      "elev": 16,
+      "cond": 4,
+      "cap": 364
+    },
+    {
+      "id": "gen_3uud5z58x",
+      "name": "33/11 kV Substation, Palghar",
+      "type": "power",
+      "lon": 72.9235,
+      "lat": 19.8414,
+      "elev": 5,
+      "cond": 2,
+      "cap": 183
+    },
+    {
+      "id": "gen_9dikq6h3c",
+      "name": "Water Works, Palghar",
+      "type": "water",
+      "lon": 72.8727,
+      "lat": 19.4769,
+      "elev": 17,
+      "cond": 4,
+      "cap": 270
+    },
+    {
+      "id": "gen_xupf3k25j",
+      "name": "Tower Cluster, Palghar",
+      "type": "telecom",
+      "lon": 72.9097,
+      "lat": 19.576,
+      "elev": 3,
+      "cond": 3,
+      "cap": 460
+    },
+    {
+      "id": "gen_catrrinqh",
+      "name": "Telephone Exchange, Palghar",
+      "type": "telecom",
+      "lon": 72.8986,
+      "lat": 19.7888,
+      "elev": 4,
+      "cond": 4,
+      "cap": 216
+    },
+    {
+      "id": "gen_75gsrkfm3",
+      "name": "Treatment Plant, Palghar",
+      "type": "water",
+      "lon": 72.5855,
+      "lat": 19.5675,
+      "elev": 9,
+      "cond": 2,
+      "cap": 282
+    },
+    {
+      "id": "gen_p2pm3l972",
+      "name": "Telephone Exchange, Palghar",
+      "type": "telecom",
+      "lon": 72.9487,
+      "lat": 19.6826,
+      "elev": 18,
+      "cond": 4,
+      "cap": 410
+    },
+    {
+      "id": "gen_7u8zjdl3t",
+      "name": "Water Works, Palghar",
+      "type": "water",
+      "lon": 72.8092,
+      "lat": 19.5146,
+      "elev": 9,
+      "cond": 4,
+      "cap": 130
+    },
+    {
+      "id": "gen_bij5wpvqy",
+      "name": "Water Works, Palghar",
+      "type": "water",
+      "lon": 72.517,
+      "lat": 19.6382,
+      "elev": 4,
+      "cond": 4,
+      "cap": 190
+    },
+    {
+      "id": "gen_d24qn7i9d",
+      "name": "33/11 kV Substation, Palghar",
+      "type": "power",
+      "lon": 72.836,
+      "lat": 19.6829,
+      "elev": 18,
+      "cond": 3,
+      "cap": 114
+    },
+    {
+      "id": "gen_axw1jkyan",
+      "name": "Tower Cluster, Palghar",
+      "type": "telecom",
+      "lon": 72.5964,
+      "lat": 19.8114,
+      "elev": 9,
+      "cond": 3,
+      "cap": 325
+    },
+    {
+      "id": "gen_aim2jx8k1",
+      "name": "Treatment Plant, Palghar",
+      "type": "water",
+      "lon": 72.4959,
+      "lat": 19.7327,
+      "elev": 13,
+      "cond": 2,
+      "cap": 494
+    },
+    {
+      "id": "gen_5uk01xesp",
+      "name": "Cyclone Shelter, Palghar",
+      "type": "shelter",
+      "lon": 72.5172,
+      "lat": 19.686,
+      "elev": 5,
+      "cond": 3,
+      "cap": 435
+    },
+    {
+      "id": "gen_ybq9vyi2x",
+      "name": "Power Station, Palghar",
+      "type": "power",
+      "lon": 72.5128,
+      "lat": 19.4638,
+      "elev": 3,
+      "cond": 3,
+      "cap": 460
+    },
+    {
+      "id": "gen_rtr16tc6n",
+      "name": "Relief Camp, Palghar",
+      "type": "shelter",
+      "lon": 72.9462,
+      "lat": 19.7134,
+      "elev": 16,
+      "cond": 4,
+      "cap": 812
+    },
+    {
+      "id": "gen_5i4e35w0x",
+      "name": "District Hospital, Mumbai",
+      "type": "hospital",
+      "lon": 72.746,
+      "lat": 18.8373,
+      "elev": 13,
+      "cond": 2,
+      "cap": 215
+    },
+    {
+      "id": "gen_gaeeqqnfz",
+      "name": "Multipurpose Shelter, Mumbai",
+      "type": "shelter",
+      "lon": 72.968,
+      "lat": 18.8956,
+      "elev": 14,
+      "cond": 2,
+      "cap": 1439
+    },
+    {
+      "id": "gen_4ewslg8sm",
+      "name": "Water Works, Mumbai",
+      "type": "water",
+      "lon": 72.8426,
+      "lat": 18.7596,
+      "elev": 7,
+      "cond": 2,
+      "cap": 196
+    },
+    {
+      "id": "gen_152c7q3ad",
+      "name": "Power Station, Mumbai",
+      "type": "power",
+      "lon": 73.0108,
+      "lat": 18.7861,
+      "elev": 3,
+      "cond": 2,
+      "cap": 266
+    },
+    {
+      "id": "gen_vtyml44hd",
+      "name": "CHC, Mumbai",
+      "type": "hospital",
+      "lon": 72.8554,
+      "lat": 19.2498,
+      "elev": 8,
+      "cond": 3,
+      "cap": 361
+    },
+    {
+      "id": "gen_lqkrbwxxu",
+      "name": "Relief Camp, Mumbai",
+      "type": "shelter",
+      "lon": 73.0291,
+      "lat": 18.9898,
+      "elev": 9,
+      "cond": 4,
+      "cap": 472
+    },
+    {
+      "id": "gen_xdpweg1su",
+      "name": "132 kV Grid Substation, Mumbai",
+      "type": "power",
+      "lon": 73.0024,
+      "lat": 18.8033,
+      "elev": 9,
+      "cond": 2,
+      "cap": 393
+    },
+    {
+      "id": "gen_ccz7airy7",
+      "name": "Multipurpose Shelter, Mumbai",
+      "type": "shelter",
+      "lon": 72.793,
+      "lat": 18.962,
+      "elev": 12,
+      "cond": 3,
+      "cap": 957
+    },
+    {
+      "id": "gen_63b5thfpr",
+      "name": "Tower Cluster, Mumbai",
+      "type": "telecom",
+      "lon": 72.7272,
+      "lat": 18.9011,
+      "elev": 18,
+      "cond": 3,
+      "cap": 439
+    },
+    {
+      "id": "gen_jatmhxzch",
+      "name": "Pumping Station, Mumbai",
+      "type": "water",
+      "lon": 72.8136,
+      "lat": 18.8907,
+      "elev": 12,
+      "cond": 4,
+      "cap": 451
+    },
+    {
+      "id": "gen_gvp431lrm",
+      "name": "Telephone Exchange, Mumbai",
+      "type": "telecom",
+      "lon": 72.7486,
+      "lat": 19.2015,
+      "elev": 19,
+      "cond": 2,
+      "cap": 53
+    },
+    {
+      "id": "gen_tnubjkzr4",
+      "name": "Water Works, Mumbai",
+      "type": "water",
+      "lon": 72.7221,
+      "lat": 19.1026,
+      "elev": 3,
+      "cond": 4,
+      "cap": 270
+    },
+    {
+      "id": "gen_16cu7racw",
+      "name": "Relief Camp, Mumbai",
+      "type": "shelter",
+      "lon": 72.9179,
+      "lat": 18.8559,
+      "elev": 12,
+      "cond": 4,
+      "cap": 848
+    },
+    {
+      "id": "gen_rf28tcedm",
+      "name": "Treatment Plant, Mumbai",
+      "type": "water",
+      "lon": 73.0102,
+      "lat": 19.1657,
+      "elev": 3,
+      "cond": 4,
+      "cap": 460
+    },
+    {
+      "id": "gen_vsm5qdrck",
+      "name": "132 kV Grid Substation, Mumbai",
+      "type": "power",
+      "lon": 72.7298,
+      "lat": 19.0824,
+      "elev": 3,
+      "cond": 2,
+      "cap": 373
+    },
+    {
+      "id": "gen_l6kcejmzt",
+      "name": "Cyclone Shelter, Mumbai",
+      "type": "shelter",
+      "lon": 72.9506,
+      "lat": 19.2184,
+      "elev": 10,
+      "cond": 3,
+      "cap": 262
+    },
+    {
+      "id": "gen_qbkk85fgu",
+      "name": "Power Station, Mumbai",
+      "type": "power",
+      "lon": 72.8509,
+      "lat": 19.026,
+      "elev": 17,
+      "cond": 4,
+      "cap": 249
+    },
+    {
+      "id": "gen_d9pnzrnia",
+      "name": "Multipurpose Shelter, Mumbai",
+      "type": "shelter",
+      "lon": 72.9139,
+      "lat": 18.9626,
+      "elev": 13,
+      "cond": 4,
+      "cap": 1011
+    },
+    {
+      "id": "gen_fc70dvdhq",
+      "name": "Treatment Plant, Mumbai",
+      "type": "water",
+      "lon": 72.9784,
+      "lat": 19.0396,
+      "elev": 2,
+      "cond": 3,
+      "cap": 485
+    },
+    {
+      "id": "gen_88xksknuv",
+      "name": "Power Station, Mumbai",
+      "type": "power",
+      "lon": 72.552,
+      "lat": 19.2199,
+      "elev": 18,
+      "cond": 3,
+      "cap": 303
+    },
+    {
+      "id": "gen_de6d4e69t",
+      "name": "Power Station, Mumbai",
+      "type": "power",
+      "lon": 72.8607,
+      "lat": 18.901,
+      "elev": 15,
+      "cond": 3,
+      "cap": 218
+    },
+    {
+      "id": "gen_bf6cpuhul",
+      "name": "132 kV Grid Substation, Mumbai",
+      "type": "power",
+      "lon": 72.6937,
+      "lat": 18.9571,
+      "elev": 6,
+      "cond": 3,
+      "cap": 122
+    },
+    {
+      "id": "gen_lq4f31057",
+      "name": "Tower Cluster, Raigad",
+      "type": "telecom",
+      "lon": 72.9334,
+      "lat": 18.5519,
+      "elev": 19,
+      "cond": 2,
+      "cap": 165
+    },
+    {
+      "id": "gen_avezjcc9o",
+      "name": "Cyclone Shelter, Raigad",
+      "type": "shelter",
+      "lon": 72.8864,
+      "lat": 18.5801,
+      "elev": 17,
+      "cond": 3,
+      "cap": 313
+    },
+    {
+      "id": "gen_ndj1sbcwl",
+      "name": "District Hospital, Raigad",
+      "type": "hospital",
+      "lon": 73.2251,
+      "lat": 18.2996,
+      "elev": 7,
+      "cond": 2,
+      "cap": 127
+    },
+    {
+      "id": "gen_7vnarxbyw",
+      "name": "Multipurpose Shelter, Raigad",
+      "type": "shelter",
+      "lon": 72.9525,
+      "lat": 18.6289,
+      "elev": 8,
+      "cond": 4,
+      "cap": 714
+    },
+    {
+      "id": "gen_d86az7qym",
+      "name": "CHC, Raigad",
+      "type": "hospital",
+      "lon": 73.0556,
+      "lat": 18.5113,
+      "elev": 10,
+      "cond": 2,
+      "cap": 227
+    },
+    {
+      "id": "gen_z3p1ai2nl",
+      "name": "BSNL Exchange, Raigad",
+      "type": "telecom",
+      "lon": 73.1399,
+      "lat": 18.692,
+      "elev": 17,
+      "cond": 4,
+      "cap": 113
+    },
+    {
+      "id": "gen_43sjpm5p4",
+      "name": "132 kV Grid Substation, Raigad",
+      "type": "power",
+      "lon": 73.1121,
+      "lat": 18.7487,
+      "elev": 3,
+      "cond": 4,
+      "cap": 148
+    },
+    {
+      "id": "gen_hg6m8t4p6",
+      "name": "Tower Cluster, Raigad",
+      "type": "telecom",
+      "lon": 73.258,
+      "lat": 18.5653,
+      "elev": 10,
+      "cond": 3,
+      "cap": 293
+    },
+    {
+      "id": "gen_ifdwbg330",
+      "name": "Cyclone Shelter, Raigad",
+      "type": "shelter",
+      "lon": 73.2411,
+      "lat": 18.4547,
+      "elev": 9,
+      "cond": 4,
+      "cap": 1065
+    },
+    {
+      "id": "gen_4efa5j8wm",
+      "name": "CHC, Raigad",
+      "type": "hospital",
+      "lon": 73.1394,
+      "lat": 18.4648,
+      "elev": 5,
+      "cond": 3,
+      "cap": 328
+    },
+    {
+      "id": "gen_z1jjtnqoi",
+      "name": "33/11 kV Substation, Raigad",
+      "type": "power",
+      "lon": 73.2745,
+      "lat": 18.6631,
+      "elev": 7,
+      "cond": 3,
+      "cap": 357
+    },
+    {
+      "id": "gen_uvy0s02jl",
+      "name": "BSNL Exchange, Raigad",
+      "type": "telecom",
+      "lon": 73.211,
+      "lat": 18.484,
+      "elev": 19,
+      "cond": 3,
+      "cap": 96
+    },
+    {
+      "id": "gen_alhfdnm6s",
+      "name": "Relief Camp, Raigad",
+      "type": "shelter",
+      "lon": 73.1958,
+      "lat": 18.3717,
+      "elev": 6,
+      "cond": 4,
+      "cap": 1098
+    },
+    {
+      "id": "gen_vpvoaysp4",
+      "name": "General Hospital, Raigad",
+      "type": "hospital",
+      "lon": 73.2001,
+      "lat": 18.6175,
+      "elev": 14,
+      "cond": 3,
+      "cap": 458
+    },
+    {
+      "id": "gen_gz0xq9hbp",
+      "name": "Telephone Exchange, Raigad",
+      "type": "telecom",
+      "lon": 73.0201,
+      "lat": 18.6547,
+      "elev": 6,
+      "cond": 2,
+      "cap": 372
+    },
+    {
+      "id": "gen_uaistbwmc",
+      "name": "Water Works, Raigad",
+      "type": "water",
+      "lon": 73.046,
+      "lat": 18.4482,
+      "elev": 19,
+      "cond": 3,
+      "cap": 456
+    },
+    {
+      "id": "gen_v9q5romvf",
+      "name": "Medical College, Raigad",
+      "type": "hospital",
+      "lon": 72.929,
+      "lat": 18.613,
+      "elev": 6,
+      "cond": 2,
+      "cap": 376
+    },
+    {
+      "id": "gen_h6ao4pvg1",
+      "name": "Tower Cluster, Raigad",
+      "type": "telecom",
+      "lon": 73.1648,
+      "lat": 18.4465,
+      "elev": 17,
+      "cond": 4,
+      "cap": 328
+    },
+    {
+      "id": "gen_tmzietq1x",
+      "name": "District Hospital, Raigad",
+      "type": "hospital",
+      "lon": 73.2392,
+      "lat": 18.6325,
+      "elev": 4,
+      "cond": 4,
+      "cap": 377
+    },
+    {
+      "id": "gen_ntipkvook",
+      "name": "CHC, Raigad",
+      "type": "hospital",
+      "lon": 72.9905,
+      "lat": 18.4823,
+      "elev": 16,
+      "cond": 3,
+      "cap": 419
+    },
+    {
+      "id": "gen_jf09vx0at",
+      "name": "Water Works, Raigad",
+      "type": "water",
+      "lon": 73.0428,
+      "lat": 18.395,
+      "elev": 4,
+      "cond": 4,
+      "cap": 114
+    },
+    {
+      "id": "gen_c3jor8k82",
+      "name": "Relief Camp, Ratnagiri",
+      "type": "shelter",
+      "lon": 73.3759,
+      "lat": 16.8806,
+      "elev": 10,
+      "cond": 4,
+      "cap": 830
+    },
+    {
+      "id": "gen_s1bfc3tud",
+      "name": "33/11 kV Substation, Ratnagiri",
+      "type": "power",
+      "lon": 73.25,
+      "lat": 16.8064,
+      "elev": 17,
+      "cond": 4,
+      "cap": 275
+    },
+    {
+      "id": "gen_xvwhradei",
+      "name": "Pumping Station, Ratnagiri",
+      "type": "water",
+      "lon": 73.4745,
+      "lat": 17.0812,
+      "elev": 14,
+      "cond": 4,
+      "cap": 343
+    },
+    {
+      "id": "gen_jh6tybvgh",
+      "name": "General Hospital, Ratnagiri",
+      "type": "hospital",
+      "lon": 73.4069,
+      "lat": 16.763,
+      "elev": 4,
+      "cond": 2,
+      "cap": 191
+    },
+    {
+      "id": "gen_9vsd782o7",
+      "name": "Medical College, Ratnagiri",
+      "type": "hospital",
+      "lon": 73.275,
+      "lat": 16.9475,
+      "elev": 17,
+      "cond": 4,
+      "cap": 361
+    },
+    {
+      "id": "gen_zyay2n35i",
+      "name": "Power Station, Ratnagiri",
+      "type": "power",
+      "lon": 73.4225,
+      "lat": 16.9041,
+      "elev": 6,
+      "cond": 2,
+      "cap": 168
+    },
+    {
+      "id": "gen_v4qd1hd48",
+      "name": "Treatment Plant, Ratnagiri",
+      "type": "water",
+      "lon": 73.3209,
+      "lat": 16.8904,
+      "elev": 2,
+      "cond": 3,
+      "cap": 154
+    },
+    {
+      "id": "gen_kxgyegwch",
+      "name": "CHC, Ratnagiri",
+      "type": "hospital",
+      "lon": 73.1428,
+      "lat": 16.9384,
+      "elev": 4,
+      "cond": 3,
+      "cap": 285
+    },
+    {
+      "id": "gen_gjugt03y6",
+      "name": "District Hospital, Ratnagiri",
+      "type": "hospital",
+      "lon": 73.1835,
+      "lat": 16.6549,
+      "elev": 6,
+      "cond": 3,
+      "cap": 203
+    },
+    {
+      "id": "gen_nt25dldaz",
+      "name": "Power Station, Ratnagiri",
+      "type": "power",
+      "lon": 73.4363,
+      "lat": 16.9597,
+      "elev": 4,
+      "cond": 4,
+      "cap": 474
+    },
+    {
+      "id": "gen_k5cy23hw9",
+      "name": "132 kV Grid Substation, Ratnagiri",
+      "type": "power",
+      "lon": 73.5481,
+      "lat": 16.942,
+      "elev": 17,
+      "cond": 2,
+      "cap": 430
+    },
+    {
+      "id": "gen_od3xeyvxb",
+      "name": "33/11 kV Substation, Ratnagiri",
+      "type": "power",
+      "lon": 73.5203,
+      "lat": 17.0401,
+      "elev": 2,
+      "cond": 3,
+      "cap": 273
+    },
+    {
+      "id": "gen_l98qwq776",
+      "name": "Pumping Station, Ratnagiri",
+      "type": "water",
+      "lon": 73.1748,
+      "lat": 16.6507,
+      "elev": 6,
+      "cond": 4,
+      "cap": 320
+    },
+    {
+      "id": "gen_tyct7jaer",
+      "name": "Tower Cluster, Ratnagiri",
+      "type": "telecom",
+      "lon": 73.2951,
+      "lat": 16.6857,
+      "elev": 11,
+      "cond": 2,
+      "cap": 400
+    },
+    {
+      "id": "gen_3lbhxdfh9",
+      "name": "Power Station, Ratnagiri",
+      "type": "power",
+      "lon": 73.2689,
+      "lat": 16.6929,
+      "elev": 14,
+      "cond": 4,
+      "cap": 95
+    },
+    {
+      "id": "gen_2ktjr43dq",
+      "name": "Pumping Station, Ratnagiri",
+      "type": "water",
+      "lon": 73.3905,
+      "lat": 17.0936,
+      "elev": 15,
+      "cond": 4,
+      "cap": 497
+    },
+    {
+      "id": "gen_h6dx42giw",
+      "name": "Pumping Station, Ratnagiri",
+      "type": "water",
+      "lon": 73.119,
+      "lat": 16.976,
+      "elev": 5,
+      "cond": 3,
+      "cap": 164
+    }
+  ],
+  "kerala": [
+    {
+      "id": "gen_gul52xix7",
+      "name": "CHC, Dakshina Kannada",
+      "type": "hospital",
+      "lon": 75.1317,
+      "lat": 13.0267,
+      "elev": 7,
+      "cond": 4,
+      "cap": 58
+    },
+    {
+      "id": "gen_2n25ooum9",
+      "name": "Relief Camp, Dakshina Kannada",
+      "type": "shelter",
+      "lon": 75.3487,
+      "lat": 12.6869,
+      "elev": 8,
+      "cond": 2,
+      "cap": 1091
+    },
+    {
+      "id": "gen_s6352gsnp",
+      "name": "Tower Cluster, Dakshina Kannada",
+      "type": "telecom",
+      "lon": 75.2245,
+      "lat": 12.9447,
+      "elev": 19,
+      "cond": 3,
+      "cap": 482
+    },
+    {
+      "id": "gen_umkw4ym7u",
+      "name": "Power Station, Dakshina Kannada",
+      "type": "power",
+      "lon": 75.26,
+      "lat": 12.7275,
+      "elev": 11,
+      "cond": 2,
+      "cap": 117
+    },
+    {
+      "id": "gen_fymike7rn",
+      "name": "Power Station, Dakshina Kannada",
+      "type": "power",
+      "lon": 75.1979,
+      "lat": 12.9767,
+      "elev": 9,
+      "cond": 2,
+      "cap": 356
+    },
+    {
+      "id": "gen_vpc1m41lq",
+      "name": "Medical College, Dakshina Kannada",
+      "type": "hospital",
+      "lon": 75.2233,
+      "lat": 12.6307,
+      "elev": 7,
+      "cond": 3,
+      "cap": 488
+    },
+    {
+      "id": "gen_89m9knqjc",
+      "name": "BSNL Exchange, Dakshina Kannada",
+      "type": "telecom",
+      "lon": 75.1713,
+      "lat": 12.6455,
+      "elev": 15,
+      "cond": 2,
+      "cap": 289
+    },
+    {
+      "id": "gen_5m4438jon",
+      "name": "Treatment Plant, Dakshina Kannada",
+      "type": "water",
+      "lon": 75.3221,
+      "lat": 12.8362,
+      "elev": 15,
+      "cond": 4,
+      "cap": 406
+    },
+    {
+      "id": "gen_4t7tm4vaj",
+      "name": "Tower Cluster, Dakshina Kannada",
+      "type": "telecom",
+      "lon": 75.2659,
+      "lat": 12.9906,
+      "elev": 2,
+      "cond": 2,
+      "cap": 87
+    },
+    {
+      "id": "gen_3irf282y6",
+      "name": "Telephone Exchange, Dakshina Kannada",
+      "type": "telecom",
+      "lon": 74.9208,
+      "lat": 13.0027,
+      "elev": 19,
+      "cond": 4,
+      "cap": 438
+    },
+    {
+      "id": "gen_bj5mf27tv",
+      "name": "Multipurpose Shelter, Dakshina Kannada",
+      "type": "shelter",
+      "lon": 75.2638,
+      "lat": 12.7313,
+      "elev": 9,
+      "cond": 4,
+      "cap": 942
+    },
+    {
+      "id": "gen_7fl7zcag6",
+      "name": "Relief Camp, Dakshina Kannada",
+      "type": "shelter",
+      "lon": 75.0169,
+      "lat": 12.708,
+      "elev": 11,
+      "cond": 4,
+      "cap": 661
+    },
+    {
+      "id": "gen_af38uww53",
+      "name": "Relief Camp, Dakshina Kannada",
+      "type": "shelter",
+      "lon": 74.8566,
+      "lat": 12.8891,
+      "elev": 14,
+      "cond": 3,
+      "cap": 1114
+    },
+    {
+      "id": "gen_yhhf9ygdw",
+      "name": "Pumping Station, Dakshina Kannada",
+      "type": "water",
+      "lon": 75.3404,
+      "lat": 12.9802,
+      "elev": 6,
+      "cond": 3,
+      "cap": 136
+    },
+    {
+      "id": "gen_3ulwac3yq",
+      "name": "Pumping Station, Dakshina Kannada",
+      "type": "water",
+      "lon": 74.974,
+      "lat": 12.6787,
+      "elev": 16,
+      "cond": 3,
+      "cap": 334
+    },
+    {
+      "id": "gen_5e9kkq3my",
+      "name": "Power Station, Dakshina Kannada",
+      "type": "power",
+      "lon": 75.285,
+      "lat": 13.0342,
+      "elev": 11,
+      "cond": 3,
+      "cap": 89
+    },
+    {
+      "id": "gen_qfhjbfklb",
+      "name": "Treatment Plant, Dakshina Kannada",
+      "type": "water",
+      "lon": 75.3354,
+      "lat": 12.9273,
+      "elev": 12,
+      "cond": 3,
+      "cap": 386
+    },
+    {
+      "id": "gen_ybzrvym96",
+      "name": "132 kV Grid Substation, Dakshina Kannada",
+      "type": "power",
+      "lon": 75.2366,
+      "lat": 12.6458,
+      "elev": 18,
+      "cond": 3,
+      "cap": 402
+    },
+    {
+      "id": "gen_qgxe50gyl",
+      "name": "BSNL Exchange, Dakshina Kannada",
+      "type": "telecom",
+      "lon": 74.8535,
+      "lat": 12.8841,
+      "elev": 15,
+      "cond": 2,
+      "cap": 193
+    },
+    {
+      "id": "gen_ojev1yj6u",
+      "name": "BSNL Exchange, Dakshina Kannada",
+      "type": "telecom",
+      "lon": 75.0603,
+      "lat": 12.793,
+      "elev": 4,
+      "cond": 2,
+      "cap": 438
+    },
+    {
+      "id": "gen_saoep1b1j",
+      "name": "Cyclone Shelter, Dakshina Kannada",
+      "type": "shelter",
+      "lon": 75.1882,
+      "lat": 12.6576,
+      "elev": 18,
+      "cond": 3,
+      "cap": 1059
+    },
+    {
+      "id": "gen_ysibqybh2",
+      "name": "132 kV Grid Substation, Dakshina Kannada",
+      "type": "power",
+      "lon": 74.9877,
+      "lat": 12.635,
+      "elev": 6,
+      "cond": 3,
+      "cap": 169
+    },
+    {
+      "id": "gen_ildgr3v3r",
+      "name": "33/11 kV Substation, Dakshina Kannada",
+      "type": "power",
+      "lon": 75.3071,
+      "lat": 12.9925,
+      "elev": 12,
+      "cond": 3,
+      "cap": 183
+    },
+    {
+      "id": "gen_6ht3cy0ou",
+      "name": "Water Works, Dakshina Kannada",
+      "type": "water",
+      "lon": 74.9477,
+      "lat": 13.0002,
+      "elev": 10,
+      "cond": 3,
+      "cap": 377
+    },
+    {
+      "id": "gen_vmhauvnvs",
+      "name": "132 kV Grid Substation, Ernakulam",
+      "type": "power",
+      "lon": 76.1126,
+      "lat": 9.895,
+      "elev": 6,
+      "cond": 4,
+      "cap": 94
+    },
+    {
+      "id": "gen_f9r2ds0ca",
+      "name": "BSNL Exchange, Ernakulam",
+      "type": "telecom",
+      "lon": 76.1285,
+      "lat": 10.1207,
+      "elev": 8,
+      "cond": 4,
+      "cap": 289
+    },
+    {
+      "id": "gen_w0uglqj47",
+      "name": "CHC, Ernakulam",
+      "type": "hospital",
+      "lon": 76.2595,
+      "lat": 10.1552,
+      "elev": 11,
+      "cond": 2,
+      "cap": 389
+    },
+    {
+      "id": "gen_rs3t6surn",
+      "name": "132 kV Grid Substation, Ernakulam",
+      "type": "power",
+      "lon": 76.2282,
+      "lat": 9.8005,
+      "elev": 18,
+      "cond": 4,
+      "cap": 243
+    },
+    {
+      "id": "gen_3g45y2qnk",
+      "name": "33/11 kV Substation, Ernakulam",
+      "type": "power",
+      "lon": 76.2589,
+      "lat": 10.2186,
+      "elev": 5,
+      "cond": 4,
+      "cap": 164
+    },
+    {
+      "id": "gen_my963e8hk",
+      "name": "Pumping Station, Ernakulam",
+      "type": "water",
+      "lon": 76.1322,
+      "lat": 9.818,
+      "elev": 10,
+      "cond": 2,
+      "cap": 358
+    },
+    {
+      "id": "gen_5xfhb9mgt",
+      "name": "Telephone Exchange, Ernakulam",
+      "type": "telecom",
+      "lon": 76.3479,
+      "lat": 9.8062,
+      "elev": 17,
+      "cond": 2,
+      "cap": 442
+    },
+    {
+      "id": "gen_ugeuprcr6",
+      "name": "Relief Camp, Ernakulam",
+      "type": "shelter",
+      "lon": 76.4866,
+      "lat": 9.9012,
+      "elev": 18,
+      "cond": 3,
+      "cap": 1463
+    },
+    {
+      "id": "gen_n7br6a3uc",
+      "name": "Multipurpose Shelter, Ernakulam",
+      "type": "shelter",
+      "lon": 76.3222,
+      "lat": 10.2096,
+      "elev": 6,
+      "cond": 3,
+      "cap": 364
+    },
+    {
+      "id": "gen_y8293yc5f",
+      "name": "BSNL Exchange, Ernakulam",
+      "type": "telecom",
+      "lon": 76.3259,
+      "lat": 10.0749,
+      "elev": 7,
+      "cond": 2,
+      "cap": 449
+    },
+    {
+      "id": "gen_9lhlbakev",
+      "name": "Water Works, Ernakulam",
+      "type": "water",
+      "lon": 76.3864,
+      "lat": 9.9609,
+      "elev": 13,
+      "cond": 2,
+      "cap": 492
+    },
+    {
+      "id": "gen_131l3qf10",
+      "name": "132 kV Grid Substation, Ernakulam",
+      "type": "power",
+      "lon": 76.3081,
+      "lat": 10.0845,
+      "elev": 7,
+      "cond": 3,
+      "cap": 392
+    },
+    {
+      "id": "gen_emuomokwc",
+      "name": "Telephone Exchange, Ernakulam",
+      "type": "telecom",
+      "lon": 76.2754,
+      "lat": 10.016,
+      "elev": 10,
+      "cond": 3,
+      "cap": 109
+    },
+    {
+      "id": "gen_7k38mn8hm",
+      "name": "Treatment Plant, Ernakulam",
+      "type": "water",
+      "lon": 76.1617,
+      "lat": 10.0117,
+      "elev": 10,
+      "cond": 4,
+      "cap": 396
+    },
+    {
+      "id": "gen_7yy5ibbus",
+      "name": "Telephone Exchange, Ernakulam",
+      "type": "telecom",
+      "lon": 76.4641,
+      "lat": 10.121,
+      "elev": 19,
+      "cond": 3,
+      "cap": 57
+    },
+    {
+      "id": "gen_gupq5p2vn",
+      "name": "Multipurpose Shelter, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 76.9131,
+      "lat": 8.4817,
+      "elev": 8,
+      "cond": 2,
+      "cap": 632
+    },
+    {
+      "id": "gen_my42zskql",
+      "name": "Multipurpose Shelter, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 77.0492,
+      "lat": 8.4281,
+      "elev": 17,
+      "cond": 2,
+      "cap": 1051
+    },
+    {
+      "id": "gen_vr9zpbbul",
+      "name": "Power Station, Thiruvananthapuram",
+      "type": "power",
+      "lon": 76.9255,
+      "lat": 8.6748,
+      "elev": 6,
+      "cond": 3,
+      "cap": 262
+    },
+    {
+      "id": "gen_c7pm8gj0g",
+      "name": "Multipurpose Shelter, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 77.0685,
+      "lat": 8.7391,
+      "elev": 9,
+      "cond": 4,
+      "cap": 1345
+    },
+    {
+      "id": "gen_jliutu8eo",
+      "name": "Treatment Plant, Thiruvananthapuram",
+      "type": "water",
+      "lon": 76.721,
+      "lat": 8.2935,
+      "elev": 3,
+      "cond": 2,
+      "cap": 395
+    },
+    {
+      "id": "gen_jrupjht2e",
+      "name": "General Hospital, Thiruvananthapuram",
+      "type": "hospital",
+      "lon": 76.7505,
+      "lat": 8.6108,
+      "elev": 3,
+      "cond": 2,
+      "cap": 209
+    },
+    {
+      "id": "gen_54q2i05ca",
+      "name": "Telephone Exchange, Thiruvananthapuram",
+      "type": "telecom",
+      "lon": 76.7103,
+      "lat": 8.407,
+      "elev": 18,
+      "cond": 3,
+      "cap": 93
+    },
+    {
+      "id": "gen_yuaujttjf",
+      "name": "Treatment Plant, Thiruvananthapuram",
+      "type": "water",
+      "lon": 77.1123,
+      "lat": 8.5486,
+      "elev": 12,
+      "cond": 4,
+      "cap": 367
+    },
+    {
+      "id": "gen_oe5anfxby",
+      "name": "Telephone Exchange, Thiruvananthapuram",
+      "type": "telecom",
+      "lon": 76.8271,
+      "lat": 8.6382,
+      "elev": 16,
+      "cond": 2,
+      "cap": 242
+    },
+    {
+      "id": "gen_rpluvg6m7",
+      "name": "District Hospital, Thiruvananthapuram",
+      "type": "hospital",
+      "lon": 76.7401,
+      "lat": 8.6835,
+      "elev": 14,
+      "cond": 3,
+      "cap": 142
+    },
+    {
+      "id": "gen_8gcuc4f4z",
+      "name": "Cyclone Shelter, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 76.993,
+      "lat": 8.5865,
+      "elev": 16,
+      "cond": 4,
+      "cap": 424
+    },
+    {
+      "id": "gen_9lq24fuq2",
+      "name": "Water Works, Thiruvananthapuram",
+      "type": "water",
+      "lon": 77.0277,
+      "lat": 8.4323,
+      "elev": 15,
+      "cond": 3,
+      "cap": 489
+    },
+    {
+      "id": "gen_wjx7dhr3l",
+      "name": "Cyclone Shelter, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 76.8209,
+      "lat": 8.2628,
+      "elev": 6,
+      "cond": 4,
+      "cap": 1451
+    },
+    {
+      "id": "gen_r2uqvccpn",
+      "name": "Relief Camp, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 77.0617,
+      "lat": 8.4613,
+      "elev": 14,
+      "cond": 4,
+      "cap": 1159
+    },
+    {
+      "id": "gen_ik8km4d3i",
+      "name": "Power Station, Thiruvananthapuram",
+      "type": "power",
+      "lon": 77.1053,
+      "lat": 8.3796,
+      "elev": 16,
+      "cond": 4,
+      "cap": 140
+    },
+    {
+      "id": "gen_qxv8qn6o1",
+      "name": "Pumping Station, Thiruvananthapuram",
+      "type": "water",
+      "lon": 76.8342,
+      "lat": 8.5806,
+      "elev": 8,
+      "cond": 4,
+      "cap": 102
+    },
+    {
+      "id": "gen_x4kf80j92",
+      "name": "Telephone Exchange, Thiruvananthapuram",
+      "type": "telecom",
+      "lon": 76.8163,
+      "lat": 8.5907,
+      "elev": 13,
+      "cond": 3,
+      "cap": 238
+    },
+    {
+      "id": "gen_bhp3b5117",
+      "name": "Multipurpose Shelter, Thiruvananthapuram",
+      "type": "shelter",
+      "lon": 76.7917,
+      "lat": 8.6931,
+      "elev": 19,
+      "cond": 2,
+      "cap": 528
+    },
+    {
+      "id": "gen_w2wv4q0qu",
+      "name": "132 kV Grid Substation, Thiruvananthapuram",
+      "type": "power",
+      "lon": 77.0306,
+      "lat": 8.7058,
+      "elev": 13,
+      "cond": 2,
+      "cap": 313
+    },
+    {
+      "id": "gen_sny8p44lu",
+      "name": "Medical College, Thiruvananthapuram",
+      "type": "hospital",
+      "lon": 76.7432,
+      "lat": 8.6093,
+      "elev": 12,
+      "cond": 3,
+      "cap": 305
+    }
+  ],
+  "tn": [
+    {
+      "id": "gen_qb21n1cp5",
+      "name": "Power Station, Kanyakumari",
+      "type": "power",
+      "lon": 77.5595,
+      "lat": 8.2732,
+      "elev": 11,
+      "cond": 2,
+      "cap": 360
+    },
+    {
+      "id": "gen_uch8rbf3k",
+      "name": "BSNL Exchange, Kanyakumari",
+      "type": "telecom",
+      "lon": 77.3696,
+      "lat": 8.2841,
+      "elev": 7,
+      "cond": 3,
+      "cap": 72
+    },
+    {
+      "id": "gen_my29pb34z",
+      "name": "Water Works, Kanyakumari",
+      "type": "water",
+      "lon": 77.5195,
+      "lat": 8.0582,
+      "elev": 4,
+      "cond": 2,
+      "cap": 357
+    },
+    {
+      "id": "gen_mxedv4vc6",
+      "name": "Pumping Station, Kanyakumari",
+      "type": "water",
+      "lon": 77.5494,
+      "lat": 8.4431,
+      "elev": 10,
+      "cond": 3,
+      "cap": 405
+    },
+    {
+      "id": "gen_ktp56zeen",
+      "name": "CHC, Kanyakumari",
+      "type": "hospital",
+      "lon": 77.5113,
+      "lat": 8.2643,
+      "elev": 2,
+      "cond": 2,
+      "cap": 404
+    },
+    {
+      "id": "gen_mx6yrdlvn",
+      "name": "BSNL Exchange, Kanyakumari",
+      "type": "telecom",
+      "lon": 77.5839,
+      "lat": 8.0138,
+      "elev": 17,
+      "cond": 3,
+      "cap": 63
+    },
+    {
+      "id": "gen_5461kw4qe",
+      "name": "General Hospital, Kanyakumari",
+      "type": "hospital",
+      "lon": 77.5768,
+      "lat": 8.14,
+      "elev": 6,
+      "cond": 2,
+      "cap": 413
+    },
+    {
+      "id": "gen_cqzitrag1",
+      "name": "Power Station, Kanyakumari",
+      "type": "power",
+      "lon": 77.6607,
+      "lat": 7.9985,
+      "elev": 6,
+      "cond": 3,
+      "cap": 410
+    },
+    {
+      "id": "gen_paf32941g",
+      "name": "132 kV Grid Substation, Kanyakumari",
+      "type": "power",
+      "lon": 77.3613,
+      "lat": 8.4069,
+      "elev": 11,
+      "cond": 3,
+      "cap": 478
+    },
+    {
+      "id": "gen_g8jtxa51o",
+      "name": "Telephone Exchange, Kanyakumari",
+      "type": "telecom",
+      "lon": 77.2841,
+      "lat": 8.0662,
+      "elev": 7,
+      "cond": 4,
+      "cap": 101
+    },
+    {
+      "id": "gen_vgy5xlaau",
+      "name": "Telephone Exchange, Kanyakumari",
+      "type": "telecom",
+      "lon": 77.6708,
+      "lat": 8.1063,
+      "elev": 6,
+      "cond": 4,
+      "cap": 239
+    },
+    {
+      "id": "gen_hasjjuof0",
+      "name": "Treatment Plant, Kanyakumari",
+      "type": "water",
+      "lon": 77.5539,
+      "lat": 8.005,
+      "elev": 5,
+      "cond": 2,
+      "cap": 298
+    },
+    {
+      "id": "gen_e34lga4px",
+      "name": "Multipurpose Shelter, Kanyakumari",
+      "type": "shelter",
+      "lon": 77.4935,
+      "lat": 8.3257,
+      "elev": 12,
+      "cond": 4,
+      "cap": 490
+    },
+    {
+      "id": "gen_x8ht9abf0",
+      "name": "33/11 kV Substation, Kanyakumari",
+      "type": "power",
+      "lon": 77.6897,
+      "lat": 8.0431,
+      "elev": 19,
+      "cond": 4,
+      "cap": 467
+    },
+    {
+      "id": "gen_tmiv3v478",
+      "name": "Pumping Station, Kanyakumari",
+      "type": "water",
+      "lon": 77.453,
+      "lat": 7.9589,
+      "elev": 12,
+      "cond": 4,
+      "cap": 162
+    },
+    {
+      "id": "gen_62zr0gzg1",
+      "name": "Telephone Exchange, Kanyakumari",
+      "type": "telecom",
+      "lon": 77.3468,
+      "lat": 8.2564,
+      "elev": 10,
+      "cond": 3,
+      "cap": 375
+    },
+    {
+      "id": "gen_xudt2nhns",
+      "name": "Multipurpose Shelter, Kanyakumari",
+      "type": "shelter",
+      "lon": 77.5209,
+      "lat": 8.3752,
+      "elev": 4,
+      "cond": 3,
+      "cap": 1398
+    },
+    {
+      "id": "gen_jdnztpzrx",
+      "name": "132 kV Grid Substation, Kanyakumari",
+      "type": "power",
+      "lon": 77.3701,
+      "lat": 8.2437,
+      "elev": 10,
+      "cond": 3,
+      "cap": 84
+    },
+    {
+      "id": "gen_n99zk6ma9",
+      "name": "132 kV Grid Substation, Kanyakumari",
+      "type": "power",
+      "lon": 77.3786,
+      "lat": 8.2421,
+      "elev": 11,
+      "cond": 2,
+      "cap": 474
+    },
+    {
+      "id": "gen_z0ff1ml5s",
+      "name": "General Hospital, Kanyakumari",
+      "type": "hospital",
+      "lon": 77.7164,
+      "lat": 8.018,
+      "elev": 5,
+      "cond": 3,
+      "cap": 131
+    },
+    {
+      "id": "gen_ntkkibqij",
+      "name": "Power Station, Kanyakumari",
+      "type": "power",
+      "lon": 77.2612,
+      "lat": 8.1694,
+      "elev": 4,
+      "cond": 3,
+      "cap": 404
+    },
+    {
+      "id": "gen_t195hh29w",
+      "name": "BSNL Exchange, Kanyakumari",
+      "type": "telecom",
+      "lon": 77.2883,
+      "lat": 8.174,
+      "elev": 12,
+      "cond": 2,
+      "cap": 94
+    },
+    {
+      "id": "gen_xq7cxxb65",
+      "name": "33/11 kV Substation, Kanyakumari",
+      "type": "power",
+      "lon": 77.4512,
+      "lat": 7.9775,
+      "elev": 19,
+      "cond": 3,
+      "cap": 221
+    },
+    {
+      "id": "gen_iz9697mlr",
+      "name": "132 kV Grid Substation, Thoothukudi",
+      "type": "power",
+      "lon": 78.1977,
+      "lat": 8.7813,
+      "elev": 6,
+      "cond": 4,
+      "cap": 293
+    },
+    {
+      "id": "gen_9x2c2unu8",
+      "name": "Cyclone Shelter, Thoothukudi",
+      "type": "shelter",
+      "lon": 78.004,
+      "lat": 8.8031,
+      "elev": 9,
+      "cond": 4,
+      "cap": 258
+    },
+    {
+      "id": "gen_zmei0d60v",
+      "name": "33/11 kV Substation, Thoothukudi",
+      "type": "power",
+      "lon": 77.9096,
+      "lat": 8.728,
+      "elev": 12,
+      "cond": 4,
+      "cap": 86
+    },
+    {
+      "id": "gen_g90co923s",
+      "name": "33/11 kV Substation, Thoothukudi",
+      "type": "power",
+      "lon": 78.0401,
+      "lat": 8.792,
+      "elev": 7,
+      "cond": 3,
+      "cap": 383
+    },
+    {
+      "id": "gen_u5o09ntoe",
+      "name": "BSNL Exchange, Thoothukudi",
+      "type": "telecom",
+      "lon": 78.0664,
+      "lat": 8.5435,
+      "elev": 17,
+      "cond": 3,
+      "cap": 117
+    },
+    {
+      "id": "gen_84frm34bk",
+      "name": "Treatment Plant, Thoothukudi",
+      "type": "water",
+      "lon": 77.8545,
+      "lat": 8.7111,
+      "elev": 9,
+      "cond": 2,
+      "cap": 144
+    },
+    {
+      "id": "gen_zawx3qoar",
+      "name": "Cyclone Shelter, Thoothukudi",
+      "type": "shelter",
+      "lon": 77.9241,
+      "lat": 8.5878,
+      "elev": 10,
+      "cond": 2,
+      "cap": 559
+    },
+    {
+      "id": "gen_qa61ewzru",
+      "name": "132 kV Grid Substation, Thoothukudi",
+      "type": "power",
+      "lon": 77.8678,
+      "lat": 8.6633,
+      "elev": 3,
+      "cond": 4,
+      "cap": 236
+    },
+    {
+      "id": "gen_y9ffr1lwy",
+      "name": "Cyclone Shelter, Thoothukudi",
+      "type": "shelter",
+      "lon": 78.3436,
+      "lat": 8.5088,
+      "elev": 9,
+      "cond": 2,
+      "cap": 337
+    },
+    {
+      "id": "gen_96lznc4gp",
+      "name": "Treatment Plant, Thoothukudi",
+      "type": "water",
+      "lon": 78.1822,
+      "lat": 8.4649,
+      "elev": 14,
+      "cond": 3,
+      "cap": 210
+    },
+    {
+      "id": "gen_ivx02ks55",
+      "name": "Pumping Station, Thoothukudi",
+      "type": "water",
+      "lon": 77.9834,
+      "lat": 8.8661,
+      "elev": 14,
+      "cond": 4,
+      "cap": 229
+    },
+    {
+      "id": "gen_cmkqvpuio",
+      "name": "General Hospital, Thoothukudi",
+      "type": "hospital",
+      "lon": 77.8691,
+      "lat": 8.5787,
+      "elev": 19,
+      "cond": 4,
+      "cap": 109
+    },
+    {
+      "id": "gen_gqeh4yc7o",
+      "name": "Cyclone Shelter, Thoothukudi",
+      "type": "shelter",
+      "lon": 78.0653,
+      "lat": 8.9088,
+      "elev": 9,
+      "cond": 2,
+      "cap": 670
+    },
+    {
+      "id": "gen_avipdoggn",
+      "name": "Multipurpose Shelter, Thoothukudi",
+      "type": "shelter",
+      "lon": 78.0703,
+      "lat": 8.6101,
+      "elev": 14,
+      "cond": 3,
+      "cap": 621
+    },
+    {
+      "id": "gen_n7948t9pz",
+      "name": "132 kV Grid Substation, Thoothukudi",
+      "type": "power",
+      "lon": 78.2132,
+      "lat": 8.6946,
+      "elev": 11,
+      "cond": 2,
+      "cap": 105
+    },
+    {
+      "id": "gen_sie0fzeac",
+      "name": "Telephone Exchange, Thoothukudi",
+      "type": "telecom",
+      "lon": 78.2915,
+      "lat": 8.7584,
+      "elev": 3,
+      "cond": 4,
+      "cap": 375
+    },
+    {
+      "id": "gen_mvwc774m2",
+      "name": "Treatment Plant, Thoothukudi",
+      "type": "water",
+      "lon": 78.1689,
+      "lat": 8.6648,
+      "elev": 3,
+      "cond": 4,
+      "cap": 402
+    },
+    {
+      "id": "gen_61w2cutzh",
+      "name": "Multipurpose Shelter, Thoothukudi",
+      "type": "shelter",
+      "lon": 77.8999,
+      "lat": 8.6969,
+      "elev": 19,
+      "cond": 4,
+      "cap": 699
+    },
+    {
+      "id": "gen_wzwt176t8",
+      "name": "Water Works, Thoothukudi",
+      "type": "water",
+      "lon": 78.3159,
+      "lat": 8.5161,
+      "elev": 11,
+      "cond": 3,
+      "cap": 293
+    },
+    {
+      "id": "gen_9sj1jx3ue",
+      "name": "Pumping Station, Thoothukudi",
+      "type": "water",
+      "lon": 78.2823,
+      "lat": 8.8774,
+      "elev": 3,
+      "cond": 2,
+      "cap": 122
+    },
+    {
+      "id": "gen_l58qwmh3x",
+      "name": "Power Station, Nagapattinam",
+      "type": "power",
+      "lon": 79.9181,
+      "lat": 10.8461,
+      "elev": 2,
+      "cond": 3,
+      "cap": 249
+    },
+    {
+      "id": "gen_7pybhrpb3",
+      "name": "Treatment Plant, Nagapattinam",
+      "type": "water",
+      "lon": 79.8272,
+      "lat": 10.8147,
+      "elev": 19,
+      "cond": 3,
+      "cap": 181
+    },
+    {
+      "id": "gen_8lc9ryval",
+      "name": "CHC, Nagapattinam",
+      "type": "hospital",
+      "lon": 79.5723,
+      "lat": 10.5508,
+      "elev": 13,
+      "cond": 3,
+      "cap": 68
+    },
+    {
+      "id": "gen_zsid0yxbu",
+      "name": "Medical College, Nagapattinam",
+      "type": "hospital",
+      "lon": 80.0053,
+      "lat": 10.9341,
+      "elev": 15,
+      "cond": 2,
+      "cap": 116
+    },
+    {
+      "id": "gen_fnk05vtcp",
+      "name": "CHC, Nagapattinam",
+      "type": "hospital",
+      "lon": 79.9059,
+      "lat": 10.522,
+      "elev": 13,
+      "cond": 3,
+      "cap": 344
+    },
+    {
+      "id": "gen_r6mfvnjhd",
+      "name": "Treatment Plant, Nagapattinam",
+      "type": "water",
+      "lon": 79.6595,
+      "lat": 10.4584,
+      "elev": 10,
+      "cond": 4,
+      "cap": 387
+    },
+    {
+      "id": "gen_n5h3qooor",
+      "name": "Power Station, Nagapattinam",
+      "type": "power",
+      "lon": 79.5982,
+      "lat": 10.7597,
+      "elev": 2,
+      "cond": 2,
+      "cap": 432
+    },
+    {
+      "id": "gen_86xejfdgu",
+      "name": "BSNL Exchange, Nagapattinam",
+      "type": "telecom",
+      "lon": 79.9276,
+      "lat": 10.8681,
+      "elev": 2,
+      "cond": 4,
+      "cap": 159
+    },
+    {
+      "id": "gen_o54t7rof6",
+      "name": "Medical College, Nagapattinam",
+      "type": "hospital",
+      "lon": 79.6163,
+      "lat": 10.6652,
+      "elev": 2,
+      "cond": 3,
+      "cap": 97
+    },
+    {
+      "id": "gen_fbtk3pctj",
+      "name": "Medical College, Nagapattinam",
+      "type": "hospital",
+      "lon": 79.9102,
+      "lat": 10.7757,
+      "elev": 10,
+      "cond": 4,
+      "cap": 329
+    },
+    {
+      "id": "gen_igtsx8e4s",
+      "name": "132 kV Grid Substation, Nagapattinam",
+      "type": "power",
+      "lon": 79.6299,
+      "lat": 10.473,
+      "elev": 18,
+      "cond": 4,
+      "cap": 214
+    },
+    {
+      "id": "gen_j64x2o771",
+      "name": "Multipurpose Shelter, Nagapattinam",
+      "type": "shelter",
+      "lon": 79.6842,
+      "lat": 10.7708,
+      "elev": 5,
+      "cond": 3,
+      "cap": 387
+    },
+    {
+      "id": "gen_0c7nthmcq",
+      "name": "Telephone Exchange, Nagapattinam",
+      "type": "telecom",
+      "lon": 80.007,
+      "lat": 10.5706,
+      "elev": 5,
+      "cond": 4,
+      "cap": 60
+    },
+    {
+      "id": "gen_g9vs946wv",
+      "name": "Tower Cluster, Nagapattinam",
+      "type": "telecom",
+      "lon": 79.7055,
+      "lat": 10.6959,
+      "elev": 5,
+      "cond": 2,
+      "cap": 368
+    },
+    {
+      "id": "gen_rf4cdb1qi",
+      "name": "General Hospital, Nagapattinam",
+      "type": "hospital",
+      "lon": 79.7147,
+      "lat": 10.826,
+      "elev": 3,
+      "cond": 4,
+      "cap": 375
+    },
+    {
+      "id": "gen_jnxmly3uc",
+      "name": "BSNL Exchange, Nagapattinam",
+      "type": "telecom",
+      "lon": 79.5769,
+      "lat": 10.7097,
+      "elev": 8,
+      "cond": 2,
+      "cap": 174
+    },
+    {
+      "id": "gen_rdlnlkci3",
+      "name": "Water Works, Nagapattinam",
+      "type": "water",
+      "lon": 79.7298,
+      "lat": 10.467,
+      "elev": 11,
+      "cond": 4,
+      "cap": 61
+    },
+    {
+      "id": "gen_v384ln81i",
+      "name": "CHC, Nagapattinam",
+      "type": "hospital",
+      "lon": 79.7226,
+      "lat": 10.6866,
+      "elev": 19,
+      "cond": 3,
+      "cap": 341
+    },
+    {
+      "id": "gen_7gf41p83v",
+      "name": "Water Works, Chennai",
+      "type": "water",
+      "lon": 80.291,
+      "lat": 13.2034,
+      "elev": 16,
+      "cond": 4,
+      "cap": 289
+    },
+    {
+      "id": "gen_kpf4pfu1h",
+      "name": "Power Station, Chennai",
+      "type": "power",
+      "lon": 80.3843,
+      "lat": 13.1417,
+      "elev": 13,
+      "cond": 4,
+      "cap": 162
+    },
+    {
+      "id": "gen_mkbw9ru16",
+      "name": "132 kV Grid Substation, Chennai",
+      "type": "power",
+      "lon": 80.1277,
+      "lat": 13.0814,
+      "elev": 12,
+      "cond": 3,
+      "cap": 467
+    },
+    {
+      "id": "gen_gdl9efjfk",
+      "name": "Tower Cluster, Chennai",
+      "type": "telecom",
+      "lon": 80.2357,
+      "lat": 12.7576,
+      "elev": 18,
+      "cond": 4,
+      "cap": 223
+    },
+    {
+      "id": "gen_0voqon78n",
+      "name": "Water Works, Chennai",
+      "type": "water",
+      "lon": 79.9687,
+      "lat": 13.1781,
+      "elev": 3,
+      "cond": 4,
+      "cap": 468
+    },
+    {
+      "id": "gen_dvn187rdt",
+      "name": "Multipurpose Shelter, Chennai",
+      "type": "shelter",
+      "lon": 80.1442,
+      "lat": 12.9728,
+      "elev": 9,
+      "cond": 4,
+      "cap": 1034
+    },
+    {
+      "id": "gen_fgvnf1lfh",
+      "name": "General Hospital, Chennai",
+      "type": "hospital",
+      "lon": 80.3683,
+      "lat": 13.1079,
+      "elev": 17,
+      "cond": 2,
+      "cap": 433
+    },
+    {
+      "id": "gen_n8i97do9q",
+      "name": "Cyclone Shelter, Chennai",
+      "type": "shelter",
+      "lon": 80.42,
+      "lat": 12.8103,
+      "elev": 2,
+      "cond": 2,
+      "cap": 1264
+    },
+    {
+      "id": "gen_xsmo2mc2z",
+      "name": "Cyclone Shelter, Chennai",
+      "type": "shelter",
+      "lon": 80.0665,
+      "lat": 13.1249,
+      "elev": 19,
+      "cond": 3,
+      "cap": 1491
+    },
+    {
+      "id": "gen_g8f9upo0w",
+      "name": "Medical College, Chennai",
+      "type": "hospital",
+      "lon": 80.0712,
+      "lat": 13.0771,
+      "elev": 14,
+      "cond": 3,
+      "cap": 329
+    },
+    {
+      "id": "gen_i8w0j03wc",
+      "name": "Pumping Station, Chennai",
+      "type": "water",
+      "lon": 79.9993,
+      "lat": 12.8503,
+      "elev": 14,
+      "cond": 3,
+      "cap": 201
+    },
+    {
+      "id": "gen_6vf67meap",
+      "name": "Tower Cluster, Chennai",
+      "type": "telecom",
+      "lon": 80.2469,
+      "lat": 12.7994,
+      "elev": 2,
+      "cond": 4,
+      "cap": 456
+    },
+    {
+      "id": "gen_xt03cm8cb",
+      "name": "Telephone Exchange, Chennai",
+      "type": "telecom",
+      "lon": 80.3236,
+      "lat": 12.9119,
+      "elev": 16,
+      "cond": 2,
+      "cap": 445
+    },
+    {
+      "id": "gen_s0k5hrd09",
+      "name": "General Hospital, Chennai",
+      "type": "hospital",
+      "lon": 80.1156,
+      "lat": 13.1569,
+      "elev": 15,
+      "cond": 4,
+      "cap": 52
+    },
+    {
+      "id": "gen_8z7x4pg02",
+      "name": "Multipurpose Shelter, Chennai",
+      "type": "shelter",
+      "lon": 80.44,
+      "lat": 13.062,
+      "elev": 19,
+      "cond": 2,
+      "cap": 1253
+    },
+    {
+      "id": "gen_fo9c6umss",
+      "name": "132 kV Grid Substation, Chennai",
+      "type": "power",
+      "lon": 80.366,
+      "lat": 12.8765,
+      "elev": 2,
+      "cond": 4,
+      "cap": 371
+    },
+    {
+      "id": "gen_dpyqyhpt2",
+      "name": "Tower Cluster, Chennai",
+      "type": "telecom",
+      "lon": 80.1135,
+      "lat": 13.0654,
+      "elev": 13,
+      "cond": 2,
+      "cap": 396
+    },
+    {
+      "id": "gen_6boddo48j",
+      "name": "Medical College, Chennai",
+      "type": "hospital",
+      "lon": 80.2419,
+      "lat": 12.9259,
+      "elev": 11,
+      "cond": 3,
+      "cap": 332
+    },
+    {
+      "id": "gen_y91m0a6ww",
+      "name": "Cyclone Shelter, Chennai",
+      "type": "shelter",
+      "lon": 80.2396,
+      "lat": 12.9059,
+      "elev": 7,
+      "cond": 3,
+      "cap": 857
+    },
+    {
+      "id": "gen_6p959h6vq",
+      "name": "CHC, Chennai",
+      "type": "hospital",
+      "lon": 80.3941,
+      "lat": 13.1863,
+      "elev": 19,
+      "cond": 2,
+      "cap": 83
+    },
+    {
+      "id": "gen_sf4ebbprz",
+      "name": "District Hospital, Chennai",
+      "type": "hospital",
+      "lon": 80.0754,
+      "lat": 12.989,
+      "elev": 11,
+      "cond": 4,
+      "cap": 439
+    },
+    {
+      "id": "gen_7xpmxjgqz",
+      "name": "Relief Camp, Chennai",
+      "type": "shelter",
+      "lon": 80.0716,
+      "lat": 12.9916,
+      "elev": 6,
+      "cond": 3,
+      "cap": 1469
+    },
+    {
+      "id": "gen_nkqfauxfc",
+      "name": "Cyclone Shelter, Chennai",
+      "type": "shelter",
+      "lon": 79.9688,
+      "lat": 13.1333,
+      "elev": 7,
+      "cond": 3,
+      "cap": 439
+    },
+    {
+      "id": "gen_fvebdb6kc",
+      "name": "Multipurpose Shelter, Chennai",
+      "type": "shelter",
+      "lon": 80.2385,
+      "lat": 12.9185,
+      "elev": 13,
+      "cond": 2,
+      "cap": 247
+    }
+  ],
+  "ap": [
+    {
+      "id": "gen_115a84oke",
+      "name": "33/11 kV Substation, Nellore",
+      "type": "power",
+      "lon": 80.1186,
+      "lat": 14.295,
+      "elev": 4,
+      "cond": 2,
+      "cap": 419
+    },
+    {
+      "id": "gen_fno93szt9",
+      "name": "Relief Camp, Nellore",
+      "type": "shelter",
+      "lon": 79.8703,
+      "lat": 14.5431,
+      "elev": 3,
+      "cond": 3,
+      "cap": 200
+    },
+    {
+      "id": "gen_192076sat",
+      "name": "CHC, Nellore",
+      "type": "hospital",
+      "lon": 79.6773,
+      "lat": 14.5071,
+      "elev": 16,
+      "cond": 4,
+      "cap": 291
+    },
+    {
+      "id": "gen_m67eext25",
+      "name": "Treatment Plant, Nellore",
+      "type": "water",
+      "lon": 79.8156,
+      "lat": 14.431,
+      "elev": 7,
+      "cond": 4,
+      "cap": 325
+    },
+    {
+      "id": "gen_kewjwx1n8",
+      "name": "Treatment Plant, Nellore",
+      "type": "water",
+      "lon": 80.0093,
+      "lat": 14.3017,
+      "elev": 3,
+      "cond": 3,
+      "cap": 151
+    },
+    {
+      "id": "gen_adlmd7z3q",
+      "name": "Cyclone Shelter, Nellore",
+      "type": "shelter",
+      "lon": 79.8973,
+      "lat": 14.3484,
+      "elev": 19,
+      "cond": 3,
+      "cap": 954
+    },
+    {
+      "id": "gen_v2xd4np5n",
+      "name": "Telephone Exchange, Nellore",
+      "type": "telecom",
+      "lon": 80.1206,
+      "lat": 14.5919,
+      "elev": 3,
+      "cond": 2,
+      "cap": 249
+    },
+    {
+      "id": "gen_nwr3ie3bz",
+      "name": "Cyclone Shelter, Nellore",
+      "type": "shelter",
+      "lon": 79.7736,
+      "lat": 14.1729,
+      "elev": 9,
+      "cond": 2,
+      "cap": 950
+    },
+    {
+      "id": "gen_9748i0yj5",
+      "name": "BSNL Exchange, Nellore",
+      "type": "telecom",
+      "lon": 80.0982,
+      "lat": 14.5869,
+      "elev": 16,
+      "cond": 4,
+      "cap": 276
+    },
+    {
+      "id": "gen_8lrd308bm",
+      "name": "CHC, Nellore",
+      "type": "hospital",
+      "lon": 79.7701,
+      "lat": 14.3947,
+      "elev": 5,
+      "cond": 2,
+      "cap": 183
+    },
+    {
+      "id": "gen_t1ecrfrzb",
+      "name": "CHC, Nellore",
+      "type": "hospital",
+      "lon": 80.0302,
+      "lat": 14.3091,
+      "elev": 7,
+      "cond": 3,
+      "cap": 73
+    },
+    {
+      "id": "gen_6dyfc5hav",
+      "name": "BSNL Exchange, Nellore",
+      "type": "telecom",
+      "lon": 80.122,
+      "lat": 14.5753,
+      "elev": 6,
+      "cond": 2,
+      "cap": 462
+    },
+    {
+      "id": "gen_81yxcfpio",
+      "name": "Pumping Station, Nellore",
+      "type": "water",
+      "lon": 80.0108,
+      "lat": 14.6219,
+      "elev": 7,
+      "cond": 3,
+      "cap": 195
+    },
+    {
+      "id": "gen_hh4ghc3bv",
+      "name": "132 kV Grid Substation, Nellore",
+      "type": "power",
+      "lon": 79.9642,
+      "lat": 14.4026,
+      "elev": 13,
+      "cond": 3,
+      "cap": 286
+    },
+    {
+      "id": "gen_a99vuhag8",
+      "name": "Treatment Plant, Nellore",
+      "type": "water",
+      "lon": 79.6991,
+      "lat": 14.1649,
+      "elev": 5,
+      "cond": 3,
+      "cap": 325
+    },
+    {
+      "id": "gen_fzvfkq78y",
+      "name": "Water Works, Nellore",
+      "type": "water",
+      "lon": 79.7819,
+      "lat": 14.2536,
+      "elev": 14,
+      "cond": 3,
+      "cap": 399
+    },
+    {
+      "id": "gen_pbphf8jq4",
+      "name": "Telephone Exchange, Prakasam",
+      "type": "telecom",
+      "lon": 79.7746,
+      "lat": 15.4952,
+      "elev": 16,
+      "cond": 2,
+      "cap": 359
+    },
+    {
+      "id": "gen_7r1kixhvg",
+      "name": "Cyclone Shelter, Prakasam",
+      "type": "shelter",
+      "lon": 79.9547,
+      "lat": 15.4624,
+      "elev": 16,
+      "cond": 4,
+      "cap": 891
+    },
+    {
+      "id": "gen_pdvb43iwo",
+      "name": "Medical College, Prakasam",
+      "type": "hospital",
+      "lon": 79.9222,
+      "lat": 15.5012,
+      "elev": 18,
+      "cond": 3,
+      "cap": 478
+    },
+    {
+      "id": "gen_ufb5821sf",
+      "name": "Cyclone Shelter, Prakasam",
+      "type": "shelter",
+      "lon": 79.9313,
+      "lat": 15.4379,
+      "elev": 6,
+      "cond": 4,
+      "cap": 1421
+    },
+    {
+      "id": "gen_utg1t3o6m",
+      "name": "Pumping Station, Prakasam",
+      "type": "water",
+      "lon": 80.1434,
+      "lat": 15.464,
+      "elev": 11,
+      "cond": 2,
+      "cap": 253
+    },
+    {
+      "id": "gen_qam31z778",
+      "name": "Medical College, Prakasam",
+      "type": "hospital",
+      "lon": 79.824,
+      "lat": 15.4059,
+      "elev": 6,
+      "cond": 4,
+      "cap": 231
+    },
+    {
+      "id": "gen_m3lfwc9kb",
+      "name": "Telephone Exchange, Prakasam",
+      "type": "telecom",
+      "lon": 80.1705,
+      "lat": 15.529,
+      "elev": 7,
+      "cond": 2,
+      "cap": 140
+    },
+    {
+      "id": "gen_0kr5jyovw",
+      "name": "General Hospital, Prakasam",
+      "type": "hospital",
+      "lon": 80.1748,
+      "lat": 15.6468,
+      "elev": 12,
+      "cond": 3,
+      "cap": 110
+    },
+    {
+      "id": "gen_n5ouigr81",
+      "name": "33/11 kV Substation, Prakasam",
+      "type": "power",
+      "lon": 80.052,
+      "lat": 15.4178,
+      "elev": 6,
+      "cond": 3,
+      "cap": 155
+    },
+    {
+      "id": "gen_9c3zut7xz",
+      "name": "Telephone Exchange, Prakasam",
+      "type": "telecom",
+      "lon": 79.9057,
+      "lat": 15.6531,
+      "elev": 5,
+      "cond": 3,
+      "cap": 362
+    },
+    {
+      "id": "gen_u50otimty",
+      "name": "BSNL Exchange, Prakasam",
+      "type": "telecom",
+      "lon": 80.164,
+      "lat": 15.283,
+      "elev": 14,
+      "cond": 3,
+      "cap": 143
+    },
+    {
+      "id": "gen_ykn2x875k",
+      "name": "Relief Camp, Prakasam",
+      "type": "shelter",
+      "lon": 79.7652,
+      "lat": 15.2664,
+      "elev": 4,
+      "cond": 2,
+      "cap": 942
+    },
+    {
+      "id": "gen_n01pf1s42",
+      "name": "Water Works, Prakasam",
+      "type": "water",
+      "lon": 79.9909,
+      "lat": 15.705,
+      "elev": 6,
+      "cond": 3,
+      "cap": 279
+    },
+    {
+      "id": "gen_t8af0a3qo",
+      "name": "Multipurpose Shelter, Prakasam",
+      "type": "shelter",
+      "lon": 80.2473,
+      "lat": 15.2713,
+      "elev": 2,
+      "cond": 2,
+      "cap": 781
+    },
+    {
+      "id": "gen_otno541cn",
+      "name": "Pumping Station, Prakasam",
+      "type": "water",
+      "lon": 80.1944,
+      "lat": 15.3018,
+      "elev": 4,
+      "cond": 4,
+      "cap": 202
+    },
+    {
+      "id": "gen_dpn9l0lkv",
+      "name": "BSNL Exchange, Prakasam",
+      "type": "telecom",
+      "lon": 79.9721,
+      "lat": 15.2984,
+      "elev": 6,
+      "cond": 2,
+      "cap": 123
+    },
+    {
+      "id": "gen_he47ehrlc",
+      "name": "District Hospital, Prakasam",
+      "type": "hospital",
+      "lon": 80.0744,
+      "lat": 15.3413,
+      "elev": 11,
+      "cond": 2,
+      "cap": 389
+    },
+    {
+      "id": "gen_plrpjx689",
+      "name": "Cyclone Shelter, Prakasam",
+      "type": "shelter",
+      "lon": 79.9983,
+      "lat": 15.3296,
+      "elev": 17,
+      "cond": 2,
+      "cap": 1135
+    },
+    {
+      "id": "gen_z2wryke3u",
+      "name": "General Hospital, Prakasam",
+      "type": "hospital",
+      "lon": 80.2178,
+      "lat": 15.6035,
+      "elev": 11,
+      "cond": 3,
+      "cap": 467
+    },
+    {
+      "id": "gen_9n6dl5y34",
+      "name": "Multipurpose Shelter, Prakasam",
+      "type": "shelter",
+      "lon": 80.1058,
+      "lat": 15.4872,
+      "elev": 2,
+      "cond": 2,
+      "cap": 480
+    },
+    {
+      "id": "gen_1rzrzu80e",
+      "name": "Treatment Plant, Krishna",
+      "type": "water",
+      "lon": 80.9749,
+      "lat": 15.9643,
+      "elev": 3,
+      "cond": 4,
+      "cap": 457
+    },
+    {
+      "id": "gen_h9ladce50",
+      "name": "Telephone Exchange, Krishna",
+      "type": "telecom",
+      "lon": 81.0924,
+      "lat": 15.8676,
+      "elev": 2,
+      "cond": 3,
+      "cap": 92
+    },
+    {
+      "id": "gen_icrp6z8cr",
+      "name": "Multipurpose Shelter, Krishna",
+      "type": "shelter",
+      "lon": 80.9913,
+      "lat": 16.0323,
+      "elev": 10,
+      "cond": 3,
+      "cap": 1319
+    },
+    {
+      "id": "gen_36n58pvbi",
+      "name": "General Hospital, Krishna",
+      "type": "hospital",
+      "lon": 81.1693,
+      "lat": 16.1384,
+      "elev": 4,
+      "cond": 3,
+      "cap": 183
+    },
+    {
+      "id": "gen_p8drwpa45",
+      "name": "CHC, Krishna",
+      "type": "hospital",
+      "lon": 80.7635,
+      "lat": 16.2447,
+      "elev": 4,
+      "cond": 4,
+      "cap": 175
+    },
+    {
+      "id": "gen_msg023d3n",
+      "name": "33/11 kV Substation, Krishna",
+      "type": "power",
+      "lon": 81.1141,
+      "lat": 16.3125,
+      "elev": 8,
+      "cond": 3,
+      "cap": 499
+    },
+    {
+      "id": "gen_kib3bwe35",
+      "name": "Water Works, Krishna",
+      "type": "water",
+      "lon": 81.2269,
+      "lat": 16.3393,
+      "elev": 11,
+      "cond": 2,
+      "cap": 383
+    },
+    {
+      "id": "gen_5pxj8i0pc",
+      "name": "Treatment Plant, Krishna",
+      "type": "water",
+      "lon": 80.969,
+      "lat": 15.9776,
+      "elev": 18,
+      "cond": 2,
+      "cap": 74
+    },
+    {
+      "id": "gen_w50kifq91",
+      "name": "Multipurpose Shelter, Krishna",
+      "type": "shelter",
+      "lon": 81.2068,
+      "lat": 16.0179,
+      "elev": 5,
+      "cond": 3,
+      "cap": 1415
+    },
+    {
+      "id": "gen_encv9ic4o",
+      "name": "Multipurpose Shelter, Krishna",
+      "type": "shelter",
+      "lon": 80.9023,
+      "lat": 15.9283,
+      "elev": 15,
+      "cond": 3,
+      "cap": 210
+    },
+    {
+      "id": "gen_c5rqh01i5",
+      "name": "132 kV Grid Substation, Krishna",
+      "type": "power",
+      "lon": 81.1089,
+      "lat": 15.9655,
+      "elev": 6,
+      "cond": 2,
+      "cap": 386
+    },
+    {
+      "id": "gen_or8wchlz9",
+      "name": "Treatment Plant, Krishna",
+      "type": "water",
+      "lon": 80.8525,
+      "lat": 16.0553,
+      "elev": 19,
+      "cond": 4,
+      "cap": 90
+    },
+    {
+      "id": "gen_ifwnbmgwr",
+      "name": "Tower Cluster, Krishna",
+      "type": "telecom",
+      "lon": 80.8438,
+      "lat": 16.304,
+      "elev": 9,
+      "cond": 4,
+      "cap": 202
+    },
+    {
+      "id": "gen_4a60dcc23",
+      "name": "Tower Cluster, Krishna",
+      "type": "telecom",
+      "lon": 80.8604,
+      "lat": 15.9689,
+      "elev": 17,
+      "cond": 4,
+      "cap": 452
+    },
+    {
+      "id": "gen_3wkxdp3nx",
+      "name": "Telephone Exchange, Krishna",
+      "type": "telecom",
+      "lon": 81.0579,
+      "lat": 16.3339,
+      "elev": 10,
+      "cond": 3,
+      "cap": 117
+    },
+    {
+      "id": "gen_9uin1q9rn",
+      "name": "132 kV Grid Substation, Krishna",
+      "type": "power",
+      "lon": 80.8583,
+      "lat": 15.9812,
+      "elev": 18,
+      "cond": 2,
+      "cap": 267
+    },
+    {
+      "id": "gen_zkq0cyrpb",
+      "name": "BSNL Exchange, Krishna",
+      "type": "telecom",
+      "lon": 81.1816,
+      "lat": 16.0167,
+      "elev": 11,
+      "cond": 2,
+      "cap": 227
+    },
+    {
+      "id": "gen_sfv415jqe",
+      "name": "33/11 kV Substation, Krishna",
+      "type": "power",
+      "lon": 80.8184,
+      "lat": 16.3253,
+      "elev": 8,
+      "cond": 4,
+      "cap": 453
+    },
+    {
+      "id": "gen_lt6bm5tl1",
+      "name": "General Hospital, Krishna",
+      "type": "hospital",
+      "lon": 80.7957,
+      "lat": 15.879,
+      "elev": 14,
+      "cond": 3,
+      "cap": 182
+    },
+    {
+      "id": "gen_aynaif34i",
+      "name": "Medical College, Krishna",
+      "type": "hospital",
+      "lon": 80.9501,
+      "lat": 15.8871,
+      "elev": 8,
+      "cond": 3,
+      "cap": 169
+    },
+    {
+      "id": "gen_uz7vylxpy",
+      "name": "Power Station, Krishna",
+      "type": "power",
+      "lon": 80.9138,
+      "lat": 16.1596,
+      "elev": 13,
+      "cond": 2,
+      "cap": 243
+    },
+    {
+      "id": "gen_3qlirzk1y",
+      "name": "Telephone Exchange, Krishna",
+      "type": "telecom",
+      "lon": 80.8803,
+      "lat": 16.0702,
+      "elev": 2,
+      "cond": 2,
+      "cap": 112
+    },
+    {
+      "id": "gen_uavs9f95s",
+      "name": "Water Works, East Godavari",
+      "type": "water",
+      "lon": 82.2414,
+      "lat": 16.7396,
+      "elev": 12,
+      "cond": 4,
+      "cap": 247
+    },
+    {
+      "id": "gen_y6rpzkmak",
+      "name": "Pumping Station, East Godavari",
+      "type": "water",
+      "lon": 82.0984,
+      "lat": 16.6934,
+      "elev": 19,
+      "cond": 4,
+      "cap": 351
+    },
+    {
+      "id": "gen_xj7j0v06i",
+      "name": "General Hospital, East Godavari",
+      "type": "hospital",
+      "lon": 82.1297,
+      "lat": 17.0192,
+      "elev": 18,
+      "cond": 3,
+      "cap": 85
+    },
+    {
+      "id": "gen_q9pl2mw7e",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 82.2,
+      "lat": 17.0164,
+      "elev": 3,
+      "cond": 3,
+      "cap": 829
+    },
+    {
+      "id": "gen_2d76gl6nk",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 81.9836,
+      "lat": 16.9572,
+      "elev": 6,
+      "cond": 4,
+      "cap": 1317
+    },
+    {
+      "id": "gen_oeq3u0s81",
+      "name": "132 kV Grid Substation, East Godavari",
+      "type": "power",
+      "lon": 82.1695,
+      "lat": 16.7676,
+      "elev": 13,
+      "cond": 2,
+      "cap": 344
+    },
+    {
+      "id": "gen_y9mapw964",
+      "name": "General Hospital, East Godavari",
+      "type": "hospital",
+      "lon": 82.1974,
+      "lat": 16.6787,
+      "elev": 3,
+      "cond": 3,
+      "cap": 451
+    },
+    {
+      "id": "gen_es9i38tr7",
+      "name": "Multipurpose Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 82.1241,
+      "lat": 16.8432,
+      "elev": 3,
+      "cond": 4,
+      "cap": 944
+    },
+    {
+      "id": "gen_u98gdi3of",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 82.2118,
+      "lat": 16.8318,
+      "elev": 2,
+      "cond": 4,
+      "cap": 982
+    },
+    {
+      "id": "gen_fvox6tj2o",
+      "name": "Treatment Plant, East Godavari",
+      "type": "water",
+      "lon": 82.0438,
+      "lat": 17.1028,
+      "elev": 12,
+      "cond": 4,
+      "cap": 391
+    },
+    {
+      "id": "gen_ms9dsghyr",
+      "name": "33/11 kV Substation, East Godavari",
+      "type": "power",
+      "lon": 82.3132,
+      "lat": 17.1146,
+      "elev": 14,
+      "cond": 3,
+      "cap": 199
+    },
+    {
+      "id": "gen_te237jik7",
+      "name": "CHC, East Godavari",
+      "type": "hospital",
+      "lon": 82.1607,
+      "lat": 16.993,
+      "elev": 3,
+      "cond": 3,
+      "cap": 112
+    },
+    {
+      "id": "gen_hc39t27b5",
+      "name": "Water Works, East Godavari",
+      "type": "water",
+      "lon": 82.0386,
+      "lat": 16.9343,
+      "elev": 9,
+      "cond": 3,
+      "cap": 109
+    },
+    {
+      "id": "gen_9wurr9bdd",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 82.319,
+      "lat": 16.8121,
+      "elev": 4,
+      "cond": 3,
+      "cap": 1427
+    },
+    {
+      "id": "gen_k8axcyikg",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 81.9797,
+      "lat": 16.8434,
+      "elev": 13,
+      "cond": 4,
+      "cap": 1003
+    },
+    {
+      "id": "gen_tf6ge17bq",
+      "name": "Power Station, East Godavari",
+      "type": "power",
+      "lon": 82.2717,
+      "lat": 17.019,
+      "elev": 11,
+      "cond": 2,
+      "cap": 284
+    },
+    {
+      "id": "gen_irbn3ljcj",
+      "name": "Tower Cluster, East Godavari",
+      "type": "telecom",
+      "lon": 82.0851,
+      "lat": 16.6769,
+      "elev": 9,
+      "cond": 3,
+      "cap": 488
+    },
+    {
+      "id": "gen_ajt3fxclq",
+      "name": "Relief Camp, East Godavari",
+      "type": "shelter",
+      "lon": 82.0935,
+      "lat": 16.8181,
+      "elev": 4,
+      "cond": 3,
+      "cap": 1055
+    },
+    {
+      "id": "gen_pbvw2q8ji",
+      "name": "Pumping Station, East Godavari",
+      "type": "water",
+      "lon": 82.1196,
+      "lat": 16.8251,
+      "elev": 10,
+      "cond": 2,
+      "cap": 289
+    },
+    {
+      "id": "gen_stly2fw0v",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 81.9532,
+      "lat": 16.711,
+      "elev": 19,
+      "cond": 2,
+      "cap": 1257
+    },
+    {
+      "id": "gen_ycqoi9qne",
+      "name": "Cyclone Shelter, East Godavari",
+      "type": "shelter",
+      "lon": 82.1184,
+      "lat": 16.6534,
+      "elev": 5,
+      "cond": 3,
+      "cap": 865
+    },
+    {
+      "id": "gen_bfuj9v9oe",
+      "name": "Tower Cluster, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.5468,
+      "lat": 17.8793,
+      "elev": 9,
+      "cond": 4,
+      "cap": 129
+    },
+    {
+      "id": "gen_rd08xlp19",
+      "name": "Pumping Station, Visakhapatnam",
+      "type": "water",
+      "lon": 83.0636,
+      "lat": 17.6353,
+      "elev": 7,
+      "cond": 2,
+      "cap": 490
+    },
+    {
+      "id": "gen_71cbcixtd",
+      "name": "Tower Cluster, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.3142,
+      "lat": 17.7361,
+      "elev": 13,
+      "cond": 2,
+      "cap": 408
+    },
+    {
+      "id": "gen_4toiauxbz",
+      "name": "Telephone Exchange, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.3908,
+      "lat": 17.7937,
+      "elev": 2,
+      "cond": 4,
+      "cap": 340
+    },
+    {
+      "id": "gen_6jgr1679p",
+      "name": "District Hospital, Visakhapatnam",
+      "type": "hospital",
+      "lon": 83.5095,
+      "lat": 17.948,
+      "elev": 11,
+      "cond": 2,
+      "cap": 262
+    },
+    {
+      "id": "gen_oerb8mpm5",
+      "name": "Water Works, Visakhapatnam",
+      "type": "water",
+      "lon": 83.4917,
+      "lat": 17.8977,
+      "elev": 18,
+      "cond": 2,
+      "cap": 172
+    },
+    {
+      "id": "gen_vo5850yct",
+      "name": "132 kV Grid Substation, Visakhapatnam",
+      "type": "power",
+      "lon": 83.114,
+      "lat": 17.4675,
+      "elev": 19,
+      "cond": 3,
+      "cap": 59
+    },
+    {
+      "id": "gen_w1aqik2sk",
+      "name": "Tower Cluster, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.0667,
+      "lat": 17.645,
+      "elev": 6,
+      "cond": 2,
+      "cap": 250
+    },
+    {
+      "id": "gen_mldjamzx4",
+      "name": "Multipurpose Shelter, Visakhapatnam",
+      "type": "shelter",
+      "lon": 83.3397,
+      "lat": 17.8355,
+      "elev": 2,
+      "cond": 4,
+      "cap": 810
+    },
+    {
+      "id": "gen_u25q293sa",
+      "name": "CHC, Visakhapatnam",
+      "type": "hospital",
+      "lon": 83.1879,
+      "lat": 17.7627,
+      "elev": 12,
+      "cond": 2,
+      "cap": 154
+    },
+    {
+      "id": "gen_wtjnrdfph",
+      "name": "General Hospital, Visakhapatnam",
+      "type": "hospital",
+      "lon": 83.2245,
+      "lat": 17.9457,
+      "elev": 8,
+      "cond": 4,
+      "cap": 143
+    },
+    {
+      "id": "gen_9kuuo7giy",
+      "name": "Multipurpose Shelter, Visakhapatnam",
+      "type": "shelter",
+      "lon": 83.2575,
+      "lat": 17.8306,
+      "elev": 4,
+      "cond": 2,
+      "cap": 1484
+    },
+    {
+      "id": "gen_fl1e4tbgx",
+      "name": "BSNL Exchange, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.1796,
+      "lat": 17.4821,
+      "elev": 7,
+      "cond": 3,
+      "cap": 172
+    },
+    {
+      "id": "gen_r9s4b27mm",
+      "name": "BSNL Exchange, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.0765,
+      "lat": 17.8267,
+      "elev": 19,
+      "cond": 4,
+      "cap": 376
+    },
+    {
+      "id": "gen_b7f80v99v",
+      "name": "132 kV Grid Substation, Visakhapatnam",
+      "type": "power",
+      "lon": 83.3289,
+      "lat": 17.6468,
+      "elev": 2,
+      "cond": 3,
+      "cap": 449
+    },
+    {
+      "id": "gen_5e9dt9cor",
+      "name": "Tower Cluster, Visakhapatnam",
+      "type": "telecom",
+      "lon": 83.4653,
+      "lat": 17.8143,
+      "elev": 19,
+      "cond": 4,
+      "cap": 174
+    },
+    {
+      "id": "gen_8zf50kts7",
+      "name": "33/11 kV Substation, Visakhapatnam",
+      "type": "power",
+      "lon": 83.0642,
+      "lat": 17.4653,
+      "elev": 12,
+      "cond": 4,
+      "cap": 273
+    },
+    {
+      "id": "gen_s9zpqcwd7",
+      "name": "Multipurpose Shelter, Srikakulam",
+      "type": "shelter",
+      "lon": 84.0529,
+      "lat": 18.3043,
+      "elev": 13,
+      "cond": 2,
+      "cap": 465
+    },
+    {
+      "id": "gen_0o0rbwg55",
+      "name": "Power Station, Srikakulam",
+      "type": "power",
+      "lon": 83.9528,
+      "lat": 18.3173,
+      "elev": 11,
+      "cond": 2,
+      "cap": 326
+    },
+    {
+      "id": "gen_kbvuc8qru",
+      "name": "Treatment Plant, Srikakulam",
+      "type": "water",
+      "lon": 84.0947,
+      "lat": 18.5138,
+      "elev": 9,
+      "cond": 3,
+      "cap": 182
+    },
+    {
+      "id": "gen_mjg6iuu5x",
+      "name": "132 kV Grid Substation, Srikakulam",
+      "type": "power",
+      "lon": 84.0013,
+      "lat": 18.0928,
+      "elev": 15,
+      "cond": 2,
+      "cap": 320
+    },
+    {
+      "id": "gen_yj6dfe1q9",
+      "name": "District Hospital, Srikakulam",
+      "type": "hospital",
+      "lon": 83.8209,
+      "lat": 18.3346,
+      "elev": 10,
+      "cond": 2,
+      "cap": 431
+    },
+    {
+      "id": "gen_hn0fvogve",
+      "name": "Tower Cluster, Srikakulam",
+      "type": "telecom",
+      "lon": 83.9524,
+      "lat": 18.4038,
+      "elev": 17,
+      "cond": 3,
+      "cap": 450
+    },
+    {
+      "id": "gen_8p1bx468t",
+      "name": "Water Works, Srikakulam",
+      "type": "water",
+      "lon": 84.0334,
+      "lat": 18.1769,
+      "elev": 12,
+      "cond": 2,
+      "cap": 270
+    },
+    {
+      "id": "gen_y3x2tspyl",
+      "name": "Multipurpose Shelter, Srikakulam",
+      "type": "shelter",
+      "lon": 84.1008,
+      "lat": 18.2219,
+      "elev": 11,
+      "cond": 4,
+      "cap": 400
+    },
+    {
+      "id": "gen_tmpf95hg8",
+      "name": "District Hospital, Srikakulam",
+      "type": "hospital",
+      "lon": 83.8333,
+      "lat": 18.3459,
+      "elev": 14,
+      "cond": 2,
+      "cap": 433
+    },
+    {
+      "id": "gen_irgbxcr9q",
+      "name": "District Hospital, Srikakulam",
+      "type": "hospital",
+      "lon": 83.7256,
+      "lat": 18.222,
+      "elev": 4,
+      "cond": 2,
+      "cap": 490
+    },
+    {
+      "id": "gen_56lmz8dls",
+      "name": "Multipurpose Shelter, Srikakulam",
+      "type": "shelter",
+      "lon": 83.7591,
+      "lat": 18.0596,
+      "elev": 11,
+      "cond": 3,
+      "cap": 456
+    },
+    {
+      "id": "gen_ugxb5udx7",
+      "name": "Telephone Exchange, Srikakulam",
+      "type": "telecom",
+      "lon": 83.9161,
+      "lat": 18.3461,
+      "elev": 7,
+      "cond": 2,
+      "cap": 290
+    },
+    {
+      "id": "gen_mz3woqhcr",
+      "name": "General Hospital, Srikakulam",
+      "type": "hospital",
+      "lon": 84.0295,
+      "lat": 18.058,
+      "elev": 3,
+      "cond": 4,
+      "cap": 143
+    },
+    {
+      "id": "gen_lprt0wenv",
+      "name": "Water Works, Srikakulam",
+      "type": "water",
+      "lon": 83.8999,
+      "lat": 18.3229,
+      "elev": 10,
+      "cond": 4,
+      "cap": 466
+    },
+    {
+      "id": "gen_r26yu4y70",
+      "name": "Treatment Plant, Srikakulam",
+      "type": "water",
+      "lon": 84.0714,
+      "lat": 18.1451,
+      "elev": 10,
+      "cond": 2,
+      "cap": 214
+    },
+    {
+      "id": "gen_g4flvc4pl",
+      "name": "Multipurpose Shelter, Srikakulam",
+      "type": "shelter",
+      "lon": 83.7543,
+      "lat": 18.445,
+      "elev": 7,
+      "cond": 2,
+      "cap": 1202
+    },
+    {
+      "id": "gen_vrekmu5o1",
+      "name": "District Hospital, Srikakulam",
+      "type": "hospital",
+      "lon": 84.1061,
+      "lat": 18.2515,
+      "elev": 16,
+      "cond": 3,
+      "cap": 141
+    },
+    {
+      "id": "gen_sqfsmd1xu",
+      "name": "Telephone Exchange, Srikakulam",
+      "type": "telecom",
+      "lon": 83.7035,
+      "lat": 18.0897,
+      "elev": 17,
+      "cond": 2,
+      "cap": 316
+    },
+    {
+      "id": "gen_ffn5kg7fb",
+      "name": "BSNL Exchange, Srikakulam",
+      "type": "telecom",
+      "lon": 83.8966,
+      "lat": 18.4335,
+      "elev": 13,
+      "cond": 4,
+      "cap": 275
+    },
+    {
+      "id": "gen_oix9oprhc",
+      "name": "General Hospital, Srikakulam",
+      "type": "hospital",
+      "lon": 84.1396,
+      "lat": 18.1125,
+      "elev": 6,
+      "cond": 3,
+      "cap": 261
+    },
+    {
+      "id": "gen_6f12yvvxz",
+      "name": "Pumping Station, Srikakulam",
+      "type": "water",
+      "lon": 84.0853,
+      "lat": 18.3762,
+      "elev": 4,
+      "cond": 4,
+      "cap": 88
+    }
+  ],
+  "odisha": [
+    {
+      "id": "gen_e6kdhpbjp",
+      "name": "Cyclone Shelter, Ganjam",
+      "type": "shelter",
+      "lon": 84.6319,
+      "lat": 19.4636,
+      "elev": 2,
+      "cond": 4,
+      "cap": 711
+    },
+    {
+      "id": "gen_zy5bbw6xk",
+      "name": "Telephone Exchange, Ganjam",
+      "type": "telecom",
+      "lon": 84.5789,
+      "lat": 19.3291,
+      "elev": 3,
+      "cond": 3,
+      "cap": 336
+    },
+    {
+      "id": "gen_ky8vnhz8y",
+      "name": "Tower Cluster, Ganjam",
+      "type": "telecom",
+      "lon": 84.6236,
+      "lat": 19.2739,
+      "elev": 7,
+      "cond": 4,
+      "cap": 307
+    },
+    {
+      "id": "gen_nlf9lf3db",
+      "name": "Power Station, Ganjam",
+      "type": "power",
+      "lon": 84.8913,
+      "lat": 19.3324,
+      "elev": 19,
+      "cond": 3,
+      "cap": 273
+    },
+    {
+      "id": "gen_9bdm8wf5s",
+      "name": "Water Works, Ganjam",
+      "type": "water",
+      "lon": 84.7738,
+      "lat": 19.5273,
+      "elev": 13,
+      "cond": 4,
+      "cap": 237
+    },
+    {
+      "id": "gen_wa973mxau",
+      "name": "Medical College, Ganjam",
+      "type": "hospital",
+      "lon": 84.8187,
+      "lat": 19.3774,
+      "elev": 6,
+      "cond": 3,
+      "cap": 491
+    },
+    {
+      "id": "gen_qsfica0o6",
+      "name": "33/11 kV Substation, Ganjam",
+      "type": "power",
+      "lon": 84.5344,
+      "lat": 19.3374,
+      "elev": 6,
+      "cond": 3,
+      "cap": 300
+    },
+    {
+      "id": "gen_ovl9sqjc2",
+      "name": "Pumping Station, Ganjam",
+      "type": "water",
+      "lon": 84.7793,
+      "lat": 19.2538,
+      "elev": 10,
+      "cond": 4,
+      "cap": 336
+    },
+    {
+      "id": "gen_n0g970ye1",
+      "name": "General Hospital, Ganjam",
+      "type": "hospital",
+      "lon": 84.5015,
+      "lat": 19.3767,
+      "elev": 10,
+      "cond": 2,
+      "cap": 308
+    },
+    {
+      "id": "gen_mq2yd60f8",
+      "name": "33/11 kV Substation, Ganjam",
+      "type": "power",
+      "lon": 84.4648,
+      "lat": 19.2464,
+      "elev": 3,
+      "cond": 4,
+      "cap": 337
+    },
+    {
+      "id": "gen_dbmb158gz",
+      "name": "Pumping Station, Ganjam",
+      "type": "water",
+      "lon": 84.8005,
+      "lat": 19.1276,
+      "elev": 12,
+      "cond": 4,
+      "cap": 467
+    },
+    {
+      "id": "gen_3swmq5o9k",
+      "name": "Telephone Exchange, Ganjam",
+      "type": "telecom",
+      "lon": 84.702,
+      "lat": 19.336,
+      "elev": 9,
+      "cond": 3,
+      "cap": 116
+    },
+    {
+      "id": "gen_3o2ubnqwe",
+      "name": "Water Works, Ganjam",
+      "type": "water",
+      "lon": 84.5415,
+      "lat": 19.2882,
+      "elev": 9,
+      "cond": 2,
+      "cap": 417
+    },
+    {
+      "id": "gen_vm61ekr9m",
+      "name": "Relief Camp, Ganjam",
+      "type": "shelter",
+      "lon": 84.4615,
+      "lat": 19.2791,
+      "elev": 8,
+      "cond": 4,
+      "cap": 850
+    },
+    {
+      "id": "gen_cbwuaip6x",
+      "name": "Multipurpose Shelter, Ganjam",
+      "type": "shelter",
+      "lon": 84.6418,
+      "lat": 19.1226,
+      "elev": 5,
+      "cond": 2,
+      "cap": 914
+    },
+    {
+      "id": "gen_tjhwyl0kx",
+      "name": "Relief Camp, Khordha",
+      "type": "shelter",
+      "lon": 85.5988,
+      "lat": 20.2116,
+      "elev": 14,
+      "cond": 4,
+      "cap": 385
+    },
+    {
+      "id": "gen_mc2t03yi4",
+      "name": "33/11 kV Substation, Khordha",
+      "type": "power",
+      "lon": 85.6598,
+      "lat": 19.9992,
+      "elev": 16,
+      "cond": 3,
+      "cap": 181
+    },
+    {
+      "id": "gen_9boxt7mgs",
+      "name": "Telephone Exchange, Khordha",
+      "type": "telecom",
+      "lon": 85.4907,
+      "lat": 20.1373,
+      "elev": 12,
+      "cond": 4,
+      "cap": 446
+    },
+    {
+      "id": "gen_cgm7yefr0",
+      "name": "Tower Cluster, Khordha",
+      "type": "telecom",
+      "lon": 85.6249,
+      "lat": 19.9338,
+      "elev": 8,
+      "cond": 4,
+      "cap": 327
+    },
+    {
+      "id": "gen_j4c91r1nt",
+      "name": "Medical College, Khordha",
+      "type": "hospital",
+      "lon": 85.3896,
+      "lat": 20.3397,
+      "elev": 18,
+      "cond": 3,
+      "cap": 252
+    },
+    {
+      "id": "gen_5mqurkf19",
+      "name": "Relief Camp, Khordha",
+      "type": "shelter",
+      "lon": 85.7924,
+      "lat": 20.2514,
+      "elev": 19,
+      "cond": 2,
+      "cap": 1293
+    },
+    {
+      "id": "gen_wwggeakev",
+      "name": "Medical College, Khordha",
+      "type": "hospital",
+      "lon": 85.8067,
+      "lat": 19.9564,
+      "elev": 6,
+      "cond": 3,
+      "cap": 336
+    },
+    {
+      "id": "gen_5sxdjacht",
+      "name": "Tower Cluster, Khordha",
+      "type": "telecom",
+      "lon": 85.4367,
+      "lat": 20.1971,
+      "elev": 6,
+      "cond": 3,
+      "cap": 208
+    },
+    {
+      "id": "gen_epczja159",
+      "name": "33/11 kV Substation, Khordha",
+      "type": "power",
+      "lon": 85.8386,
+      "lat": 20.0185,
+      "elev": 10,
+      "cond": 4,
+      "cap": 459
+    },
+    {
+      "id": "gen_gfprevgx0",
+      "name": "General Hospital, Khordha",
+      "type": "hospital",
+      "lon": 85.518,
+      "lat": 20.0048,
+      "elev": 19,
+      "cond": 4,
+      "cap": 363
+    },
+    {
+      "id": "gen_cvfhd5wcu",
+      "name": "Treatment Plant, Khordha",
+      "type": "water",
+      "lon": 85.3774,
+      "lat": 20.1569,
+      "elev": 13,
+      "cond": 3,
+      "cap": 141
+    },
+    {
+      "id": "gen_c6ram1n26",
+      "name": "CHC, Khordha",
+      "type": "hospital",
+      "lon": 85.7002,
+      "lat": 20.1942,
+      "elev": 12,
+      "cond": 2,
+      "cap": 59
+    },
+    {
+      "id": "gen_mcged6x5s",
+      "name": "132 kV Grid Substation, Khordha",
+      "type": "power",
+      "lon": 85.355,
+      "lat": 20.2379,
+      "elev": 12,
+      "cond": 4,
+      "cap": 183
+    },
+    {
+      "id": "gen_wz9pds4jf",
+      "name": "Pumping Station, Khordha",
+      "type": "water",
+      "lon": 85.481,
+      "lat": 19.968,
+      "elev": 8,
+      "cond": 3,
+      "cap": 163
+    },
+    {
+      "id": "gen_29to51uoo",
+      "name": "BSNL Exchange, Khordha",
+      "type": "telecom",
+      "lon": 85.436,
+      "lat": 20.1345,
+      "elev": 19,
+      "cond": 4,
+      "cap": 410
+    },
+    {
+      "id": "gen_dbyfbgu0j",
+      "name": "CHC, Khordha",
+      "type": "hospital",
+      "lon": 85.6774,
+      "lat": 19.9651,
+      "elev": 10,
+      "cond": 3,
+      "cap": 436
+    },
+    {
+      "id": "gen_4un6dk4w5",
+      "name": "Water Works, Khordha",
+      "type": "water",
+      "lon": 85.3648,
+      "lat": 20.0308,
+      "elev": 17,
+      "cond": 4,
+      "cap": 160
+    },
+    {
+      "id": "gen_339v9gpai",
+      "name": "BSNL Exchange, Khordha",
+      "type": "telecom",
+      "lon": 85.83,
+      "lat": 20.3129,
+      "elev": 4,
+      "cond": 2,
+      "cap": 362
+    },
+    {
+      "id": "gen_1jp69b01t",
+      "name": "General Hospital, Khordha",
+      "type": "hospital",
+      "lon": 85.8349,
+      "lat": 20.2398,
+      "elev": 12,
+      "cond": 4,
+      "cap": 275
+    },
+    {
+      "id": "gen_kq3oifw7z",
+      "name": "CHC, Khordha",
+      "type": "hospital",
+      "lon": 85.7889,
+      "lat": 20.2933,
+      "elev": 11,
+      "cond": 2,
+      "cap": 357
+    },
+    {
+      "id": "gen_48okuye1y",
+      "name": "District Hospital, Khordha",
+      "type": "hospital",
+      "lon": 85.53,
+      "lat": 19.9267,
+      "elev": 13,
+      "cond": 4,
+      "cap": 237
+    },
+    {
+      "id": "gen_k3kjz82mm",
+      "name": "Cyclone Shelter, Khordha",
+      "type": "shelter",
+      "lon": 85.836,
+      "lat": 20.2953,
+      "elev": 17,
+      "cond": 3,
+      "cap": 457
+    },
+    {
+      "id": "gen_m1b4mg5la",
+      "name": "Water Works, Khordha",
+      "type": "water",
+      "lon": 85.5797,
+      "lat": 20.323,
+      "elev": 17,
+      "cond": 2,
+      "cap": 273
+    },
+    {
+      "id": "gen_udgnhuya7",
+      "name": "Relief Camp, Puri",
+      "type": "shelter",
+      "lon": 85.7218,
+      "lat": 19.6771,
+      "elev": 14,
+      "cond": 2,
+      "cap": 578
+    },
+    {
+      "id": "gen_wydvuqsr2",
+      "name": "Relief Camp, Puri",
+      "type": "shelter",
+      "lon": 85.5657,
+      "lat": 19.8089,
+      "elev": 5,
+      "cond": 3,
+      "cap": 752
+    },
+    {
+      "id": "gen_9z7wrfsdg",
+      "name": "33/11 kV Substation, Puri",
+      "type": "power",
+      "lon": 85.7672,
+      "lat": 19.7038,
+      "elev": 14,
+      "cond": 2,
+      "cap": 239
+    },
+    {
+      "id": "gen_f5ujqzh3c",
+      "name": "132 kV Grid Substation, Puri",
+      "type": "power",
+      "lon": 85.6735,
+      "lat": 19.5558,
+      "elev": 8,
+      "cond": 2,
+      "cap": 458
+    },
+    {
+      "id": "gen_cpgimdou1",
+      "name": "Cyclone Shelter, Puri",
+      "type": "shelter",
+      "lon": 85.6079,
+      "lat": 20.0253,
+      "elev": 12,
+      "cond": 3,
+      "cap": 1219
+    },
+    {
+      "id": "gen_0sxmokcai",
+      "name": "BSNL Exchange, Puri",
+      "type": "telecom",
+      "lon": 86.0189,
+      "lat": 19.5589,
+      "elev": 16,
+      "cond": 2,
+      "cap": 375
+    },
+    {
+      "id": "gen_octsh80mh",
+      "name": "Treatment Plant, Puri",
+      "type": "water",
+      "lon": 85.741,
+      "lat": 19.6552,
+      "elev": 10,
+      "cond": 2,
+      "cap": 496
+    },
+    {
+      "id": "gen_iavqnzux2",
+      "name": "Multipurpose Shelter, Puri",
+      "type": "shelter",
+      "lon": 85.656,
+      "lat": 19.7864,
+      "elev": 15,
+      "cond": 4,
+      "cap": 1336
+    },
+    {
+      "id": "gen_wbf91w8cb",
+      "name": "132 kV Grid Substation, Puri",
+      "type": "power",
+      "lon": 85.8064,
+      "lat": 19.7099,
+      "elev": 12,
+      "cond": 4,
+      "cap": 104
+    },
+    {
+      "id": "gen_fu4ngtvhi",
+      "name": "132 kV Grid Substation, Puri",
+      "type": "power",
+      "lon": 85.7935,
+      "lat": 19.7915,
+      "elev": 16,
+      "cond": 2,
+      "cap": 372
+    },
+    {
+      "id": "gen_e1br7s54k",
+      "name": "CHC, Puri",
+      "type": "hospital",
+      "lon": 85.6116,
+      "lat": 19.8784,
+      "elev": 14,
+      "cond": 2,
+      "cap": 455
+    },
+    {
+      "id": "gen_pwh1frjkr",
+      "name": "BSNL Exchange, Puri",
+      "type": "telecom",
+      "lon": 86.0258,
+      "lat": 19.7235,
+      "elev": 15,
+      "cond": 3,
+      "cap": 345
+    },
+    {
+      "id": "gen_y56wjahpc",
+      "name": "Treatment Plant, Puri",
+      "type": "water",
+      "lon": 85.7724,
+      "lat": 19.7841,
+      "elev": 15,
+      "cond": 4,
+      "cap": 362
+    },
+    {
+      "id": "gen_ia3sxwwe7",
+      "name": "BSNL Exchange, Puri",
+      "type": "telecom",
+      "lon": 85.7796,
+      "lat": 19.6407,
+      "elev": 8,
+      "cond": 3,
+      "cap": 432
+    },
+    {
+      "id": "gen_mazinpjdf",
+      "name": "Cyclone Shelter, Puri",
+      "type": "shelter",
+      "lon": 85.7932,
+      "lat": 19.7669,
+      "elev": 13,
+      "cond": 2,
+      "cap": 1405
+    },
+    {
+      "id": "gen_9ayx858sl",
+      "name": "Tower Cluster, Puri",
+      "type": "telecom",
+      "lon": 85.5752,
+      "lat": 19.9147,
+      "elev": 15,
+      "cond": 2,
+      "cap": 433
+    },
+    {
+      "id": "gen_fdvt6hlpz",
+      "name": "Multipurpose Shelter, Puri",
+      "type": "shelter",
+      "lon": 85.9574,
+      "lat": 19.7969,
+      "elev": 4,
+      "cond": 2,
+      "cap": 267
+    },
+    {
+      "id": "gen_81qtc208t",
+      "name": "General Hospital, Jagatsinghpur",
+      "type": "hospital",
+      "lon": 86.0614,
+      "lat": 20.1326,
+      "elev": 12,
+      "cond": 2,
+      "cap": 82
+    },
+    {
+      "id": "gen_dcwdmwri6",
+      "name": "Relief Camp, Jagatsinghpur",
+      "type": "shelter",
+      "lon": 86.2924,
+      "lat": 20.3438,
+      "elev": 13,
+      "cond": 2,
+      "cap": 1079
+    },
+    {
+      "id": "gen_2lsii3kwu",
+      "name": "33/11 kV Substation, Jagatsinghpur",
+      "type": "power",
+      "lon": 86.0481,
+      "lat": 20.1738,
+      "elev": 6,
+      "cond": 2,
+      "cap": 74
+    },
+    {
+      "id": "gen_mvjuf5nqv",
+      "name": "District Hospital, Jagatsinghpur",
+      "type": "hospital",
+      "lon": 85.9442,
+      "lat": 20.2054,
+      "elev": 4,
+      "cond": 2,
+      "cap": 255
+    },
+    {
+      "id": "gen_vedum20o6",
+      "name": "Pumping Station, Jagatsinghpur",
+      "type": "water",
+      "lon": 86.1617,
+      "lat": 20.0685,
+      "elev": 7,
+      "cond": 2,
+      "cap": 157
+    },
+    {
+      "id": "gen_233hmt1a1",
+      "name": "BSNL Exchange, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 85.9923,
+      "lat": 19.9687,
+      "elev": 11,
+      "cond": 3,
+      "cap": 115
+    },
+    {
+      "id": "gen_1zslebkpz",
+      "name": "132 kV Grid Substation, Jagatsinghpur",
+      "type": "power",
+      "lon": 86.0946,
+      "lat": 20.0558,
+      "elev": 7,
+      "cond": 2,
+      "cap": 329
+    },
+    {
+      "id": "gen_p0gpd9kyv",
+      "name": "Relief Camp, Jagatsinghpur",
+      "type": "shelter",
+      "lon": 86.2,
+      "lat": 20.2909,
+      "elev": 3,
+      "cond": 4,
+      "cap": 588
+    },
+    {
+      "id": "gen_axulrqg5r",
+      "name": "33/11 kV Substation, Jagatsinghpur",
+      "type": "power",
+      "lon": 85.976,
+      "lat": 20.1275,
+      "elev": 14,
+      "cond": 4,
+      "cap": 205
+    },
+    {
+      "id": "gen_nggfjopn4",
+      "name": "Relief Camp, Jagatsinghpur",
+      "type": "shelter",
+      "lon": 86.3084,
+      "lat": 20.2858,
+      "elev": 14,
+      "cond": 2,
+      "cap": 1123
+    },
+    {
+      "id": "gen_qqrrb6o8k",
+      "name": "Medical College, Jagatsinghpur",
+      "type": "hospital",
+      "lon": 85.9629,
+      "lat": 20.2132,
+      "elev": 4,
+      "cond": 3,
+      "cap": 413
+    },
+    {
+      "id": "gen_i1msonydn",
+      "name": "33/11 kV Substation, Jagatsinghpur",
+      "type": "power",
+      "lon": 86.0348,
+      "lat": 20.27,
+      "elev": 6,
+      "cond": 4,
+      "cap": 153
+    },
+    {
+      "id": "gen_r5b05qq8k",
+      "name": "Tower Cluster, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 85.8902,
+      "lat": 20.3576,
+      "elev": 2,
+      "cond": 3,
+      "cap": 89
+    },
+    {
+      "id": "gen_whmb993uj",
+      "name": "Medical College, Jagatsinghpur",
+      "type": "hospital",
+      "lon": 85.8955,
+      "lat": 19.9572,
+      "elev": 19,
+      "cond": 2,
+      "cap": 51
+    },
+    {
+      "id": "gen_cxc2ak2q5",
+      "name": "Tower Cluster, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 86.3391,
+      "lat": 20.3839,
+      "elev": 18,
+      "cond": 2,
+      "cap": 448
+    },
+    {
+      "id": "gen_du1rh8l7v",
+      "name": "Telephone Exchange, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 85.9815,
+      "lat": 20.1767,
+      "elev": 3,
+      "cond": 4,
+      "cap": 178
+    },
+    {
+      "id": "gen_ghc872iq6",
+      "name": "CHC, Jagatsinghpur",
+      "type": "hospital",
+      "lon": 85.9932,
+      "lat": 20.0866,
+      "elev": 3,
+      "cond": 4,
+      "cap": 456
+    },
+    {
+      "id": "gen_0f9qhsw3o",
+      "name": "BSNL Exchange, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 85.917,
+      "lat": 20.4434,
+      "elev": 19,
+      "cond": 4,
+      "cap": 449
+    },
+    {
+      "id": "gen_j0w78ej6r",
+      "name": "Telephone Exchange, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 85.8772,
+      "lat": 19.9781,
+      "elev": 6,
+      "cond": 4,
+      "cap": 178
+    },
+    {
+      "id": "gen_cis1gun0m",
+      "name": "Water Works, Jagatsinghpur",
+      "type": "water",
+      "lon": 86.2074,
+      "lat": 20.0394,
+      "elev": 12,
+      "cond": 2,
+      "cap": 170
+    },
+    {
+      "id": "gen_2i4pe486x",
+      "name": "Water Works, Jagatsinghpur",
+      "type": "water",
+      "lon": 85.8703,
+      "lat": 20.0162,
+      "elev": 4,
+      "cond": 3,
+      "cap": 308
+    },
+    {
+      "id": "gen_p8ild1r9w",
+      "name": "Cyclone Shelter, Jagatsinghpur",
+      "type": "shelter",
+      "lon": 86.2837,
+      "lat": 20.2764,
+      "elev": 13,
+      "cond": 4,
+      "cap": 1327
+    },
+    {
+      "id": "gen_tqwurp2q5",
+      "name": "Telephone Exchange, Jagatsinghpur",
+      "type": "telecom",
+      "lon": 85.8868,
+      "lat": 20.0425,
+      "elev": 16,
+      "cond": 2,
+      "cap": 90
+    },
+    {
+      "id": "gen_1cy950dlj",
+      "name": "33/11 kV Substation, Kendrapara",
+      "type": "power",
+      "lon": 86.4933,
+      "lat": 20.3968,
+      "elev": 19,
+      "cond": 2,
+      "cap": 409
+    },
+    {
+      "id": "gen_uehrn4c4k",
+      "name": "Water Works, Kendrapara",
+      "type": "water",
+      "lon": 86.4201,
+      "lat": 20.5652,
+      "elev": 8,
+      "cond": 4,
+      "cap": 362
+    },
+    {
+      "id": "gen_m3s1cdj2h",
+      "name": "Medical College, Kendrapara",
+      "type": "hospital",
+      "lon": 86.3747,
+      "lat": 20.387,
+      "elev": 16,
+      "cond": 3,
+      "cap": 301
+    },
+    {
+      "id": "gen_wayk2ri13",
+      "name": "Water Works, Kendrapara",
+      "type": "water",
+      "lon": 86.5768,
+      "lat": 20.5134,
+      "elev": 3,
+      "cond": 4,
+      "cap": 247
+    },
+    {
+      "id": "gen_vs1tkeokl",
+      "name": "Treatment Plant, Kendrapara",
+      "type": "water",
+      "lon": 86.592,
+      "lat": 20.4442,
+      "elev": 6,
+      "cond": 4,
+      "cap": 291
+    },
+    {
+      "id": "gen_732k0b73z",
+      "name": "Treatment Plant, Kendrapara",
+      "type": "water",
+      "lon": 86.468,
+      "lat": 20.3802,
+      "elev": 6,
+      "cond": 4,
+      "cap": 117
+    },
+    {
+      "id": "gen_lbdd8f7j6",
+      "name": "132 kV Grid Substation, Kendrapara",
+      "type": "power",
+      "lon": 86.486,
+      "lat": 20.5033,
+      "elev": 4,
+      "cond": 4,
+      "cap": 105
+    },
+    {
+      "id": "gen_oajd2ngoj",
+      "name": "Power Station, Kendrapara",
+      "type": "power",
+      "lon": 86.5346,
+      "lat": 20.6396,
+      "elev": 16,
+      "cond": 3,
+      "cap": 213
+    },
+    {
+      "id": "gen_ufo1q50sk",
+      "name": "Water Works, Kendrapara",
+      "type": "water",
+      "lon": 86.231,
+      "lat": 20.3596,
+      "elev": 11,
+      "cond": 2,
+      "cap": 159
+    },
+    {
+      "id": "gen_4njqpg1xi",
+      "name": "Tower Cluster, Kendrapara",
+      "type": "telecom",
+      "lon": 86.4171,
+      "lat": 20.4111,
+      "elev": 6,
+      "cond": 3,
+      "cap": 404
+    },
+    {
+      "id": "gen_4y1ra715v",
+      "name": "Pumping Station, Kendrapara",
+      "type": "water",
+      "lon": 86.5508,
+      "lat": 20.7206,
+      "elev": 10,
+      "cond": 2,
+      "cap": 335
+    },
+    {
+      "id": "gen_t11sa33ep",
+      "name": "BSNL Exchange, Kendrapara",
+      "type": "telecom",
+      "lon": 86.4039,
+      "lat": 20.6514,
+      "elev": 19,
+      "cond": 2,
+      "cap": 348
+    },
+    {
+      "id": "gen_10lc6tuz1",
+      "name": "Water Works, Kendrapara",
+      "type": "water",
+      "lon": 86.219,
+      "lat": 20.5726,
+      "elev": 8,
+      "cond": 2,
+      "cap": 67
+    },
+    {
+      "id": "gen_6tvc3e59j",
+      "name": "Tower Cluster, Kendrapara",
+      "type": "telecom",
+      "lon": 86.6353,
+      "lat": 20.6072,
+      "elev": 14,
+      "cond": 2,
+      "cap": 425
+    },
+    {
+      "id": "gen_nv1kre2wj",
+      "name": "33/11 kV Substation, Kendrapara",
+      "type": "power",
+      "lon": 86.2547,
+      "lat": 20.6259,
+      "elev": 18,
+      "cond": 3,
+      "cap": 314
+    },
+    {
+      "id": "gen_qbw0wl04d",
+      "name": "Treatment Plant, Bhadrak",
+      "type": "water",
+      "lon": 86.3719,
+      "lat": 20.8598,
+      "elev": 12,
+      "cond": 2,
+      "cap": 423
+    },
+    {
+      "id": "gen_m8a1jz0k7",
+      "name": "Power Station, Bhadrak",
+      "type": "power",
+      "lon": 86.7091,
+      "lat": 21.0768,
+      "elev": 10,
+      "cond": 4,
+      "cap": 283
+    },
+    {
+      "id": "gen_vc0rs3o1z",
+      "name": "Medical College, Bhadrak",
+      "type": "hospital",
+      "lon": 86.5879,
+      "lat": 21.2091,
+      "elev": 9,
+      "cond": 3,
+      "cap": 269
+    },
+    {
+      "id": "gen_2mk19tdm1",
+      "name": "Multipurpose Shelter, Bhadrak",
+      "type": "shelter",
+      "lon": 86.3029,
+      "lat": 20.8773,
+      "elev": 6,
+      "cond": 2,
+      "cap": 828
+    },
+    {
+      "id": "gen_1blsvz5wg",
+      "name": "District Hospital, Bhadrak",
+      "type": "hospital",
+      "lon": 86.6648,
+      "lat": 20.9356,
+      "elev": 5,
+      "cond": 3,
+      "cap": 312
+    },
+    {
+      "id": "gen_stdaga80y",
+      "name": "Power Station, Bhadrak",
+      "type": "power",
+      "lon": 86.5686,
+      "lat": 21.2183,
+      "elev": 6,
+      "cond": 2,
+      "cap": 136
+    },
+    {
+      "id": "gen_ihlm6czip",
+      "name": "132 kV Grid Substation, Bhadrak",
+      "type": "power",
+      "lon": 86.6373,
+      "lat": 20.9897,
+      "elev": 18,
+      "cond": 4,
+      "cap": 260
+    },
+    {
+      "id": "gen_w6ge746sq",
+      "name": "33/11 kV Substation, Bhadrak",
+      "type": "power",
+      "lon": 86.282,
+      "lat": 21.1018,
+      "elev": 14,
+      "cond": 2,
+      "cap": 495
+    },
+    {
+      "id": "gen_1m1590zcv",
+      "name": "Power Station, Bhadrak",
+      "type": "power",
+      "lon": 86.3655,
+      "lat": 20.8416,
+      "elev": 18,
+      "cond": 3,
+      "cap": 306
+    },
+    {
+      "id": "gen_uuhzdrlzu",
+      "name": "Medical College, Bhadrak",
+      "type": "hospital",
+      "lon": 86.2748,
+      "lat": 20.9937,
+      "elev": 6,
+      "cond": 3,
+      "cap": 78
+    },
+    {
+      "id": "gen_290mtqlr5",
+      "name": "Tower Cluster, Bhadrak",
+      "type": "telecom",
+      "lon": 86.4392,
+      "lat": 20.9698,
+      "elev": 16,
+      "cond": 4,
+      "cap": 364
+    },
+    {
+      "id": "gen_4t439h9k8",
+      "name": "General Hospital, Bhadrak",
+      "type": "hospital",
+      "lon": 86.344,
+      "lat": 20.7603,
+      "elev": 4,
+      "cond": 2,
+      "cap": 86
+    },
+    {
+      "id": "gen_pqycvhoib",
+      "name": "132 kV Grid Substation, Bhadrak",
+      "type": "power",
+      "lon": 86.7006,
+      "lat": 21.1429,
+      "elev": 6,
+      "cond": 4,
+      "cap": 340
+    },
+    {
+      "id": "gen_658b4xmm7",
+      "name": "Power Station, Bhadrak",
+      "type": "power",
+      "lon": 86.4063,
+      "lat": 21.0984,
+      "elev": 3,
+      "cond": 4,
+      "cap": 330
+    },
+    {
+      "id": "gen_rsc1txz2v",
+      "name": "33/11 kV Substation, Bhadrak",
+      "type": "power",
+      "lon": 86.7407,
+      "lat": 20.8376,
+      "elev": 10,
+      "cond": 2,
+      "cap": 425
+    },
+    {
+      "id": "gen_xdwomt550",
+      "name": "Medical College, Bhadrak",
+      "type": "hospital",
+      "lon": 86.2912,
+      "lat": 20.8165,
+      "elev": 7,
+      "cond": 3,
+      "cap": 183
+    },
+    {
+      "id": "gen_4db0uc36a",
+      "name": "Relief Camp, Bhadrak",
+      "type": "shelter",
+      "lon": 86.5942,
+      "lat": 20.8358,
+      "elev": 12,
+      "cond": 3,
+      "cap": 395
+    },
+    {
+      "id": "gen_y5og8tafv",
+      "name": "Multipurpose Shelter, Bhadrak",
+      "type": "shelter",
+      "lon": 86.7247,
+      "lat": 21.2218,
+      "elev": 18,
+      "cond": 2,
+      "cap": 694
+    },
+    {
+      "id": "gen_11z059bv3",
+      "name": "Power Station, Bhadrak",
+      "type": "power",
+      "lon": 86.2666,
+      "lat": 20.8666,
+      "elev": 18,
+      "cond": 4,
+      "cap": 80
+    },
+    {
+      "id": "gen_5lrp2nye6",
+      "name": "Power Station, Bhadrak",
+      "type": "power",
+      "lon": 86.6588,
+      "lat": 20.8814,
+      "elev": 8,
+      "cond": 3,
+      "cap": 472
+    },
+    {
+      "id": "gen_cr5zsw7nj",
+      "name": "Medical College, Bhadrak",
+      "type": "hospital",
+      "lon": 86.6551,
+      "lat": 21.1035,
+      "elev": 2,
+      "cond": 2,
+      "cap": 88
+    },
+    {
+      "id": "gen_8juao5v5f",
+      "name": "Telephone Exchange, Balasore",
+      "type": "telecom",
+      "lon": 86.8961,
+      "lat": 21.2458,
+      "elev": 2,
+      "cond": 2,
+      "cap": 148
+    },
+    {
+      "id": "gen_ktf7eiutr",
+      "name": "Tower Cluster, Balasore",
+      "type": "telecom",
+      "lon": 87.136,
+      "lat": 21.4884,
+      "elev": 10,
+      "cond": 4,
+      "cap": 467
+    },
+    {
+      "id": "gen_6johmihkr",
+      "name": "132 kV Grid Substation, Balasore",
+      "type": "power",
+      "lon": 87.06,
+      "lat": 21.3388,
+      "elev": 17,
+      "cond": 2,
+      "cap": 372
+    },
+    {
+      "id": "gen_6rhctbw33",
+      "name": "Treatment Plant, Balasore",
+      "type": "water",
+      "lon": 86.8076,
+      "lat": 21.6117,
+      "elev": 7,
+      "cond": 4,
+      "cap": 467
+    },
+    {
+      "id": "gen_r051mgmjq",
+      "name": "District Hospital, Balasore",
+      "type": "hospital",
+      "lon": 86.9952,
+      "lat": 21.3547,
+      "elev": 12,
+      "cond": 4,
+      "cap": 318
+    },
+    {
+      "id": "gen_c315tqw6l",
+      "name": "Multipurpose Shelter, Balasore",
+      "type": "shelter",
+      "lon": 86.6628,
+      "lat": 21.6218,
+      "elev": 2,
+      "cond": 3,
+      "cap": 761
+    },
+    {
+      "id": "gen_gs2eda5y0",
+      "name": "Power Station, Balasore",
+      "type": "power",
+      "lon": 86.9161,
+      "lat": 21.1802,
+      "elev": 7,
+      "cond": 2,
+      "cap": 309
+    },
+    {
+      "id": "gen_l2yyugqrx",
+      "name": "Tower Cluster, Balasore",
+      "type": "telecom",
+      "lon": 87.1229,
+      "lat": 21.4455,
+      "elev": 9,
+      "cond": 3,
+      "cap": 186
+    },
+    {
+      "id": "gen_x8y4hrcbr",
+      "name": "District Hospital, Balasore",
+      "type": "hospital",
+      "lon": 86.8689,
+      "lat": 21.6407,
+      "elev": 5,
+      "cond": 2,
+      "cap": 326
+    },
+    {
+      "id": "gen_p5zo1mng2",
+      "name": "Telephone Exchange, Balasore",
+      "type": "telecom",
+      "lon": 86.6847,
+      "lat": 21.168,
+      "elev": 10,
+      "cond": 4,
+      "cap": 328
+    },
+    {
+      "id": "gen_loh4jjml0",
+      "name": "Multipurpose Shelter, Balasore",
+      "type": "shelter",
+      "lon": 86.768,
+      "lat": 21.5748,
+      "elev": 18,
+      "cond": 2,
+      "cap": 1409
+    },
+    {
+      "id": "gen_lxy0af68d",
+      "name": "132 kV Grid Substation, Balasore",
+      "type": "power",
+      "lon": 86.7019,
+      "lat": 21.4016,
+      "elev": 17,
+      "cond": 2,
+      "cap": 345
+    },
+    {
+      "id": "gen_memoemk1u",
+      "name": "Treatment Plant, Balasore",
+      "type": "water",
+      "lon": 86.7741,
+      "lat": 21.1689,
+      "elev": 12,
+      "cond": 4,
+      "cap": 281
+    },
+    {
+      "id": "gen_dmp9l0kbf",
+      "name": "CHC, Balasore",
+      "type": "hospital",
+      "lon": 86.9429,
+      "lat": 21.3904,
+      "elev": 14,
+      "cond": 4,
+      "cap": 240
+    },
+    {
+      "id": "gen_od246dibu",
+      "name": "Water Works, Balasore",
+      "type": "water",
+      "lon": 86.7354,
+      "lat": 21.2757,
+      "elev": 7,
+      "cond": 3,
+      "cap": 266
+    },
+    {
+      "id": "gen_cja13vew3",
+      "name": "District Hospital, Balasore",
+      "type": "hospital",
+      "lon": 86.7791,
+      "lat": 21.4553,
+      "elev": 7,
+      "cond": 3,
+      "cap": 399
+    },
+    {
+      "id": "gen_bjzj3ekxc",
+      "name": "33/11 kV Substation, Balasore",
+      "type": "power",
+      "lon": 86.6944,
+      "lat": 21.3546,
+      "elev": 4,
+      "cond": 2,
+      "cap": 417
+    },
+    {
+      "id": "gen_2c2z8d9o4",
+      "name": "CHC, Balasore",
+      "type": "hospital",
+      "lon": 87.0996,
+      "lat": 21.3201,
+      "elev": 19,
+      "cond": 2,
+      "cap": 337
+    },
+    {
+      "id": "gen_wtnvyo6pd",
+      "name": "Water Works, South 24 Parganas",
+      "type": "water",
+      "lon": 88.066,
+      "lat": 21.9408,
+      "elev": 18,
+      "cond": 3,
+      "cap": 277
+    },
+    {
+      "id": "gen_bco4gw6w7",
+      "name": "BSNL Exchange, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.3145,
+      "lat": 21.8102,
+      "elev": 8,
+      "cond": 3,
+      "cap": 342
+    },
+    {
+      "id": "gen_zbhtufmci",
+      "name": "Relief Camp, South 24 Parganas",
+      "type": "shelter",
+      "lon": 88.3318,
+      "lat": 21.7626,
+      "elev": 19,
+      "cond": 2,
+      "cap": 1447
+    },
+    {
+      "id": "gen_sz3i2tdtr",
+      "name": "Tower Cluster, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.242,
+      "lat": 21.8541,
+      "elev": 3,
+      "cond": 3,
+      "cap": 404
+    },
+    {
+      "id": "gen_zl0lg6bbg",
+      "name": "132 kV Grid Substation, South 24 Parganas",
+      "type": "power",
+      "lon": 88.5179,
+      "lat": 22.0636,
+      "elev": 11,
+      "cond": 2,
+      "cap": 488
+    },
+    {
+      "id": "gen_8tk14zazs",
+      "name": "BSNL Exchange, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.0654,
+      "lat": 21.9894,
+      "elev": 9,
+      "cond": 4,
+      "cap": 317
+    },
+    {
+      "id": "gen_e69p9pkx1",
+      "name": "Telephone Exchange, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.487,
+      "lat": 21.7824,
+      "elev": 16,
+      "cond": 3,
+      "cap": 182
+    },
+    {
+      "id": "gen_xu8iwz5s0",
+      "name": "Telephone Exchange, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.4978,
+      "lat": 22.1383,
+      "elev": 6,
+      "cond": 2,
+      "cap": 169
+    },
+    {
+      "id": "gen_0g4ad8qpx",
+      "name": "Medical College, South 24 Parganas",
+      "type": "hospital",
+      "lon": 88.1544,
+      "lat": 21.7468,
+      "elev": 4,
+      "cond": 4,
+      "cap": 326
+    },
+    {
+      "id": "gen_3b9rrngmc",
+      "name": "33/11 kV Substation, South 24 Parganas",
+      "type": "power",
+      "lon": 88.1393,
+      "lat": 21.7026,
+      "elev": 13,
+      "cond": 4,
+      "cap": 114
+    },
+    {
+      "id": "gen_quf66nsm6",
+      "name": "33/11 kV Substation, South 24 Parganas",
+      "type": "power",
+      "lon": 88.5498,
+      "lat": 22.1254,
+      "elev": 6,
+      "cond": 4,
+      "cap": 53
+    },
+    {
+      "id": "gen_dtuibv8hu",
+      "name": "Tower Cluster, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.1393,
+      "lat": 21.7765,
+      "elev": 6,
+      "cond": 2,
+      "cap": 74
+    },
+    {
+      "id": "gen_shkhhm7xc",
+      "name": "Pumping Station, South 24 Parganas",
+      "type": "water",
+      "lon": 88.1615,
+      "lat": 21.7077,
+      "elev": 9,
+      "cond": 2,
+      "cap": 341
+    },
+    {
+      "id": "gen_zqby6tr47",
+      "name": "Pumping Station, South 24 Parganas",
+      "type": "water",
+      "lon": 88.3589,
+      "lat": 21.7969,
+      "elev": 6,
+      "cond": 3,
+      "cap": 320
+    },
+    {
+      "id": "gen_3yqkg1n2k",
+      "name": "Water Works, South 24 Parganas",
+      "type": "water",
+      "lon": 88.3582,
+      "lat": 21.9001,
+      "elev": 10,
+      "cond": 2,
+      "cap": 398
+    },
+    {
+      "id": "gen_8ambhd3xr",
+      "name": "Water Works, South 24 Parganas",
+      "type": "water",
+      "lon": 88.3207,
+      "lat": 21.8215,
+      "elev": 12,
+      "cond": 4,
+      "cap": 106
+    },
+    {
+      "id": "gen_mpixr1h83",
+      "name": "Treatment Plant, South 24 Parganas",
+      "type": "water",
+      "lon": 88.3149,
+      "lat": 22.1007,
+      "elev": 9,
+      "cond": 4,
+      "cap": 112
+    },
+    {
+      "id": "gen_y9dwbdhd9",
+      "name": "Telephone Exchange, South 24 Parganas",
+      "type": "telecom",
+      "lon": 88.4596,
+      "lat": 21.6851,
+      "elev": 18,
+      "cond": 3,
+      "cap": 185
+    },
+    {
+      "id": "gen_15ehnkodi",
+      "name": "Treatment Plant, South 24 Parganas",
+      "type": "water",
+      "lon": 88.5044,
+      "lat": 21.8006,
+      "elev": 14,
+      "cond": 3,
+      "cap": 268
+    }
+  ],
+  "andaman": [
+    {
+      "id": "gen_rtitgzw06",
+      "name": "BSNL Exchange, Port Blair",
+      "type": "telecom",
+      "lon": 92.9053,
+      "lat": 11.7136,
+      "elev": 4,
+      "cond": 3,
+      "cap": 474
+    },
+    {
+      "id": "gen_gjabtsfd8",
+      "name": "Multipurpose Shelter, Port Blair",
+      "type": "shelter",
+      "lon": 92.7678,
+      "lat": 11.6959,
+      "elev": 4,
+      "cond": 4,
+      "cap": 249
+    },
+    {
+      "id": "gen_vctfgaojf",
+      "name": "Pumping Station, Port Blair",
+      "type": "water",
+      "lon": 92.4981,
+      "lat": 11.7984,
+      "elev": 2,
+      "cond": 4,
+      "cap": 265
+    },
+    {
+      "id": "gen_cgwzlp8oj",
+      "name": "District Hospital, Port Blair",
+      "type": "hospital",
+      "lon": 92.5408,
+      "lat": 11.5948,
+      "elev": 2,
+      "cond": 3,
+      "cap": 66
+    },
+    {
+      "id": "gen_0b7uc1126",
+      "name": "Water Works, Port Blair",
+      "type": "water",
+      "lon": 92.9082,
+      "lat": 11.4874,
+      "elev": 13,
+      "cond": 4,
+      "cap": 224
+    },
+    {
+      "id": "gen_vmwlki0yy",
+      "name": "General Hospital, Port Blair",
+      "type": "hospital",
+      "lon": 92.7405,
+      "lat": 11.6212,
+      "elev": 18,
+      "cond": 4,
+      "cap": 301
+    },
+    {
+      "id": "gen_ze259ykv3",
+      "name": "Pumping Station, Port Blair",
+      "type": "water",
+      "lon": 92.4527,
+      "lat": 11.4869,
+      "elev": 19,
+      "cond": 2,
+      "cap": 265
+    },
+    {
+      "id": "gen_nicszdr4u",
+      "name": "Treatment Plant, Port Blair",
+      "type": "water",
+      "lon": 92.6273,
+      "lat": 11.7445,
+      "elev": 14,
+      "cond": 4,
+      "cap": 384
+    },
+    {
+      "id": "gen_exm2x9f18",
+      "name": "Power Station, Port Blair",
+      "type": "power",
+      "lon": 92.9132,
+      "lat": 11.7923,
+      "elev": 18,
+      "cond": 2,
+      "cap": 330
+    },
+    {
+      "id": "gen_w6zgo3nho",
+      "name": "Multipurpose Shelter, Port Blair",
+      "type": "shelter",
+      "lon": 92.6852,
+      "lat": 11.4146,
+      "elev": 6,
+      "cond": 2,
+      "cap": 227
+    },
+    {
+      "id": "gen_9b3uo7e07",
+      "name": "Tower Cluster, Port Blair",
+      "type": "telecom",
+      "lon": 92.7681,
+      "lat": 11.7556,
+      "elev": 6,
+      "cond": 2,
+      "cap": 154
+    },
+    {
+      "id": "gen_5x5mzv5m8",
+      "name": "Relief Camp, Port Blair",
+      "type": "shelter",
+      "lon": 92.5683,
+      "lat": 11.3775,
+      "elev": 17,
+      "cond": 2,
+      "cap": 686
+    },
+    {
+      "id": "gen_pjsh3o3kt",
+      "name": "33/11 kV Substation, Port Blair",
+      "type": "power",
+      "lon": 92.5816,
+      "lat": 11.7894,
+      "elev": 3,
+      "cond": 3,
+      "cap": 392
+    },
+    {
+      "id": "gen_8282czwjf",
+      "name": "General Hospital, Port Blair",
+      "type": "hospital",
+      "lon": 92.9465,
+      "lat": 11.5651,
+      "elev": 19,
+      "cond": 2,
+      "cap": 98
+    },
+    {
+      "id": "gen_rq14273uq",
+      "name": "33/11 kV Substation, Port Blair",
+      "type": "power",
+      "lon": 92.4684,
+      "lat": 11.7283,
+      "elev": 6,
+      "cond": 3,
+      "cap": 134
+    },
+    {
+      "id": "gen_xclj57j49",
+      "name": "Water Works, Port Blair",
+      "type": "water",
+      "lon": 92.9283,
+      "lat": 11.7926,
+      "elev": 16,
+      "cond": 3,
+      "cap": 142
+    },
+    {
+      "id": "gen_icyry55f1",
+      "name": "Telephone Exchange, Port Blair",
+      "type": "telecom",
+      "lon": 92.904,
+      "lat": 11.6324,
+      "elev": 16,
+      "cond": 3,
+      "cap": 253
+    },
+    {
+      "id": "gen_wbdxkt0bs",
+      "name": "Pumping Station, Port Blair",
+      "type": "water",
+      "lon": 92.631,
+      "lat": 11.6726,
+      "elev": 13,
+      "cond": 3,
+      "cap": 397
+    }
+  ]
+}

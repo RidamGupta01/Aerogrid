@@ -143,11 +143,10 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         <MapUpdater bounds={mapBounds} />
         <MapEventsHandler appMode={appMode} setUserLocation={setUserLocation} />
         
-        {/* Dark Theme Base Map via OSM + CSS Filter */}
+        {/* Base Map via OSM */}
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          className="dark-map-tiles"
         />
 
         {/* Swath */}

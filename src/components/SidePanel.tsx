@@ -87,7 +87,7 @@ export function SidePanel({
   const activeAsset = model.res.find((r: any) => r.a.id === activeAssetId);
 
   return (
-    <div className="flex flex-col gap-6 overflow-hidden">
+    <div className="flex-1 flex flex-col gap-6 overflow-y-auto p-4 pb-24 custom-scrollbar">
       
       {/* Controls */}
       <section className="glass-panel p-5">
@@ -97,18 +97,18 @@ export function SidePanel({
         <div className="space-y-4">
           <div>
             <div className="flex justify-between text-sm mb-2"><span className="text-subtext">Wind at landfall</span><span className="font-mono text-text">{storm.vL} km/h</span></div>
-            <input type="range" min="70" max="250" step="5" value={storm.vL} onChange={e => {setStorm(s=>({...s, vL: +e.target.value})); setPreset('custom')}} className="w-full accent-accent" />
+            <input type="range" min="70" max="250" step="5" value={storm.vL} onChange={e => {setStorm(s=>({...s, vL: +e.target.value})); setPreset('custom')}} className="w-full accent-white cursor-pointer bg-[#3C4043] h-2 rounded-lg" />
           </div>
           <div>
             <div className="flex justify-between text-sm mb-2"><span className="text-subtext">Eyewall radius</span><span className="font-mono text-text">{storm.rm} km</span></div>
-            <input type="range" min="15" max="80" step="5" value={storm.rm} onChange={e => {setStorm(s=>({...s, rm: +e.target.value})); setPreset('custom')}} className="w-full accent-accent" />
+            <input type="range" min="15" max="80" step="5" value={storm.rm} onChange={e => {setStorm(s=>({...s, rm: +e.target.value})); setPreset('custom')}} className="w-full accent-white cursor-pointer bg-[#3C4043] h-2 rounded-lg" />
           </div>
           <div className="flex flex-col gap-2 pt-2">
-            <label className="flex items-center gap-3 text-sm text-text cursor-pointer hover:text-accent transition-colors">
-              <input type="checkbox" checked={swath} onChange={e => setSwath(e.target.checked)} className="accent-accent w-4 h-4" /> Show gale-force swath (62+ km/h)
+            <label className="flex items-center gap-3 text-sm text-text cursor-pointer hover:text-white transition-colors">
+              <input type="checkbox" checked={swath} onChange={e => setSwath(e.target.checked)} className="accent-white w-4 h-4" /> Show gale-force swath (62+ km/h)
             </label>
-            <label className="flex items-center gap-3 text-sm text-text cursor-pointer hover:text-accent transition-colors">
-              <input type="checkbox" checked={dnames} onChange={e => setDnames(e.target.checked)} className="accent-accent w-4 h-4" /> Show district names
+            <label className="flex items-center gap-3 text-sm text-text cursor-pointer hover:text-white transition-colors">
+              <input type="checkbox" checked={dnames} onChange={e => setDnames(e.target.checked)} className="accent-white w-4 h-4" /> Show district names
             </label>
           </div>
         </div>
@@ -181,7 +181,7 @@ export function SidePanel({
       </section>
 
       {/* Asset Rankings */}
-      <section className="glass-panel p-5 flex-1 flex flex-col min-h-0">
+      <section className="glass-panel p-5">
         <h2 className="text-sm font-display font-semibold uppercase tracking-widest text-subtext mb-4 flex items-center gap-2">
           <ShieldAlert className="w-4 h-4" /> Assets Ranked By Risk
         </h2>
@@ -218,7 +218,7 @@ export function SidePanel({
           ))}
         </div>
 
-        <div className="flex-1 overflow-y-auto pr-2 space-y-1 min-h-[200px]">
+        <div className="pr-2 space-y-1">
           {displayedAssets.map((r: any) => (
             <button 
               key={r.a.id} 
