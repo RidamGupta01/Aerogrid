@@ -174,6 +174,7 @@ export default function App() {
             setUserLocation={setUserLocation}
             assets={assets}
             mapBounds={mapBounds}
+            isPlaying={isPlaying}
           />
         </div>
       )}

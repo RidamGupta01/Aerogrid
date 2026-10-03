@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Polyline, Circle, CircleMarker, Marker, Toolti
 import L from 'leaflet';
 import { vmaxAt, galeR } from '../lib/simulation';
 import type { StormState } from '../lib/simulation';
-import { lonlat, nearestCoast, TYPES, K, dist, type Point } from '../lib/model';
+import { lonlat, nearestCoast, TYPES, K, dist, type Point, TL } from '../lib/model';
 
 // Fix Leaflet default marker icon issue
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -67,6 +67,28 @@ function MapEventsHandler({ appMode, setUserLocation }: { appMode: string, setUs
   return null;
 }
 
+function CinematicPlaybackCamera({ storm, model, isPlaying }: { storm: StormState, model: any, isPlaying: boolean }) {
+  const map = useMap();
+  useEffect(() => {
+    if (isPlaying) {
+      const pos = model.tr.pos(storm.t);
+      const ll = lonlat(pos); // [lon, lat]
+      
+      let targetZoom = 5.5;
+      if (storm.t <= TL) {
+         const progress = storm.t / TL; 
+         targetZoom = 5.5 + (progress * 1.5); // max 7.0 at landfall
+      } else {
+         const progress = Math.min(1, (storm.t - TL) / (60 - TL));
+         targetZoom = 7.0 - (progress * 1.5); // back to 5.5
+      }
+      
+      map.setView([ll[1], ll[0]], targetZoom, { animate: true, duration: 0.1, easeLinearity: 1 });
+    }
+  }, [storm.t, isPlaying, map, model, storm]);
+  return null;
+}
+
 import { useEffect } from 'react';
 
 interface MapViewProps {
@@ -82,6 +104,7 @@ interface MapViewProps {
   setUserLocation: (ll: [number, number] | null) => void;
   assets: any[];
   mapBounds: [[number, number], [number, number]];
+  isPlaying: boolean;
 }
 
 function getIntensityColor(vmax: number) {
@@ -92,7 +115,7 @@ function getIntensityColor(vmax: number) {
   return '#3b82f6'; // Depression (Blue)
 }
 
-export function MapView({ storm, setStorm, model, setPreset, swath, selectedAssetId, setSelectedAssetId, appMode, userLocation, setUserLocation, assets, mapBounds }: MapViewProps) {
+export function MapView({ storm, setStorm, model, setPreset, swath, selectedAssetId, setSelectedAssetId, appMode, userLocation, setUserLocation, assets, mapBounds, isPlaying }: MapViewProps) {
   
   const { trackSegments, swathCircles, timeMarkers, currentStorm } = useMemo(() => {
     const trackSegments: { positions: [[number, number], [number, number]], color: string, dash: string, weight: number }[] = [];
@@ -193,6 +216,7 @@ export function MapView({ storm, setStorm, model, setPreset, swath, selectedAsse
         <MapUpdater bounds={mapBounds} />
         <ActiveAssetFlyTo selectedAssetId={selectedAssetId} assets={assets} />
         <MapEventsHandler appMode={appMode} setUserLocation={setUserLocation} />
+        <CinematicPlaybackCamera storm={storm} model={model} isPlaying={isPlaying} />
         
         {/* Base Map via OSM */}
         <TileLayer
