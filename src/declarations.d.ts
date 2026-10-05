@@ -26,6 +26,19 @@ declare module 'lucide-react' {
   export const CheckCircle2: any;
   export const Radio: any;
   export const Activity: any;
+  export const Bell: any;
+  export const CalendarDays: any;
+  export const Check: any;
+  export const ChevronDown: any;
+  export const Cloud: any;
+  export const Crosshair: any;
+  export const ExternalLink: any;
+  export const Gauge: any;
+  export const LocateFixed: any;
+  export const Map: any;
+  export const Menu: any;
+  export const Thermometer: any;
+  export const X: any;
   const content: any;
   export default content;
 }
